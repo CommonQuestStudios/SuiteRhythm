@@ -11616,116 +11616,27 @@ function initializeMenuToggles() {
         });
     }
 
-    // Color palette picker
-    const palettePicker = document.getElementById('palettePicker');
-    const paletteNameEl = document.getElementById('paletteName');
-    const paletteNames = {
-        '':                 'Deep Violet',
-        'midnight-ocean':   'Midnight Ocean',
-        'crimson-circuit':  'Crimson Circuit',
-        'forest-synth':     'Forest Synth',
-        'rose-gold':        'Rose Gold',
-        'arctic-minimal':   'Arctic Minimal',
-        'sunset-funk':      'Sunset Funk',
-        'pastel-vaporwave': 'Pastel Vaporwave',
-        'monochrome-pro':   'Monochrome Pro',
-        'toxic-goblin':     'Toxic Goblin',
-        'neon-pink':        'Neon Pink',
-        'deep-space':       'Deep Space',
-        'matrix':           'Matrix',
-        'cobalt-storm':     'Cobalt Storm',
-        'amber-dusk':       'Amber Dusk',
-        'neon-arcade':      'Neon Arcade',
-    };
-    if (palettePicker) {
-        const savedPalette = localStorage.getItem('SuiteRhythm_palette') ?? null;
-        const activePalette = savedPalette !== null ? savedPalette : 'crimson-circuit';
-        if (activePalette) {
-            document.documentElement.setAttribute('data-color-palette', activePalette);
-        } else {
-            document.documentElement.removeAttribute('data-color-palette');
-        }
-        if (paletteNameEl) paletteNameEl.textContent = paletteNames[activePalette] ?? 'Deep Violet';
-        palettePicker.querySelectorAll('.palette-swatch').forEach(btn => {
-            const btnVal = btn.dataset.paletteValue ?? '';
-            btn.classList.toggle('active', btnVal === activePalette);
-            btn.addEventListener('click', () => {
-                const val = btn.dataset.paletteValue ?? '';
-                if (val) {
-                    document.documentElement.setAttribute('data-color-palette', val);
-                } else {
-                    document.documentElement.removeAttribute('data-color-palette');
-                }
-                localStorage.setItem('SuiteRhythm_palette', val);
-                if (paletteNameEl) paletteNameEl.textContent = paletteNames[val] ?? 'Deep Violet';
-                palettePicker.querySelectorAll('.palette-swatch').forEach(s => {
-                    s.classList.toggle('active', (s.dataset.paletteValue ?? '') === val);
-                });
+    // Accent picker (brass default, copper, violet)
+    const accentPicker = document.getElementById('accentPicker');
+    const accentNameEl = document.getElementById('accentName');
+    const accentNames = { '': 'Brass', 'copper': 'Copper', 'violet': 'Violet' };
+    if (accentPicker) {
+        const applyAccent = (value) => {
+            const accent = accentNames[value] !== undefined ? value : '';
+            if (accent) document.documentElement.setAttribute('data-accent', accent);
+            else document.documentElement.removeAttribute('data-accent');
+            localStorage.setItem('SuiteRhythm_accent', accent);
+            if (accentNameEl) accentNameEl.textContent = accentNames[accent];
+            accentPicker.querySelectorAll('.accent-swatch').forEach(btn => {
+                btn.classList.toggle('active', (btn.dataset.accentValue ?? '') === accent);
             });
-        });
-    }
-
-    // Full look presets: layout treatment plus suggested theme/palette.
-    const lookPicker = document.getElementById('lookPicker');
-    const lookNameEl = document.getElementById('lookName');
-    const lookNames = {
-        'classic': 'Classic Console',
-        'studio-console': 'Studio Console',
-        'broadcast-neon': 'Broadcast Neon',
-        'story-paper': 'Story Paper',
-        'control-deck': 'Control Deck',
-        'cinema-wide': 'Cinema Wide',
-    };
-    const syncThemeCards = (value) => {
-        if (!themePicker) return;
-        themePicker.querySelectorAll('.theme-card').forEach(card => {
-            card.classList.toggle('active', card.dataset.themeValue === value);
-        });
-    };
-    const syncPaletteCards = (value) => {
-        if (!palettePicker) return;
-        palettePicker.querySelectorAll('.palette-swatch').forEach(btn => {
-            btn.classList.toggle('active', (btn.dataset.paletteValue ?? '') === value);
-        });
-        if (paletteNameEl) paletteNameEl.textContent = paletteNames[value] ?? 'Deep Violet';
-    };
-    const applyLook = (value, card = null) => {
-        const look = value || 'classic';
-        document.documentElement.setAttribute('data-look', look);
-        localStorage.setItem('SuiteRhythm_look', look);
-        if (lookNameEl) lookNameEl.textContent = lookNames[look] ?? 'Classic Console';
-        if (lookPicker) {
-            lookPicker.querySelectorAll('.look-card').forEach(btn => {
-                btn.classList.toggle('active', (btn.dataset.lookValue || 'classic') === look);
-            });
-        }
-        const source = card || lookPicker?.querySelector(`[data-look-value="${look}"]`);
-        const theme = source?.dataset.lookTheme;
-        const palette = source?.dataset.lookPalette;
-        if (theme) {
-            document.documentElement.setAttribute('data-theme', theme);
-            localStorage.setItem('SuiteRhythm_theme', theme);
-            syncThemeCards(theme);
-        }
-        if (palette !== undefined) {
-            if (palette) document.documentElement.setAttribute('data-color-palette', palette);
-            else document.documentElement.removeAttribute('data-color-palette');
-            localStorage.setItem('SuiteRhythm_palette', palette);
-            syncPaletteCards(palette);
-        }
-    };
-    if (lookPicker) {
-        const activeLook = localStorage.getItem('SuiteRhythm_look') || 'classic';
-        document.documentElement.setAttribute('data-look', activeLook);
-        if (lookNameEl) lookNameEl.textContent = lookNames[activeLook] ?? 'Classic Console';
-        lookPicker.querySelectorAll('.look-card').forEach(card => {
-            const cardValue = card.dataset.lookValue || 'classic';
-            card.classList.toggle('active', cardValue === activeLook);
-            card.addEventListener('click', () => applyLook(cardValue, card));
+        };
+        applyAccent(localStorage.getItem('SuiteRhythm_accent') ?? '');
+        accentPicker.querySelectorAll('.accent-swatch').forEach(btn => {
+            btn.addEventListener('click', () => applyAccent(btn.dataset.accentValue ?? ''));
         });
     }
 }
-
 // ===== EXPORTS FOR NEXT.JS =====
 // Auto-initialization via DOMContentLoaded is replaced by explicit init in AppShell.jsx useEffect.
 // Call initSuiteRhythm() after the React component has mounted and the DOM is ready.

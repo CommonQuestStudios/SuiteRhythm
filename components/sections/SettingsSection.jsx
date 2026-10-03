@@ -1,115 +1,16 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
-
 import { CONFIG } from '../../lib/config.js';
 import SectionBackButton from '../SectionBackButton';
 
-const LOOK_PRESETS = [
-  {
-    value: 'classic',
-    name: 'Classic Console',
-    description: 'Current SuiteRhythm layout with a sharper red/orange pulse.',
-    previewClass: 'look-preview-classic',
-    theme: 'dark',
-    palette: 'crimson-circuit',
-  },
-  {
-    value: 'studio-console',
-    name: 'Studio Console',
-    description: 'Dense production desk, compact panels, cool meters.',
-    previewClass: 'look-preview-studio',
-    theme: 'dark',
-    palette: 'arctic-minimal',
-  },
-  {
-    value: 'broadcast-neon',
-    name: 'Broadcast Neon',
-    description: 'Horizontal show-control layout built for stream setups.',
-    previewClass: 'look-preview-broadcast',
-    theme: 'dark',
-    palette: 'neon-pink',
-  },
-  {
-    value: 'story-paper',
-    name: 'Story Paper',
-    description: 'Readable writers desk with soft surfaces and editorial spacing.',
-    previewClass: 'look-preview-paper',
-    theme: 'light',
-    palette: 'rose-gold',
-  },
-  {
-    value: 'control-deck',
-    name: 'Control Deck',
-    description: 'Compact left rail and tighter tool panels for fast triggering.',
-    previewClass: 'look-preview-deck',
-    theme: 'dark',
-    palette: 'amber-dusk',
-  },
-  {
-    value: 'cinema-wide',
-    name: 'Cinema Wide',
-    description: 'Roomy cinematic composition for demos and live sessions.',
-    previewClass: 'look-preview-cinema',
-    theme: 'dark',
-    palette: 'sunset-funk',
-  },
+export const ACCENTS = [
+  { value: '', name: 'Brass', a: '#d6a24a', b: '#efc272' },
+  { value: 'copper', name: 'Copper', a: '#cf7a4e', b: '#ea9b72' },
+  { value: 'violet', name: 'Violet', a: '#a386dc', b: '#c6b0f3' },
 ];
 
-const PALETTE_NAMES = {
-  '': 'Deep Violet',
-  'midnight-ocean': 'Midnight Ocean',
-  'crimson-circuit': 'Crimson Circuit',
-  'forest-synth': 'Forest Synth',
-  'rose-gold': 'Rose Gold',
-  'arctic-minimal': 'Arctic Minimal',
-  'sunset-funk': 'Sunset Funk',
-  'pastel-vaporwave': 'Pastel Vaporwave',
-  'monochrome-pro': 'Monochrome Pro',
-  'toxic-goblin': 'Toxic Goblin',
-  'neon-pink': 'Neon Pink',
-  'deep-space': 'Deep Space',
-  'matrix': 'Matrix',
-  'cobalt-storm': 'Cobalt Storm',
-  'amber-dusk': 'Amber Dusk',
-  'neon-arcade': 'Neon Arcade',
-};
-
-/** Settings section — volume, playback options, scene presets, custom triggers. */
+/** Settings section — appearance, volume, playback options, scene presets, custom triggers. */
 export default function SettingsSection() {
-  const [activeLook, setActiveLook] = useState('classic');
-  const activeLookName = useMemo(
-    () => LOOK_PRESETS.find((preset) => preset.value === activeLook)?.name ?? 'Classic Console',
-    [activeLook]
-  );
-
-  useEffect(() => {
-    setActiveLook(localStorage.getItem('SuiteRhythm_look') || 'classic');
-  }, []);
-
-  function applyLookPreset(preset) {
-    const root = document.documentElement;
-    root.setAttribute('data-look', preset.value);
-    root.setAttribute('data-theme', preset.theme);
-    if (preset.palette) root.setAttribute('data-color-palette', preset.palette);
-    else root.removeAttribute('data-color-palette');
-
-    localStorage.setItem('SuiteRhythm_look', preset.value);
-    localStorage.setItem('SuiteRhythm_theme', preset.theme);
-    localStorage.setItem('SuiteRhythm_palette', preset.palette);
-
-    document.querySelectorAll('.theme-card').forEach((card) => {
-      card.classList.toggle('active', card.dataset.themeValue === preset.theme);
-    });
-    document.querySelectorAll('.palette-swatch').forEach((swatch) => {
-      swatch.classList.toggle('active', (swatch.dataset.paletteValue ?? '') === preset.palette);
-    });
-    const paletteName = document.getElementById('paletteName');
-    if (paletteName) paletteName.textContent = PALETTE_NAMES[preset.palette] ?? 'Deep Violet';
-
-    setActiveLook(preset.value);
-  }
-
   return (
     <div id="settingsSection" className="app-section hidden">
       <div className="section-header">
@@ -129,60 +30,33 @@ export default function SettingsSection() {
             <span className="toggle-indicator">&#9660;</span>
           </button>
           <div className="menu-content" id="appearanceMenuContent">
-            <h3>Look Presets</h3>
-            <div className="look-picker" id="lookPicker">
-              {LOOK_PRESETS.map((preset) => (
-                <button
-                  className={`look-card${activeLook === preset.value ? ' active' : ''}`}
-                  data-look-value={preset.value}
-                  data-look-theme={preset.theme}
-                  data-look-palette={preset.palette}
-                  key={preset.value}
-                  onClick={() => applyLookPreset(preset)}
-                  type="button"
-                >
-                  <div className={`look-preview ${preset.previewClass}`}><span /><span /><span /></div>
-                  <div className="look-card-copy">
-                    <strong>{preset.name}</strong>
-                    <span>{preset.description}</span>
-                  </div>
-                </button>
-              ))}
-            </div>
-            <div className="look-label" id="lookName">{activeLookName}</div>
-
             <h3>Theme</h3>
             <div className="theme-picker" id="themePicker">
               <button className="theme-card active" data-theme-value="dark" type="button">
                 <div className="theme-card-preview dark-preview" />
-                <div className="theme-card-label">Dark</div>
+                <div className="theme-card-label">Studio Dark</div>
               </button>
               <button className="theme-card" data-theme-value="light" type="button">
                 <div className="theme-card-preview light-preview" />
-                <div className="theme-card-label">Light</div>
+                <div className="theme-card-label">Daylight</div>
               </button>
             </div>
 
-            <h3 style={{ marginTop: 20 }}>Color Palette</h3>
-            <div className="palette-picker" id="palettePicker">
-              <button className="palette-swatch"        data-palette-value=""          type="button" title="Deep Violet"    style={{ '--swatch-a': '#8a2be2', '--swatch-b': '#03dac6' }} />
-              <button className="palette-swatch"        data-palette-value="midnight-ocean"    type="button" title="Midnight Ocean"  style={{ '--swatch-a': '#1565c0', '--swatch-b': '#00acc1' }} />
-              <button className="palette-swatch active" data-palette-value="crimson-circuit"   type="button" title="Crimson Circuit" style={{ '--swatch-a': '#b71c1c', '--swatch-b': '#ff8f00' }} />
-              <button className="palette-swatch"        data-palette-value="forest-synth"      type="button" title="Forest Synth"   style={{ '--swatch-a': '#2e7d32', '--swatch-b': '#b2ff59' }} />
-              <button className="palette-swatch"        data-palette-value="rose-gold"         type="button" title="Rose Gold"      style={{ '--swatch-a': '#ad1457', '--swatch-b': '#ffb300' }} />
-              <button className="palette-swatch"        data-palette-value="arctic-minimal"    type="button" title="Arctic Minimal" style={{ '--swatch-a': '#0277bd', '--swatch-b': '#00bcd4' }} />
-              <button className="palette-swatch"        data-palette-value="sunset-funk"       type="button" title="Sunset Funk"    style={{ '--swatch-a': '#e65100', '--swatch-b': '#ffd600' }} />
-              <button className="palette-swatch"        data-palette-value="pastel-vaporwave"  type="button" title="Pastel Vaporwave" style={{ '--swatch-a': '#8e24aa', '--swatch-b': '#80deea' }} />
-              <button className="palette-swatch"        data-palette-value="monochrome-pro"    type="button" title="Monochrome Pro" style={{ '--swatch-a': '#424242', '--swatch-b': '#bdbdbd' }} />
-              <button className="palette-swatch"        data-palette-value="toxic-goblin"      type="button" title="Toxic Goblin"   style={{ '--swatch-a': '#6200ea', '--swatch-b': '#76ff03' }} />
-              <button className="palette-swatch"        data-palette-value="neon-pink"         type="button" title="Neon Pink"      style={{ '--swatch-a': '#e91e63', '--swatch-b': '#00e5ff' }} />
-              <button className="palette-swatch"        data-palette-value="deep-space"        type="button" title="Deep Space"     style={{ '--swatch-a': '#1a237e', '--swatch-b': '#ffd740' }} />
-              <button className="palette-swatch"        data-palette-value="matrix"            type="button" title="Matrix"         style={{ '--swatch-a': '#1b5e20', '--swatch-b': '#00e676' }} />
-              <button className="palette-swatch"        data-palette-value="cobalt-storm"      type="button" title="Cobalt Storm"   style={{ '--swatch-a': '#283593', '--swatch-b': '#cfd8dc' }} />
-              <button className="palette-swatch"        data-palette-value="amber-dusk"        type="button" title="Amber Dusk"     style={{ '--swatch-a': '#f57f17', '--swatch-b': '#00838f' }} />
-              <button className="palette-swatch"        data-palette-value="neon-arcade"       type="button" title="Neon Arcade"    style={{ '--swatch-a': '#00b0ff', '--swatch-b': '#ff6d00' }} />
+            <h3 style={{ marginTop: 20 }}>Accent</h3>
+            <div className="accent-picker" id="accentPicker">
+              {ACCENTS.map((accent) => (
+                <button
+                  key={accent.value || 'brass'}
+                  className={`accent-swatch${accent.value === '' ? ' active' : ''}`}
+                  data-accent-value={accent.value}
+                  type="button"
+                  style={{ '--swatch-a': accent.a, '--swatch-b': accent.b }}
+                >
+                  {accent.name}
+                </button>
+              ))}
             </div>
-            <div className="palette-label" id="paletteName">Crimson Circuit</div>
+            <div className="accent-label" id="accentName">Brass</div>
           </div>
         </section>
 

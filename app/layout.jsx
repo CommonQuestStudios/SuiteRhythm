@@ -1,8 +1,19 @@
 import './globals.css';
+import './theme.css';
 import Script from 'next/script';
+import { Fraunces, Manrope } from 'next/font/google';
 import GlobalAudioKill from '../components/GlobalAudioKill';
 import DebugPerfPanel from '../components/DebugPerfPanel';
 import { SITE_URL, SITE_HOST } from '../lib/site';
+
+// Self hosted at build time, so font-src 'self' in the CSP still holds.
+const manrope = Manrope({ subsets: ['latin'], variable: '--font-manrope', display: 'swap' });
+const fraunces = Fraunces({
+  subsets: ['latin'],
+  variable: '--font-fraunces',
+  display: 'swap',
+  axes: ['opsz', 'SOFT'],
+});
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -31,12 +42,12 @@ export const viewport = {
   width: 'device-width',
   initialScale: 1,
   viewportFit: 'cover',
-  themeColor: '#8a2be2',
+  themeColor: '#15120f',
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className={`${manrope.variable} ${fraunces.variable}`}>
       <head>
         {/* Howler.js is loaded as an npm package (see engine/SuiteRhythm.js) */}
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />

@@ -181,6 +181,14 @@ export default function AppShell({ user }) {
 
         // 4. Wire up settings accordion toggles (was a standalone function in game.js)
         initializeMenuToggles();
+
+        // 5. Deep link: /?section=soundLibrarySection opens that panel directly.
+        try {
+          const wanted = new URLSearchParams(window.location.search).get('section');
+          if (wanted && /^[A-Za-z0-9_-]{1,64}$/.test(wanted) && document.getElementById(wanted)?.classList.contains('app-section')) {
+            instance.navigateToSection?.(wanted, { replaceHistory: true });
+          }
+        } catch (_) { /* ignore */ }
       } catch (e) {
         console.error('[AppShell] SuiteRhythm engine failed to start:', e);
         // Show user-visible error if the engine fails to initialize
