@@ -32,7 +32,10 @@ const tutorialSections = [
     summary: 'Use this when you want SuiteRhythm to react while you speak.',
     points: [
       'Auto Detect listens to spoken words and uses local trigger rules plus server analysis to choose audio.',
-      'Short action words can fire instantly. Examples include thunder, knock, door, sword, bird, applause, and heartbeat.',
+      'Short action words can fire instantly. Examples include thunder, knock, door, sword, bird, applause, and heartbeat. Past tense works too: slammed, shattered, creaked.',
+      'Longer narrated beats such as drew his sword, crack of thunder, kicked the door open, or casts a spell fire their own cues.',
+      'Negated or finished sounds stay quiet: there was no gunshot, the rain had stopped, no one knocked.',
+      'Voice commands only run when spoken on their own in a short phrase, or after the wake phrase Suite Rhythm. Try: Suite Rhythm, stop all. Suite Rhythm, quieter music. Suite Rhythm, play thunder. Saying silence or play inside a story will not trigger anything.',
       'Mood bias affects whether the app leans calm, tense, heroic, eerie, or intense.',
       'If a sound is not right for your session, disable it in Sound Library so it stops being selected.',
     ],

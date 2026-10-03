@@ -4,14 +4,15 @@
  * catalog table so it becomes searchable like any other library sound.
  *
  * Body: { id: string }  — the generated_sounds row id.
+ * Requires ADMIN_API_SECRET via the `x-admin-secret` header.
  */
 
 import { NextResponse } from 'next/server';
-import { requireAuth } from '../../../../../lib/api-auth.js';
+import { requireAdmin } from '../../../../../lib/api-auth.js';
 import { promoteGeneratedSound } from '../../../../../lib/generated-sound-store.js';
 
 export async function POST(request) {
-  const denied = requireAuth(request);
+  const denied = requireAdmin(request);
   if (denied) return denied;
 
   let body;
@@ -29,6 +30,6 @@ export async function POST(request) {
     return NextResponse.json({ ok: true, ...result });
   } catch (err) {
     console.error('[/api/admin/generated-sounds/promote]', err);
-    return NextResponse.json({ ok: false, error: err?.message || 'Promotion failed' }, { status: 500 });
+    return NextResponse.json({ ok: false, error: 'Promotion failed' }, { status: 500 });
   }
 }

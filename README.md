@@ -136,6 +136,9 @@ Common production variables:
 | `SUPABASE_SERVICE_ROLE_KEY` | Server side Supabase admin operations |
 | `OPENAI_API_KEY` | AI scene and transcript analysis |
 | `API_AUTH_SECRET` | Signs internal API tokens |
+| `PUBLIC_BETA_ACCESS` | `true` (default) lets anonymous visitors use provider routes behind rate limits; `false` requires signed tokens |
+| `ADMIN_API_SECRET` | Required for admin mutations such as `POST /api/admin/generated-sounds/promote` (sent as `x-admin-secret`) |
+| `NEXT_PUBLIC_SITE_URL` | Canonical public origin for metadata, sitemap, and analytics |
 | `R2_ACCOUNT_ID` | Cloudflare account id |
 | `R2_ACCESS_KEY_ID` | R2 write and read credential id |
 | `R2_SECRET_ACCESS_KEY` | R2 write and read credential secret |
@@ -232,6 +235,14 @@ window.postMessage({ suiterhythm: 'trigger', query: 'thunder' }, '*');
 | `npm run sounds:plan` | Dry run the curated ElevenLabs batch |
 | `npm run sounds:generate` | Generate the curated ElevenLabs batch |
 | `npm run sounds:migrate-prefix` | Run the R2 and catalog prefix migration |
+| `node scripts/eval-narration.mjs "line"` | Show which instant keywords and phrase triggers a narration line fires |
+| `node scripts/eval-search.mjs "query" [type]` | Show which catalog sound a search query resolves to |
+
+## Deployment
+
+Vercel is the only runtime deployment. Pushes to `main` build and deploy automatically with the environment variables set in the Vercel project.
+
+The GitHub Pages address (`commonqueststudios.github.io/SuiteRhythm`) is served from this repository's `main` branch by GitHub's static hosting. It cannot run the Next.js server routes, so the root [index.html](index.html) simply forwards visitors to the Vercel app.
 
 ## Status
 

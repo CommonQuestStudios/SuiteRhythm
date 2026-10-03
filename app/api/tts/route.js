@@ -11,12 +11,16 @@
 
 import { requireAuth } from '../../../lib/api-auth.js';
 import { checkRateLimit, rateLimitHeaders } from '../../../lib/rate-limit.js';
+import { fetchWithTimeout } from '../../../lib/fetch-with-timeout.js';
 
 const ELEVENLABS_API_KEY = process.env.ELEVENLABS_API_KEY;
 const DEFAULT_VOICE_ID = process.env.ELEVENLABS_VOICE_ID || 'PPzYpIqttlTYA83688JI';
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 const OPENAI_TTS_MODEL = process.env.OPENAI_TTS_MODEL || 'gpt-4o-mini-tts';
 const OPENAI_TTS_VOICE = process.env.OPENAI_TTS_VOICE || 'onyx';
+// Long enough for a 3000 character synthesis, short enough to fail over to the next provider.
+const PROVIDER_TIMEOUT_MS = Number(process.env.TTS_PROVIDER_TIMEOUT_MS) || 45_000;
+const VOICE_ID_PATTERN = /^[A-Za-z0-9_-]{1,64}$/;
 
 function extractDetail(errText) {
     try {
@@ -30,7 +34,7 @@ function extractDetail(errText) {
 async function tryElevenLabs(text, voiceId) {
     if (!ELEVENLABS_API_KEY) return { ok: false, status: 0, detail: 'ElevenLabs API key not configured' };
 
-    const resp = await fetch(
+    const resp = await fetchWithTimeout(
         `https://api.elevenlabs.io/v1/text-to-speech/${encodeURIComponent(voiceId)}`,
         {
             method: 'POST',
@@ -49,7 +53,8 @@ async function tryElevenLabs(text, voiceId) {
                     use_speaker_boost: true,
                 },
             }),
-        }
+        },
+        PROVIDER_TIMEOUT_MS
     );
 
     if (resp.ok) return { ok: true, body: resp.body };
@@ -61,7 +66,7 @@ async function tryElevenLabs(text, voiceId) {
 async function tryOpenAI(text) {
     if (!OPENAI_API_KEY) return { ok: false, status: 0, detail: 'OpenAI API key not configured' };
 
-    const resp = await fetch('https://api.openai.com/v1/audio/speech', {
+    const resp = await fetchWithTimeout('https://api.openai.com/v1/audio/speech', {
         method: 'POST',
         headers: {
             'Authorization': `Bearer ${OPENAI_API_KEY}`,
@@ -73,7 +78,7 @@ async function tryOpenAI(text) {
             input: text,
             response_format: 'mp3',
         }),
-    });
+    }, PROVIDER_TIMEOUT_MS);
 
     if (resp.ok) return { ok: true, body: resp.body };
 
@@ -133,7 +138,7 @@ export async function POST(request) {
     }
 
     const trimmed = text.trim();
-    const voiceId = voice || DEFAULT_VOICE_ID;
+    const voiceId = typeof voice === 'string' && VOICE_ID_PATTERN.test(voice) ? voice : DEFAULT_VOICE_ID;
     const providers = [
         { name: 'elevenlabs', run: () => tryElevenLabs(trimmed, voiceId) },
         { name: 'openai', run: () => tryOpenAI(trimmed) },

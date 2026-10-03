@@ -1,5 +1,5 @@
 // SuiteRhythm Service Worker
-const CACHE_NAME = 'SuiteRhythm-v32'; // Bumped: remove stale public login/pay shell
+const CACHE_NAME = 'SuiteRhythm-v33'; // Bumped: catalog JSON is now network first
 const UPDATE_MESSAGE = 'SR_SW_UPDATE_AVAILABLE';
 
 // Note: Sound files are served via /r2-audio/* proxy (Cloudflare R2) and NOT cached here
@@ -86,12 +86,14 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Use network-first for app shell files (HTML, JS, CSS) and navigation requests
-  // so deploys do not keep serving stale chunks while online.
+  // Use network-first for app shell files (HTML, JS, CSS, catalog JSON) and
+  // navigation requests so deploys do not keep serving stale chunks or a stale
+  // fallback catalog while online.
   const isAppShell = url.origin === self.location.origin && 
     (event.request.mode === 'navigate' ||
      url.pathname.endsWith('.html') || url.pathname.endsWith('.js') ||
-     url.pathname.endsWith('.css') || url.pathname === '/' || url.pathname.endsWith('/'));
+     url.pathname.endsWith('.css') || url.pathname.endsWith('.json') ||
+     url.pathname === '/' || url.pathname.endsWith('/'));
   
   if (isAppShell) {
     event.respondWith((async () => {

@@ -61,12 +61,33 @@ export default function AppShell({ user }) {
 
     let banner = null;
     let pendingReload = false;
+    // A hidden tab is often a streamer's live audio source. Only reload it
+    // silently when the engine is idle; otherwise wait and show the banner
+    // once the user comes back to the tab.
+    const engineIsBusy = () => {
+      const eng = window.gameInstance;
+      if (!eng) return false;
+      return !!eng.isListening || (eng.activeSounds?.size || 0) > 0 || !!eng.storyActive || !!eng.demoRunning;
+    };
+    let deferredUntilVisible = false;
+    const onVisible = () => {
+      if (document.hidden || !deferredUntilVisible) return;
+      deferredUntilVisible = false;
+      document.removeEventListener('visibilitychange', onVisible);
+      showUpdateBanner();
+    };
     const showUpdateBanner = () => {
       if (pendingReload || banner) return;
-      // If the tab isn't visible, just reload silently — no in-flight UX to lose.
       if (typeof document !== 'undefined' && document.hidden) {
-        pendingReload = true;
-        window.location.reload();
+        if (!engineIsBusy()) {
+          pendingReload = true;
+          window.location.reload();
+          return;
+        }
+        if (!deferredUntilVisible) {
+          deferredUntilVisible = true;
+          document.addEventListener('visibilitychange', onVisible);
+        }
         return;
       }
       try {
@@ -105,6 +126,7 @@ export default function AppShell({ user }) {
 
     return () => {
       navigator.serviceWorker.removeEventListener('message', handleSwMessage);
+      document.removeEventListener('visibilitychange', onVisible);
       try { banner?.remove(); } catch (_) {}
     };
   }, []);

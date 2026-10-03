@@ -29,5 +29,322 @@
     "transcript": "The statue cast a long shadow across the room.",
     "mode": "auto",
     "ruleSfxQueries": []
+  },
+  {
+    "name": "progressive animal sound fires",
+    "transcript": "The dog was barking at the mailman.",
+    "mode": "auto",
+    "ruleSfxQueries": ["dog bark"]
+  },
+  {
+    "name": "past tense door slam fires",
+    "transcript": "The door slammed shut behind them.",
+    "mode": "auto",
+    "ruleSfxQueries": ["door slam"]
+  },
+  {
+    "name": "past tense shatter fires",
+    "transcript": "The window shattered as the rock went through.",
+    "mode": "auto",
+    "ruleSfxQueries": ["glass shatter"]
+  },
+  {
+    "name": "same file is not fired twice in one sentence",
+    "transcript": "The dog barked and barked at the gate.",
+    "mode": "auto",
+    "ruleSfxQueries": ["dog bark"]
+  },
+  {
+    "name": "negated gunshot stays silent",
+    "transcript": "There was no gunshot, only the wind.",
+    "mode": "auto",
+    "ruleSfxQueries": []
+  },
+  {
+    "name": "stopped rain stays silent",
+    "transcript": "The rain had finally stopped.",
+    "mode": "auto",
+    "ruleSfxQueries": []
+  },
+  {
+    "name": "never heard thunder stays silent",
+    "transcript": "She never heard the thunder that night.",
+    "mode": "auto",
+    "ruleSfxQueries": []
+  },
+
+  {
+    "name": "narration: tavern door swings open, silent crowd",
+    "transcript": "The tavern door swung open and the crowd fell silent.",
+    "mode": "auto",
+    "ruleSfxQueries": ["door creak"],
+    "phraseSound": null
+  },
+  {
+    "name": "narration: fist slam, mugs rattle is not chains",
+    "transcript": "He slammed his fist on the table and the mugs rattled.",
+    "mode": "auto",
+    "ruleSfxQueries": ["door slam"]
+  },
+  {
+    "name": "narration: rain and rolling thunder layer",
+    "transcript": "Rain lashed the windows as thunder rolled over the hills.",
+    "mode": "auto",
+    "ruleSfxQueries": ["rain", "thunder storm"],
+    "phraseSound": "thunder crack close"
+  },
+  {
+    "name": "narration: nocked arrow",
+    "transcript": "She nocked an arrow and let it fly toward the orc.",
+    "mode": "auto",
+    "ruleSfxQueries": ["arrow shot"],
+    "phraseSound": "bowstring draw tension"
+  },
+  {
+    "name": "narration: goblin shriek is a creature, not a woman scream",
+    "transcript": "The goblin shrieked and scrambled up the wall.",
+    "mode": "auto",
+    "ruleSfxQueries": ["monster growl"]
+  },
+  {
+    "name": "narration: dragon roar is one event",
+    "transcript": "The dragon roared and the ground shook.",
+    "mode": "auto",
+    "ruleSfxQueries": ["dragon growl"]
+  },
+  {
+    "name": "narration: cat hiss keeps the specific sound",
+    "transcript": "The cat hissed at the stranger.",
+    "mode": "auto",
+    "ruleSfxQueries": ["cat hiss"]
+  },
+  {
+    "name": "narration: knock on oak door",
+    "transcript": "He knocked three times on the heavy oak door.",
+    "mode": "auto",
+    "ruleSfxQueries": ["door knock"]
+  },
+  {
+    "name": "narration: church bell tolls",
+    "transcript": "The church bell tolled midnight.",
+    "mode": "auto",
+    "ruleSfxQueries": ["bell chime"],
+    "phraseSound": "church bell toll"
+  },
+  {
+    "name": "narration: floorboards creak",
+    "transcript": "The old floorboards creaked under his boots.",
+    "mode": "auto",
+    "ruleSfxQueries": ["door creak"],
+    "phraseSound": "wood stair groan"
+  },
+  {
+    "name": "narration: waves crash on rocks",
+    "transcript": "Waves crashed against the rocks below the lighthouse.",
+    "mode": "auto",
+    "ruleSfxQueries": ["waves shore"],
+    "phraseSound": "ocean wave crash shore"
+  },
+  {
+    "name": "narration: campfire crackles",
+    "transcript": "The campfire crackled as they settled in for the night.",
+    "mode": "auto",
+    "ruleSfxQueries": ["campfire"]
+  },
+  {
+    "name": "narration: gunshot across the square",
+    "transcript": "A gunshot rang out across the square.",
+    "mode": "auto",
+    "ruleSfxQueries": ["gunshot"]
+  },
+  {
+    "name": "narration: phone rang",
+    "transcript": "Her phone rang in the middle of the sermon.",
+    "mode": "auto",
+    "ruleSfxQueries": ["phone ring"]
+  },
+  {
+    "name": "narration: horses galloped",
+    "transcript": "The horses galloped across the muddy field.",
+    "mode": "auto",
+    "ruleSfxQueries": ["horse gallop"]
+  },
+  {
+    "name": "narration: crowd applause is one cue",
+    "transcript": "The crowd erupted in applause.",
+    "mode": "auto",
+    "ruleSfxQueries": ["crowd"],
+    "phraseSound": "crowd cheering"
+  },
+  {
+    "name": "narration: baby cried",
+    "transcript": "The baby cried all through the night.",
+    "mode": "auto",
+    "ruleSfxQueries": ["baby crying"]
+  },
+  {
+    "name": "narration: drew dagger",
+    "transcript": "He drew his dagger slowly.",
+    "mode": "auto",
+    "ruleSfxQueries": ["draw sword"]
+  },
+  {
+    "name": "narration: sword clang on shield",
+    "transcript": "The sword clanged against the shield.",
+    "mode": "auto",
+    "ruleSfxQueries": ["sword clash"]
+  },
+  {
+    "name": "narration: massive explosion",
+    "transcript": "A massive explosion tore through the warehouse.",
+    "mode": "auto",
+    "ruleSfxQueries": ["big explosion"],
+    "phraseSound": "big explosion"
+  },
+  {
+    "name": "narration: wizard casts a spell",
+    "transcript": "The wizard cast a spell and the room filled with light.",
+    "mode": "auto",
+    "ruleSfxQueries": ["magic spell"],
+    "phraseSound": "magic spell"
+  },
+  {
+    "name": "narration: coins clink",
+    "transcript": "Coins clinked onto the bar as he paid for the ale.",
+    "mode": "auto",
+    "ruleSfxQueries": ["coin clink"]
+  },
+  {
+    "name": "narration: clock ticks",
+    "transcript": "The clock on the mantel ticked away the hours.",
+    "mode": "auto",
+    "ruleSfxQueries": ["tick tock"]
+  },
+  {
+    "name": "narration: train whistles into station",
+    "transcript": "The train whistled as it pulled into the station.",
+    "mode": "auto",
+    "ruleSfxQueries": ["train passing"]
+  },
+  {
+    "name": "narration: sirens wail (no human wail)",
+    "transcript": "Sirens wailed in the distance.",
+    "mode": "auto",
+    "ruleSfxQueries": ["police siren"]
+  },
+  {
+    "name": "narration: owl hoots",
+    "transcript": "The owl hooted from the barn roof.",
+    "mode": "auto",
+    "ruleSfxQueries": ["owl hoot"]
+  },
+  {
+    "name": "silent: no sword no shield",
+    "transcript": "He had no sword, no shield, and no plan.",
+    "mode": "auto",
+    "ruleSfxQueries": [],
+    "phraseSound": null
+  },
+  {
+    "name": "silent: never heard the knock",
+    "transcript": "She never heard the knock at the door.",
+    "mode": "auto",
+    "ruleSfxQueries": []
+  },
+  {
+    "name": "silent: rain stopped, wind died down",
+    "transcript": "The rain had finally stopped and the wind died down.",
+    "mode": "auto",
+    "ruleSfxQueries": [],
+    "phraseSound": null
+  },
+  {
+    "name": "silent: sleeping dog, silent clock",
+    "transcript": "The dog slept by the fire while the clock sat silent.",
+    "mode": "auto",
+    "ruleSfxQueries": []
+  },
+  {
+    "name": "silent: talking about the war",
+    "transcript": "They talked about the war for hours.",
+    "mode": "auto",
+    "ruleSfxQueries": []
+  },
+  {
+    "name": "silent: fired off an email",
+    "transcript": "He fired off an angry email to the council.",
+    "mode": "auto",
+    "ruleSfxQueries": []
+  },
+  {
+    "name": "silent: market crashed",
+    "transcript": "The market crashed and the bank went under.",
+    "mode": "auto",
+    "ruleSfxQueries": []
+  },
+  {
+    "name": "silent: drew a breath, shot a look",
+    "transcript": "She drew a long breath and shot him a look.",
+    "mode": "auto",
+    "ruleSfxQueries": []
+  },
+  {
+    "name": "silent: bells fallen silent",
+    "transcript": "The bells had fallen silent years ago.",
+    "mode": "auto",
+    "ruleSfxQueries": []
+  },
+  {
+    "name": "silent: thunder of hooves faded",
+    "transcript": "The thunder of hooves faded into the distance.",
+    "mode": "auto",
+    "ruleSfxQueries": [],
+    "phraseSound": null
+  },
+  {
+    "name": "silent: guard blocked the doorway",
+    "transcript": "The guard blocked the doorway with his spear.",
+    "mode": "auto",
+    "ruleSfxQueries": []
+  },
+  {
+    "name": "silent: not the wind",
+    "transcript": "It was not the wind that woke her.",
+    "mode": "auto",
+    "ruleSfxQueries": []
+  },
+  {
+    "name": "silent: cast a glance, no one knocked",
+    "transcript": "He cast a glance at the door, but no one knocked.",
+    "mode": "auto",
+    "ruleSfxQueries": []
+  },
+  {
+    "name": "catalog search: short descriptive queries land on the right sound",
+    "transcript": "",
+    "mode": "auto",
+    "search": [
+      { "query": "sword draw", "expect": "draw sword" },
+      { "query": "heavy rain", "expect": "heavy rain downpour" },
+      { "query": "explosion large", "expect": "big explosion" },
+      { "query": "wind howling", "expect": "wind howl" },
+      { "query": "wolf howl", "expect": "wolf howl" },
+      { "query": "glass shatter", "expect": "glass shatter" },
+      { "query": "bell toll", "expect": "cursed bell toll" },
+      { "query": "ocean waves crashing", "expect": "rough ocean waves" },
+      { "query": "scream", "expect": "woman scream" },
+      { "query": "tavern ambience", "type": "ambience", "expect": "tavern ambience" },
+      { "query": "tense battle drums", "type": "music", "expect": "horde war drums" }
+    ]
+  },
+  {
+    "name": "catalog search: transcript fragments do not match",
+    "transcript": "",
+    "mode": "auto",
+    "search": [
+      { "query": "police officer entered room", "expect": null },
+      { "query": "clock sat desk", "expect": null },
+      { "query": "the and of", "expect": null }
+    ]
   }
 ]

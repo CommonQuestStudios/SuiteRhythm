@@ -13,6 +13,19 @@ import { getStaticStoriesForApi } from '../../../lib/server-catalog.js';
 import { checkRateLimit, rateLimitHeaders } from '../../../lib/rate-limit.js';
 
 export async function GET(request) {
+  // Anonymous pagination of the whole table should not be free to script.
+  const rate = checkRateLimit(request, {
+    namespace: 'stories-get',
+    limit: 60,
+    windowMs: 60_000,
+  });
+  if (!rate.allowed) {
+    return NextResponse.json(
+      { error: 'Rate limit exceeded. Try again shortly.' },
+      { status: 429, headers: rateLimitHeaders(rate) }
+    );
+  }
+
   // Parse and clamp pagination params so unauthenticated callers can't pull the
   // entire stories table in one request.
   const { searchParams } = new URL(request.url);

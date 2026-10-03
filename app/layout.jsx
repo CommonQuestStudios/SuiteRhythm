@@ -2,26 +2,28 @@ import './globals.css';
 import Script from 'next/script';
 import GlobalAudioKill from '../components/GlobalAudioKill';
 import DebugPerfPanel from '../components/DebugPerfPanel';
+import { SITE_URL, SITE_HOST } from '../lib/site';
 
 export const metadata = {
+  metadataBase: new URL(SITE_URL),
   title: 'SuiteRhythm | Reactive Sound Studio',
   description:
     'Create reactive soundtracks, ambience, and sound effects for tabletop games, storytelling, and creative broadcasts.',
   manifest: '/manifest.json',
   openGraph: {
     type: 'website',
-    url: 'https://suiterhythm.vercel.app/',
+    url: `${SITE_URL}/`,
     title: 'SuiteRhythm | Reactive Sound Studio',
     description:
       'Create reactive soundtracks, ambience, and sound effects for tabletop games, storytelling, and creative broadcasts.',
-    images: [{ url: 'https://suiterhythm.vercel.app/og-image.png', width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/og-image.png`, width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'SuiteRhythm | Reactive Sound Studio',
     description:
       'Create reactive soundtracks, ambience, and sound effects for tabletop games, storytelling, and creative broadcasts.',
-    images: ['https://suiterhythm.vercel.app/og-image.png'],
+    images: [`${SITE_URL}/og-image.png`],
   },
 };
 
@@ -41,7 +43,7 @@ export default function RootLayout({ children }) {
         {/* Apply saved theme before first paint to prevent flash */}
         <Script src="/theme-init.js" strategy="beforeInteractive" />
         {/* Plausible Analytics — privacy-friendly, no cookies, no banner needed */}
-        <script defer data-domain="suiterhythm.vercel.app" src="https://plausible.io/js/script.js" />
+        <script defer data-domain={SITE_HOST} src="https://plausible.io/js/script.js" />
       </head>
       <body>
         {/* Global zombie-audio killer — runs on every route, including landing. */}

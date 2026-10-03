@@ -14,9 +14,11 @@
 import { NextResponse } from 'next/server';
 import { requireAuth } from '../../../lib/api-auth.js';
 import { checkRateLimit, rateLimitHeaders } from '../../../lib/rate-limit.js';
+import { fetchWithTimeout } from '../../../lib/fetch-with-timeout.js';
 
 const PIXABAY_KEY = process.env.PIXABAY_API_KEY;
 const UPSTREAM_UNAVAILABLE_STATUSES = new Set([401, 403, 429]);
+const UPSTREAM_TIMEOUT_MS = 10_000;
 
 export async function GET(request) {
   const denied = requireAuth(request);
@@ -58,9 +60,9 @@ export async function GET(request) {
   params.set('per_page', String(perPage));
 
   try {
-    const res = await fetch(`https://pixabay.com/api/audio/?${params}`, {
+    const res = await fetchWithTimeout(`https://pixabay.com/api/audio/?${params}`, {
       headers: { 'Accept': 'application/json' },
-    });
+    }, UPSTREAM_TIMEOUT_MS);
 
     if (!res.ok) {
       const upstreamStatus = res.status;

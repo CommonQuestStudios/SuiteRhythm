@@ -9,7 +9,7 @@ import { LRUCache, MemoryMonitor, CacheManager } from '../lib/modules/memory-man
 import PerformanceMonitor from '../lib/modules/performance-monitor.js';
 import { CircuitBreaker, RetryHandler, OfflineDetector, setupGlobalErrorHandlers } from '../lib/modules/error-handler.js';
 import { initAccessibility, announceToScreenReader } from '../lib/modules/accessibility.js';
-import { buildTriggerMap, ruleBasedDecision, tfidfMatch, shouldTriggerKeyword, rankInstantPreloadFiles } from '../lib/modules/trigger-system.js';
+import { buildTriggerMap, ruleBasedDecision, tfidfMatch, shouldTriggerKeyword, rankInstantPreloadFiles, findTriggerMatches } from '../lib/modules/trigger-system.js';
 import { WOLF_NOUNS } from '../lib/modules/creature-taxonomy.js';
 import { computeNormalizationGain as computeNormGain, calculateVolume as calcVolume, getSfxBucket as sfxBucket, getDuckParams as duckParamsCalc, shuffleArray as shuffle } from '../lib/modules/sound-engine.js';
 import { MODE_CONTEXTS, MODE_RULES, MODE_STINGERS, MODE_PRELOAD_SETS, GENERIC_PRELOAD_SET } from '../lib/modules/ai-director.js';
@@ -36,6 +36,10 @@ import { installErrorReporter } from '../lib/modules/error-reporter.js';
 import { loadSavedSoundsCatalog } from '../lib/modules/saved-sounds-loader.js';
 import { getR2AudioBase, isSavedSoundsPath, joinAudioUrlBase, normalizeAudioUrl } from '../lib/modules/audio-url.js';
 import { getClientAccessToken, setClientAccessToken } from '../lib/client-token-store.js';
+import { readStoredNumber } from '../lib/modules/stored-settings.js';
+import { nextRecognitionRestartDelay, wasHealthyRecognitionSession } from '../lib/modules/recognition-restart.js';
+import { PHRASE_TRIGGERS, matchPhraseTriggers, resolvePhraseSound } from '../lib/modules/phrase-triggers.js';
+import { normalizeSoundName } from '../lib/sound-catalog.js';
 
 // Expose CONFIG globally for modules that read window.CONFIG (e.g., api.js debugLog)
 try { window.CONFIG = CONFIG; window.Howler = Howler; } catch (_) {}
@@ -232,9 +236,9 @@ class SuiteRhythm {
     try { this.musicEnabled = JSON.parse(localStorage.getItem('SuiteRhythm_music_enabled') ?? 'true'); } catch { this.musicEnabled = true; }
     try { this.sfxEnabled = JSON.parse(localStorage.getItem('SuiteRhythm_sfx_enabled') ?? 'true'); } catch { this.sfxEnabled = true; }
     // Mixer levels (user-controlled)
-    this.musicLevel = parseFloat(localStorage.getItem('SuiteRhythm_music_level') ?? '0.5'); // default 50%
-    this.sfxLevel = parseFloat(localStorage.getItem('SuiteRhythm_sfx_level') ?? '0.9');   // default 90%
-    this.ambientDurationMultiplier = parseFloat(localStorage.getItem('SuiteRhythm_ambient_duration') ?? '1.0'); // 0.5x to 3x
+    this.musicLevel = readStoredNumber(localStorage, 'SuiteRhythm_music_level', { fallback: 0.5, min: 0, max: 1 }); // default 50%
+    this.sfxLevel = readStoredNumber(localStorage, 'SuiteRhythm_sfx_level', { fallback: 0.9, min: 0, max: 1 });   // default 90%
+    this.ambientDurationMultiplier = readStoredNumber(localStorage, 'SuiteRhythm_ambient_duration', { fallback: 1.0, min: 0.5, max: 3 }); // 0.5x to 3x
     try { this.ambienceEnabled = JSON.parse(localStorage.getItem('SuiteRhythm_ambience_enabled') ?? 'true'); } catch { this.ambienceEnabled = true; }
     // AI sound generation fallback (ElevenLabs) — only ever attempted after a
     // genuine library miss; see _maybeGenerateMissingSound(). The server is
@@ -249,12 +253,12 @@ class SuiteRhythm {
     this._startupSoundPlayed = false;
     this.currentMusicBase = 0.5; // last intensity-derived music gain (pre-user)
     // Mood & performance
-    this.moodBias = parseFloat(localStorage.getItem('SuiteRhythm_mood_bias') ?? '0.5'); // 0..1
+    this.moodBias = readStoredNumber(localStorage, 'SuiteRhythm_mood_bias', { fallback: 0.5, min: 0, max: 1 }); // 0..1
     try { this.voiceDuckEnabled = JSON.parse(localStorage.getItem('SuiteRhythm_voice_duck') ?? 'false'); } catch { this.voiceDuckEnabled = false; }
     this._voiceDuckActive = false; // true when voice duck is currently lowering music
     try { this.lowLatencyMode = JSON.parse(localStorage.getItem('SuiteRhythm_low_latency') ?? 'false'); } catch { this.lowLatencyMode = false; }
     this.preloadConcurrency = this.getPreloadConcurrency();
-    this.keywordCooldownMs = parseInt(localStorage.getItem('SuiteRhythm_keyword_cooldown_ms') ?? '3000');
+    this.keywordCooldownMs = readStoredNumber(localStorage, 'SuiteRhythm_keyword_cooldown_ms', { fallback: 3000, min: 0, max: 60000, integer: true });
     // Cross-session ambient restore is OPT-IN and only honors snapshots <2 min old.
     // Prevents the "sounds mysteriously playing from a previous session" bug where
     // a day-old snapshot would auto-play on page load.
@@ -270,6 +274,10 @@ class SuiteRhythm {
         
         // Speech Recognition
         this.recognition = null;
+        this._recognitionRestartTimer = null;
+        this._recognitionFailures = 0;
+        this._recognitionSessionStartedAt = 0;
+        this._recognitionSessionHadResults = false;
         this.transcriptBuffer = [];
     this.lastAnalysisTime = 0;
     // Analyze interval with adaptive rate limiting
@@ -532,14 +540,17 @@ class SuiteRhythm {
 
         
         // Load sound catalog from backend
-        this.loadSoundCatalog().catch(e => console.warn('Backend catalog unavailable:', e.message));
+        const catalogReady = this.loadSoundCatalog().catch(e => console.warn('Backend catalog unavailable:', e.message));
         // Load local saved sounds (legacy/fallback)
-        this.loadSavedSounds().catch(e => console.warn('Saved sounds load failed:', e.message));
+        const savedReady = this.loadSavedSounds().catch(e => console.warn('Saved sounds load failed:', e.message));
         // Load built-in stories
         this.loadStories().catch(e => console.warn('Stories load failed:', e.message));
         
-        // Preload instant keyword buffers after a short delay (non-blocking)
-        setTimeout(() => this.preloadInstantKeywords().catch(e => console.warn('Preload keywords failed:', e.message)), 2000);
+        // Preload instant keyword buffers once the trigger map and catalog exist.
+        // A fixed delay used to skip the preload entirely on slow connections.
+        Promise.allSettled([catalogReady, savedReady]).then(() => {
+            setTimeout(() => this.preloadInstantKeywords().catch(e => console.warn('Preload keywords failed:', e.message)), 500);
+        });
         // Pre-warm CDN cache for common sounds
         setTimeout(() => this.prewarmCDN().catch(e => console.warn('CDN prewarm failed:', e.message)), 3000);
 
@@ -2508,7 +2519,7 @@ class SuiteRhythm {
                             const buf = await this.audioContext.decodeAudioData(ab); this.activeBuffers.set(url, buf);
                         } catch(_) {}
                     }
-                });
+                }).catch((err) => debugLog('Story prefetch skipped:', err?.message || err));
             }
         }
     }
@@ -2731,8 +2742,9 @@ class SuiteRhythm {
         debugLog('Preloading instant keyword buffers...');
         
         // Rank by how many keywords a file can answer, so the bytes we spend buy
-        // the most trigger coverage.
-        const sorted = rankInstantPreloadFiles(this.instantKeywords);
+        // the most trigger coverage. Phrase cues ("drew his sword") are ranked
+        // alongside keywords so they also play from the decoded buffer cache.
+        const sorted = rankInstantPreloadFiles({ ...this.instantKeywords, ...this._phrasePreloadEntries() });
         // Budget by bytes, not file count: mean trigger file is ~0.7MB and the
         // largest are multi-megabyte ambience beds that are never instant triggers.
         const { maxFileBytes, byteBudget } = this.getInstantPreloadBudget();
@@ -2802,6 +2814,19 @@ class SuiteRhythm {
     }
 
     // ===== CDN PRE-WARMING =====
+    // Phrase triggers as pseudo keywords for the preload ranker: one entry per
+    // phrase table row, pointing at the catalog file it resolves to.
+    _phrasePreloadEntries() {
+        const entries = {};
+        if (!Array.isArray(this.soundCatalog) || !this.soundCatalog.length) return entries;
+        for (const entry of [...PHRASE_TRIGGERS, ...(this._customPhraseEntries || [])]) {
+            const sound = resolvePhraseSound(entry, this.soundCatalog);
+            if (!sound?.src) continue;
+            entries[`phrase:${entry.patterns[0]}`] = { file: sound.src, category: 'phrase', volume: entry.volume || 0.8 };
+        }
+        return entries;
+    }
+
     async prewarmCDN() {
         if (!this.soundCatalog || this.soundCatalog.length === 0) {
             debugLog('Skipping CDN pre-warm (no catalog loaded yet)');
@@ -5209,26 +5234,43 @@ class SuiteRhythm {
             this.recognition.lang = 'en-US';
             this.recognition.maxAlternatives = 3;
             
-            this.recognition.onresult = (event) => this.handleSpeechResult(event);
+            this.recognition.onresult = (event) => {
+                this._recognitionSessionHadResults = true;
+                this.handleSpeechResult(event);
+            };
             this.recognition.onerror = (event) => this.handleSpeechError(event);
             this.recognition.onend = () => {
                 this._recognitionActive = false;
-                if (this.isListening) {
-                    // Delay before restart to avoid rapid cycling on unstable connections
-                    setTimeout(() => {
-                        if (this.isListening) {
-                            try {
-                                this.recognition.start();
-                            } catch (e) {
-                                debugLog('Recognition restart skipped:', e.message);
-                            }
-                        }
-                    }, 500);
+                if (!this.isListening) return;
+                // Chrome ends continuous sessions on its own; restart quickly after a
+                // healthy run, but back off when sessions keep dying immediately so a
+                // dead speech service never turns into a 2 Hz restart loop.
+                const endedAt = Date.now();
+                if (wasHealthyRecognitionSession(this._recognitionSessionStartedAt, endedAt, this._recognitionSessionHadResults)) {
+                    this._recognitionFailures = 0;
+                } else {
+                    this._recognitionFailures += 1;
                 }
+                const delay = nextRecognitionRestartDelay(this._recognitionFailures);
+                if (this._recognitionFailures >= 3) {
+                    this.updateStatus(`Speech service unreachable. Retrying in ${Math.round(delay / 1000)}s...`);
+                }
+                if (this._recognitionRestartTimer) clearTimeout(this._recognitionRestartTimer);
+                this._recognitionRestartTimer = setTimeout(() => {
+                    this._recognitionRestartTimer = null;
+                    if (!this.isListening || !this.recognition) return;
+                    try {
+                        this.recognition.start();
+                    } catch (e) {
+                        debugLog('Recognition restart skipped:', e.message);
+                    }
+                }, delay);
             };
             
             this.recognition.onstart = () => {
                 this._recognitionActive = true;
+                this._recognitionSessionStartedAt = Date.now();
+                this._recognitionSessionHadResults = false;
                 debugLog('Speech recognition started');
                 this.updateStatus('Listening... Speak clearly!');
             };
@@ -5425,27 +5467,14 @@ class SuiteRhythm {
         // ===== INSTANT KEYWORD DETECTION =====
         checkInstantKeywords(text) {
             if (!text || !this.sfxEnabled) return;
-        
-            const lowerText = text.toLowerCase();
-            let triggered = 0;
+
             const maxTriggers = 2;
             const now = Date.now();
             const KEYWORD_COOLDOWN = this.keywordCooldownMs || 3000;
 
-            // Synonym expansion: also check if any transcript word maps to a known keyword
-            const expandedHits = new Set();
-            for (const w of lowerText.split(/\s+/)) {
-                const canonical = this._expandSynonym(w.replace(/[^a-z'-]/g, ''));
-                if (canonical !== w.replace(/[^a-z'-]/g, '') && this.instantKeywords[canonical]) {
-                    expandedHits.add(canonical);
-                }
-            }
-        
-            for (const [keyword, config] of Object.entries(this.instantKeywords)) {
-                if (triggered >= maxTriggers) break;
-                // Per-keyword cooldown to prevent spam from repeated interim transcripts.
-                // Base cooldown from settings, then blend with the learned cooldown so
-                // keywords that spam get stretched and rare ones get shorter gaps.
+            // Cooldown / consumed checks run inside the matcher so a keyword that is
+            // merely on cooldown also keeps a sibling keyword from refiring its file.
+            const skip = (keyword, config) => {
                 const lastTrigger = this.instantKeywordCooldowns.get(keyword) || 0;
                 let effectiveCooldown = KEYWORD_COOLDOWN;
                 try {
@@ -5453,112 +5482,68 @@ class SuiteRhythm {
                     // Weighted average biased slightly toward the learned value.
                     effectiveCooldown = Math.round((KEYWORD_COOLDOWN * 0.4) + (learned * 0.6));
                 } catch (_) {}
-                if (now - lastTrigger < effectiveCooldown) continue;
+                if (now - lastTrigger < effectiveCooldown) return true;
                 // Skip keywords whose event was already consumed (e.g. the train already passed)
-                if (this._isEventConsumed(keyword)) continue;
-                const escapedKw = keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-                const regex = new RegExp(`\\b${escapedKw}\\b`, 'i');
-                // Check only the primary finalized transcript and synonym expansions.
-                if (regex.test(lowerText) || expandedHits.has(keyword)) {
-                    if (!shouldTriggerKeyword(keyword, lowerText, config)) continue;
-                    this.instantKeywordCooldowns.set(keyword, now);
-                    try { recordKeywordFire(keyword); } catch (_) {}
-                    debugLog(`Instant trigger detected: "${keyword}"`);
-                    this.bumpStat('keywords');
-                    this.bumpStat('triggers');
-                    config._triggerStart = performance.now();
-                    this.logActivity(`Keyword: "${keyword}" -> ${config.query || config.file || '?'}`, 'trigger');
-                    const intensityMul = Math.max(0.4, Math.min(1.5, this.voiceIntensity))
-                        * this._getPacingVolumeMultiplier() * this._getIntensityCurveMultiplier();
-                    this.playInstantSound(config, keyword, intensityMul);
-                    // Keyword-suppress: silence AI SFX for a moment so they don't step on this hit
-                    this._keywordSuppressUntil = now + (this._keywordSuppressMs || 2500);
-                    // Mark this keyword (and its underlying sound file) as a consumed event
-                    this._markEventConsumed(keyword);
-                    if (config.file) this._markEventConsumed(config.file);
-                    triggered++;
-                }
+                if (this._isEventConsumed(keyword)) return true;
+                if (config.file && this._isEventConsumed(config.file)) return true;
+                return false;
+            };
+
+            const matches = findTriggerMatches(text, this.instantKeywords, {
+                synonyms: this._synonymMap,
+                skip,
+                max: maxTriggers,
+            });
+
+            for (const { keyword, config } of matches) {
+                this.instantKeywordCooldowns.set(keyword, now);
+                try { recordKeywordFire(keyword); } catch (_) {}
+                debugLog(`Instant trigger detected: "${keyword}"`);
+                this.bumpStat('keywords');
+                this.bumpStat('triggers');
+                config._triggerStart = performance.now();
+                this.logActivity(`Keyword: "${keyword}" -> ${config.query || config.file || '?'}`, 'trigger');
+                const intensityMul = Math.max(0.4, Math.min(1.5, this.voiceIntensity))
+                    * this._getPacingVolumeMultiplier() * this._getIntensityCurveMultiplier();
+                this.playInstantSound(config, keyword, intensityMul);
+                // Keyword-suppress: silence AI SFX for a moment so they don't step on this hit
+                this._keywordSuppressUntil = now + (this._keywordSuppressMs || 2500);
+                // Mark this keyword (and its underlying sound file) as a consumed event
+                this._markEventConsumed(keyword);
+                if (config.file) this._markEventConsumed(config.file);
             }
         }
     
     // ===== MULTI-WORD PHRASE TRIGGER MATCHING =====
     // Covers high-drama 2-3 word narrative phrases the single-keyword system misses.
-    // Phrases are grouped into buckets so only one fires per sentence.
+    // The table lives in lib/modules/phrase-triggers.js; only one phrase fires per sentence.
     async checkPhraseKeywords(text) {
         if (!text || !this.sfxEnabled) return;
-        const lower = ` ${text.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim()} `;
         const now = Date.now();
         const PHRASE_COOLDOWN = Math.max(this.keywordCooldownMs || 3000, 4000);
 
-        // Phrase table: each entry is { patterns[], query, volume, category }
-        // Patterns are checked as substrings (order matters: more specific first)
-        const phraseTable = [
-            // Wind & weather context (must be before creature/combat to win priority)
-            { patterns: ['roar of the wind', 'roar of the storm', 'roar of the gale', 'wind roared', 'storm roared', 'gale roared', 'wind roars', 'storm roars', 'roaring wind', 'roaring storm', 'roaring gale', 'roaring tempest'], query: 'wind howling storm', volume: 0.7 },
-            { patterns: ['roar of the sea', 'roar of the ocean', 'roar of the waves', 'sea roared', 'ocean roared', 'waves roared', 'roaring sea', 'roaring ocean', 'roaring waves', 'roar of the surf'], query: 'ocean waves crashing', volume: 0.7 },
-            { patterns: ['roar of the fire', 'roar of the flames', 'roar of the blaze', 'fire roars', 'flames roar', 'fire roared', 'flames roared', 'roaring fire', 'roaring flames', 'roaring inferno'], query: 'fire roaring crackling', volume: 0.7 },
-            { patterns: ['roar of the crowd', 'crowd roars', 'crowd roared', 'roaring crowd', 'roaring audience', 'audience roared'], query: 'crowd cheering', volume: 0.7 },
-            { patterns: ['wind howled', 'wind was howling', 'howl of the wind', 'howling wind', 'wind howling', 'howling gale', 'gale howled'], query: 'wind howling', volume: 0.7 },
-            { patterns: ['waves crashed', 'waves crashing', 'crash of the waves', 'sea crashed', 'surf crashed', 'waves crash'], query: 'ocean waves crashing', volume: 0.7 },
-            // Combat actions
-            { patterns: ['drew his sword', 'drew her sword', 'drew their sword', 'draws his sword', 'draws her sword', 'pulled out his sword', 'pulled out her sword'], query: 'sword draw', volume: 0.8 },
-            { patterns: ['swings his sword', 'swings her sword', 'slashes with', 'brings his blade', 'brings her blade', 'blade cuts', 'sword slices'], query: 'sword slash', volume: 0.85 },
-            { patterns: ['notched an arrow', 'nocked an arrow', 'drew an arrow', 'takes aim', 'takes her aim', 'takes his aim', 'lines up the shot'], query: 'bow draw', volume: 0.7 },
-            { patterns: ['fires the arrow', 'releases the arrow', 'lets the arrow fly', 'looses the arrow'], query: 'arrow release', volume: 0.75 },
-            { patterns: ['kicks the door', 'kicks open the door', 'door flies open', 'burst through the door', 'bursts through the door', 'slams the door', 'door slams'], query: 'door slam', volume: 0.85 },
-            { patterns: ['throws a punch', 'throws his fist', 'throws her fist', 'lands a blow', 'delivers a punch', 'connects with a punch'], query: 'punch impact', volume: 0.8 },
-            { patterns: ['cracks of thunder', 'crack of thunder', 'thunder crashes', 'thunder rolls', 'thunder booms', 'lightning strikes', 'lightning flashes'], query: 'thunder crack', volume: 0.9 },
-            // Environment
-            { patterns: ['the room goes dark', 'lights go out', 'candle goes out', 'torch goes out', 'plunged into darkness'], query: 'candle extinguish', volume: 0.6 },
-            { patterns: ['glass shatters', 'window shatters', 'mirror shatters', 'shatters into pieces', 'breaks the glass', 'glass breaks', 'smashes the window'], query: 'glass shatter', volume: 0.85 },
-            { patterns: ['fire spreads', 'flames erupt', 'fire roars', 'flames roar', 'burst into flames', 'catches fire', 'erupts in flames'], query: 'fire roar', volume: 0.8 },
-            { patterns: ['heavy rain', 'rain begins', 'starts to rain', 'rain pours', 'pouring rain', 'downpour', 'sheets of rain'], query: 'heavy rain', volume: 0.6 },
-            { patterns: ['creaking floorboards', 'floor creaks', 'floorboard creaks', 'old staircase', 'stairs creak', 'creaking stairs'], query: 'floorboard creak', volume: 0.6 },
-            // Creatures / NPCs
-            { patterns: ['wolf howls', 'wolves howl', 'howl in the distance', 'distant howl', 'howling in the night'], query: 'wolf howl', volume: 0.75 },
-            { patterns: ['horse gallops', 'horse charges', 'horses thunder', 'hooves pound', 'clatter of hooves', 'sound of hooves'], query: 'horse gallop', volume: 0.7 },
-            { patterns: ['crowd cheers', 'crowd erupts', 'crowd roars', 'audience applauds', 'cheers from the crowd', 'roar of the crowd'], query: 'crowd cheer', volume: 0.7 },
-            { patterns: ['screams echo', 'a scream rings', 'someone screams', 'lets out a scream', 'blood-curdling scream', 'piercing scream'], query: 'scream', volume: 0.9 },
-            { patterns: ['bell rings', 'bell tolls', 'church bell', 'alarm bell', 'bells ring', 'bells toll'], query: 'bell toll', volume: 0.7 },
-            { patterns: ['ears ringing', 'ear ringing', 'ears are ringing', 'ringing in her ears', 'ringing in his ears', 'ringing in my ears', 'head ringing', 'ears rang', 'ears began to ring'], query: 'ringing in ears tinnitus', volume: 0.75 },
-            // Magic
-            { patterns: ['casts a spell', 'cast a spell', 'waves her wand', 'waves his wand', 'mutters an incantation', 'speaks the words of power', 'activates the rune', 'channels her magic', 'channels his magic'], query: 'magic spell cast', volume: 0.8 },
-            { patterns: ['explosion rips', 'explosion tears', 'massive explosion', 'deafening explosion', 'explosion rocks', 'explosion shakes'], query: 'explosion large', volume: 0.95 },
-        ];
-
-        let fired = 0;
         const maxPhraseTriggers = 1;
-        const fullTable = [...phraseTable, ...(this._customPhraseEntries || [])];
-        for (const entry of fullTable) {
+        let fired = 0;
+        const fullTable = [...PHRASE_TRIGGERS, ...(this._customPhraseEntries || [])];
+        for (const entry of matchPhraseTriggers(text, fullTable)) {
             if (fired >= maxPhraseTriggers) break;
             const bucketKey = 'phrase:' + entry.patterns[0];
             const lastFired = this.instantKeywordCooldowns.get(bucketKey) || 0;
             if (now - lastFired < PHRASE_COOLDOWN) continue;
-            const matched = entry.patterns.some((pattern) => {
-                const normalizedPattern = ` ${pattern.replace(/[^a-z0-9]+/g, ' ').trim()} `;
-                return lower.includes(normalizedPattern);
-            });
-            if (matched) {
-                const query = String(entry.query || '').toLowerCase().trim();
-                const sound = this.soundCatalog.find((candidate) =>
-                    candidate.type === 'sfx' &&
-                    (String(candidate.id || '').toLowerCase() === query ||
-                     String(candidate.name || '').toLowerCase() === query)
-                );
-                if (!sound) {
-                    debugLog('Phrase trigger skipped because it has no exact catalog sound:', entry.query);
-                    continue;
-                }
-                if (this._isEventConsumed(sound.id) || this._getActiveSfxIds().includes(sound.id)) continue;
-                this.instantKeywordCooldowns.set(bucketKey, now);
-                debugLog('Phrase trigger:', entry.patterns[0], '->', entry.query);
-                this.bumpStat('keywords');
-                this.bumpStat('triggers');
-                this.logActivity(`Phrase: "${entry.query}"`, 'trigger');
-                await this.playSoundEffectById({ id: sound.id, volume: entry.volume, confidence: 1 });
-                this._markEventConsumed(sound.id);
-                fired++;
+            const sound = resolvePhraseSound(entry, this.soundCatalog);
+            if (!sound) {
+                debugLog('Phrase trigger skipped because it has no catalog sound:', entry.sound || entry.query);
+                continue;
             }
+            if (this._isEventConsumed(sound.id) || this._getActiveSfxIds().includes(sound.id)) continue;
+            this.instantKeywordCooldowns.set(bucketKey, now);
+            debugLog('Phrase trigger:', entry.patterns[0], '->', sound.name || sound.id);
+            this.bumpStat('keywords');
+            this.bumpStat('triggers');
+            this.logActivity(`Phrase: "${entry.matchedPattern || entry.query || sound.name}" -> ${sound.name || sound.id}`, 'trigger');
+            await this.playSoundEffectById({ id: sound.id, volume: entry.volume, confidence: 1, trigger: entry.matchedPattern || entry.query });
+            this._markEventConsumed(sound.id);
+            fired++;
         }
     }
 
@@ -6055,12 +6040,8 @@ class SuiteRhythm {
         
         // Handle Music (mood-adaptive: prefer mood-matching tracks)
         if (this.musicEnabled && decisions.music && decisions.music.id) {
-            // NOTE: do NOT pre-gate on an exact soundCatalog.id match here.
-            // updateMusicById has its own fallbacks (filename-only suffix match
-            // and semanticSearchCatalog) that resolve descriptive AI queries
-            // like "sing ballad acoustic guitar" to real catalog entries.
-            // The old pre-check was short-circuiting those fallbacks and
-            // caused sing mode to never play any backing music.
+            // updateMusicById resolves exact ids, filename suffixes, exact names
+            // and normalized names; the server already snaps names it offered.
             this.bumpStat('transitions');
             await this.updateMusicById(decisions.music);
         }
@@ -6068,10 +6049,8 @@ class SuiteRhythm {
         // Handle Sound Effects (skip in demo mode — story cue map handles SFX)
         if (this.sfxEnabled && !this.demoRunning && decisions.sfx && decisions.sfx.length > 0) {
             for (const sfx of decisions.sfx) {
-                // NOTE: do NOT hard-reject unknown catalog IDs here —
-                // playSoundEffectById already matches by name and falls back
-                // to semanticSearchCatalog. The old pre-check was dropping
-                // every descriptive AI output (same bug that broke sing-mode music).
+                // Server side resolveDecisionSounds has already snapped ids to
+                // offered candidates; playSoundEffectById handles the rest.
                 // Skip disabled sounds
                 if (sfx.id && this.disabledSounds.has(sfx.id)) {
                     debugLog('Skipping disabled sound:', sfx.id);
@@ -6233,11 +6212,9 @@ class SuiteRhythm {
                 return;
             }
         
-        // Find sound in catalog by exact ID, filename suffix, or exact display name.
-        // The AI prompt instructs the model to return catalog `name` values
-        // (e.g. "sing ballad acoustic guitar"), but catalog entries store the
-        // file path in `id` — so match on `name` too before falling through
-        // to the fuzzy semantic search.
+        // Find sound in catalog by exact ID, filename suffix, exact display name,
+        // then normalized name. The AI returns catalog `name` values while
+        // catalog entries store the file path in `id`.
         const wantedLc = String(musicData.id || '').toLowerCase().trim();
         let sound = this.soundCatalog.find(s => s.id === musicData.id);
         if (!sound) {
@@ -6247,6 +6224,10 @@ class SuiteRhythm {
         if (!sound && wantedLc) {
             // Match on the human-readable `name` field (what the AI actually returns)
             sound = this.soundCatalog.find(s => s.name && String(s.name).toLowerCase() === wantedLc);
+        }
+        if (!sound && wantedLc) {
+            const key = normalizeSoundName(wantedLc);
+            if (key) sound = this.soundCatalog.find(s => s.type === 'music' && normalizeSoundName(s.name) === key);
         }
         if (!sound) {
             console.warn('Music ID not found in catalog:', musicData.id);
@@ -6552,6 +6533,14 @@ class SuiteRhythm {
             sound = this.soundCatalog.find(s => s.name && s.name.toLowerCase() === q && s.type === 'sfx');
         }
         if (!sound) {
+            // Tolerate punctuation/casing/prefix drift in the returned name, but
+            // never fall through to a loose semantic guess.
+            const key = normalizeSoundName(sfxData.id);
+            if (key) {
+                sound = this.soundCatalog.find(s => s.type === 'sfx' && (normalizeSoundName(s.name) === key || normalizeSoundName(s.id) === key));
+            }
+        }
+        if (!sound) {
             console.warn('SFX ID not found in catalog:', sfxData.id);
             return;
         }
@@ -6596,8 +6585,8 @@ class SuiteRhythm {
             this._recordTriggeredSound({
                 id: sound.id,
                 name: sound.name || sound.id,
-                keyword: sfxData.intent || sfxData.id || '',
-                source: 'ai',
+                keyword: sfxData.trigger || (Array.isArray(sfxData.tags) && sfxData.tags[0]) || '',
+                source: sfxData.trigger ? 'phrase' : 'ai',
             });
             // Start cooldown for this bucket
             this.sfxCooldowns.set(bucket, Date.now() + this.sfxCooldownMs);
@@ -6884,97 +6873,6 @@ class SuiteRhythm {
         const m = Math.floor(s / 60);
         const sec = s % 60;
         return `${m}:${String(sec).padStart(2, '0')}`;
-    }
-    
-    // ===== CLIENT-SIDE SEMANTIC SEARCH =====
-    // Score catalog sounds against a text query using tag similarity + substring matching
-    semanticSearchCatalog(query, type = null, maxResults = 5) {
-        if (!query || this.soundCatalog.length === 0) return [];
-        const tokens = query.toLowerCase().split(/\s+/).filter(t => t.length > 2);
-        if (tokens.length === 0) return [];
-        const originalTokens = new Set(tokens);
-        
-        // Synonym expansion for common audio terms
-        const synonyms = {
-            sword: ['blade', 'slash', 'metal', 'clang', 'weapon', 'dagger', 'steel'],
-            door: ['creak', 'open', 'slam', 'knock', 'gate', 'entrance'],
-            rain: ['water', 'drip', 'storm', 'wet', 'shower', 'downpour'],
-            fire: ['flame', 'crackle', 'burn', 'torch', 'inferno', 'campfire', 'fireplace'],
-            wind: ['breeze', 'gust', 'howl', 'whoosh', 'blizzard', 'storm'],
-            walk: ['footstep', 'step', 'boots', 'footsteps', 'running', 'gravel'],
-            horse: ['gallop', 'hooves', 'neigh', 'whinny', 'trotting', 'cavalry'],
-            fight: ['battle', 'combat', 'clash', 'war', 'attack', 'strike', 'medieval'],
-            magic: ['spell', 'enchant', 'arcane', 'mystic', 'wizard', 'cast', 'potion', 'healing'],
-            monster: ['creature', 'beast', 'roar', 'growl', 'demon', 'zombie', 'dragon', 'troll', 'goblin'],
-            forest: ['trees', 'leaves', 'birds', 'nature', 'jungle', 'grove', 'branch', 'woodland'],
-            tavern: ['crowd', 'mug', 'inn', 'chatter', 'pub', 'bar', 'rowdy', 'drinking'],
-            ocean: ['waves', 'sea', 'water', 'shore', 'nautical', 'ship', 'harbor', 'sailing'],
-            night: ['crickets', 'owl', 'dark', 'nocturnal', 'midnight', 'evening'],
-            thunder: ['lightning', 'storm', 'rumble', 'electric', 'bolt'],
-            scream: ['shriek', 'yell', 'shout', 'cry', 'wail'],
-            ghost: ['phantom', 'spirit', 'haunt', 'spectral', 'eerie', 'spooky', 'whisper'],
-            explosion: ['blast', 'boom', 'detonate', 'cannon', 'impact'],
-            arrow: ['bow', 'shot', 'missile', 'projectile', 'quiver'],
-            dragon: ['wyrm', 'drake', 'serpent', 'beast', 'wings', 'roar', 'fire'],
-            castle: ['throne', 'royal', 'palace', 'tower', 'fortress', 'dungeon', 'portcullis'],
-            cave: ['dungeon', 'underground', 'drip', 'echo', 'cavern', 'crypt'],
-            dog: ['bark', 'howl', 'puppy', 'hound', 'growl', 'whimper'],
-            cat: ['meow', 'hiss', 'purr', 'feline', 'screech'],
-            bell: ['chime', 'ring', 'toll', 'ding', 'clock'],
-            laugh: ['giggle', 'chuckle', 'cackle', 'evil'],
-            death: ['dying', 'dead', 'funeral', 'grave', 'somber', 'dirge'],
-            heal: ['healing', 'cure', 'restore', 'holy', 'divine', 'blessing'],
-            pirate: ['ship', 'sea', 'shanty', 'swashbuckle', 'cannon', 'treasure'],
-            wolf: ['howl', 'growl', 'snarl', 'predator', 'pack'],
-            underwater: ['deep', 'submerge', 'bubbles', 'diving', 'depths'],
-            christmas: ['holiday', 'festive', 'winter', 'sleigh', 'carol', 'jingle'],
-            scary: ['horror', 'fright', 'terror', 'creepy', 'suspense', 'eerie']
-        };
-        
-        // Expand tokens with synonyms
-        const expanded = new Set(tokens);
-        for (const token of tokens) {
-            if (synonyms[token]) synonyms[token].forEach(s => expanded.add(s));
-        }
-        
-        return this.soundCatalog
-            .filter(s => {
-                if (type && s.type !== type) return false;
-                if (this.disabledSounds.has(s.id)) return false;
-                return true;
-            })
-            .map(s => {
-                let score = 0;
-                const id = s.id.toLowerCase();
-                const idWords = new Set(id.split(/[^a-z0-9]+/).filter(Boolean));
-                const tags = (s.tags || []).map(t => t.toLowerCase());
-                let originalStrongHits = 0;
-                
-                for (const token of expanded) {
-                    const original = originalTokens.has(token);
-                    // Exact tag match (highest value)
-                    if (tags.includes(token)) {
-                        score += original ? 3 : 1.5;
-                        if (original) originalStrongHits++;
-                    }
-                    // Partial tag match
-                    else if (token.length >= 5 && tags.some(t => t.includes(token) || token.includes(t))) {
-                        score += original ? 1.25 : 0.6;
-                    }
-                    // ID contains token
-                    if (idWords.has(token)) {
-                        score += original ? 2 : 1;
-                        if (original) originalStrongHits++;
-                    } else if (token.length >= 5 && id.includes(token)) {
-                        score += original ? 1 : 0.5;
-                    }
-                }
-                return { sound: s, score, originalStrongHits };
-            })
-            .filter(r => r.originalStrongHits > 0 && r.score >= (type === 'music' ? 2.5 : 3))
-            .sort((a, b) => b.score - a.score)
-            .slice(0, maxResults)
-            .map(r => r.sound);
     }
     
     // ===== PIXABAY INTEGRATION =====
@@ -8300,6 +8198,11 @@ class SuiteRhythm {
     stopListening() {
         this.isListening = false;
         this.currentInterim = '';
+        if (this._recognitionRestartTimer) {
+            clearTimeout(this._recognitionRestartTimer);
+            this._recognitionRestartTimer = null;
+        }
+        this._recognitionFailures = 0;
         // Cancel pending silence-triggered analysis timer
         if (this._silenceAnalysisTimer) {
             clearTimeout(this._silenceAnalysisTimer);
@@ -8469,7 +8372,16 @@ class SuiteRhythm {
 
     // ===== VOICE COMMANDS =====
     handleVoiceCommands(text) {
-        const t = text.toLowerCase();
+        const raw = String(text || '').toLowerCase().trim();
+        if (!raw) return false;
+        // Narration is full of "silence", "play", "stop everything" said in
+        // character. A command is only honored when it is spoken on its own
+        // (a short final utterance) or prefixed with the wake phrase.
+        const wake = /^(?:hey\s+|ok\s+|okay\s+)?(?:suite|sweet)\s*rhythm\b[,:]?\s*/;
+        const hasWake = wake.test(raw);
+        const wordCount = raw.split(/\s+/).filter(Boolean).length;
+        if (!hasWake && wordCount > 6) return false;
+        const t = hasWake ? raw.replace(wake, '') : raw;
         let handled = false;
         const say = (msg) => this.updateStatus(msg);
         if (/\b(skip|next) (track|song|music)\b/.test(t)) {
@@ -8537,7 +8449,7 @@ class SuiteRhythm {
             handled = true;
         }
         // Stop all audio
-        if (/\bstop (all|everything|audio|sounds)\b|\bsilence\b/.test(t)) {
+        if (/^(?:please\s+)?stop (all|everything|audio|sounds|the sounds|the music)\b|^silence\.?$/.test(t)) {
             this.stopAllSounds();
             say('All audio stopped');
             handled = true;
@@ -8561,14 +8473,14 @@ class SuiteRhythm {
             say('Ambient stopped');
             handled = true;
         }
-        // Play a specific sound by name from catalog
-        const playMatch = t.match(/\bplay (?:the )?(?:sound )?(.+?)(?:\s+sound)?$/);
+        // Play a specific sound by name from catalog (utterance must start with "play")
+        const playMatch = t.match(/^(?:please\s+)?play (?:the )?(?:sound )?(.+?)(?:\s+sound)?\.?$/);
         if (playMatch && !handled) {
             const query = playMatch[1].trim();
-            const match = this.soundCatalog.find(s =>
+            const match = query.length >= 3 ? this.soundCatalog.find(s =>
                 s.id.toLowerCase().includes(query) ||
                 (s.tags && s.tags.some(tag => tag.toLowerCase().includes(query)))
-            );
+            ) : null;
             if (match) {
                 if (match.type === 'music') {
                     this.updateMusicById({ id: match.id, action: 'play_or_continue', volume: 0.5 });
@@ -11019,10 +10931,16 @@ class SuiteRhythm {
         for (const s of storyEntries) {
             const card = document.createElement('div');
             card.className = 'demo-story-card';
+            card.setAttribute('role', 'button');
+            card.tabIndex = 0;
             card.innerHTML = `<p class="demo-story-card-theme">${escapeHtml(s.theme)}</p><p class="demo-story-card-title">${escapeHtml(s.title)}</p><p class="demo-story-card-desc">${escapeHtml(s.description)}</p>`;
-            card.addEventListener('click', () => {
+            const choose = () => {
                 overlay.classList.add('hidden');
                 this.launchDemoStory(s.id);
+            };
+            card.addEventListener('click', choose);
+            card.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); choose(); }
             });
             list.appendChild(card);
         }
@@ -11378,6 +11296,10 @@ class SuiteRhythm {
     destroy() {
         try {
             // Stop listening
+            if (this._recognitionRestartTimer) {
+                clearTimeout(this._recognitionRestartTimer);
+                this._recognitionRestartTimer = null;
+            }
             if (this.isListening) {
                 this.recognition?.abort();
                 this.isListening = false;

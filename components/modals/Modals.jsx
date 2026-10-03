@@ -4,9 +4,13 @@
  * Collection of all overlay and modal components.
  * Grouped in one file to keep imports clean in AppShell.
  * Each modal is rendered in the DOM so the engine can show or hide them.
+ * Keyboard behavior (focus, Tab trap, Escape) comes from useDialogBehavior.
  */
 
+import { useDialogBehavior } from './useDialogBehavior';
+
 export function FeedbackModal() {
+  useDialogBehavior('feedbackModal', { initialFocus: '#feedbackType' });
   return (
     <div
       id="feedbackModal"
@@ -72,6 +76,7 @@ export function LoadingOverlay() {
 }
 
 export function StoryContextModal() {
+  useDialogBehavior('storyContextModal', { initialFocus: '#storyContextInput' });
   return (
     <div
       id="storyContextModal"
@@ -138,11 +143,18 @@ export function StoryOverlay() {
 }
 
 export function DemoSelectorOverlay() {
+  useDialogBehavior('demoSelectorOverlay');
   return (
-    <div id="demoSelectorOverlay" className="overlay hidden">
+    <div
+      id="demoSelectorOverlay"
+      className="overlay hidden"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="demoSelectorTitle"
+    >
       <div className="overlay-content" style={{ flexDirection: 'column', maxWidth: 600, width: '90%' }}>
         <button id="demoSelectorClose" className="close-btn" aria-label="Close" style={{ alignSelf: 'flex-end' }}>&times;</button>
-        <h2 style={{ margin: 0 }}>Choose a Demo Story</h2>
+        <h2 id="demoSelectorTitle" style={{ margin: 0 }}>Choose a Demo Story</h2>
         <div id="demoStoryList" className="demo-story-list" />
       </div>
     </div>

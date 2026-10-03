@@ -1,4 +1,4 @@
-const BASE = 'https://suiterhythm.vercel.app';
+import { SITE_URL as BASE } from '../lib/site';
 
 export default function sitemap() {
   return [

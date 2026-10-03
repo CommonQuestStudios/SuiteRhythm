@@ -22,6 +22,10 @@ if (!r2ProxyOrigin && !audioCdnOrigin) {
   console.warn('[next.config] No R2_PUBLIC_URL or NEXT_PUBLIC_R2_CDN_URL set — catalog audio will not resolve.');
 }
 
+const isProduction = process.env.NODE_ENV === 'production';
+// Next dev mode needs eval for HMR and source maps; nothing in the app itself does.
+const scriptSrc = ["'self'", "'unsafe-inline'", ...(isProduction ? [] : ["'unsafe-eval'"]), 'https://plausible.io'].join(' ');
+
 const securityHeaders = [
   { key: 'X-Content-Type-Options', value: 'nosniff' },
   { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
@@ -46,7 +50,7 @@ const securityHeaders = [
     key: 'Content-Security-Policy',
     value: [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://plausible.io",
+      `script-src ${scriptSrc}`,
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' data: blob: https:",
       "media-src 'self' blob: https: data:",
@@ -130,15 +134,15 @@ const nextConfig = {
         headers: securityHeaders,
       },
       {
-        source: '/login',
-        headers: privateRouteHeaders,
-      },
-      {
         source: '/dashboard',
         headers: privateRouteHeaders,
       },
       {
         source: '/obs',
+        headers: privateRouteHeaders,
+      },
+      {
+        source: '/admin/:path*',
         headers: privateRouteHeaders,
       },
     ];

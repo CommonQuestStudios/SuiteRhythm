@@ -11,7 +11,8 @@ import crypto from 'crypto';
 import { MODE_CONTEXTS, MODE_RULES } from '../../../lib/modules/ai-director.js';
 import { requireAuth } from '../../../lib/api-auth.js';
 import { classifyLocal } from '../../../lib/modules/local-classifier.js';
-import { buildCatalogSummary, SFX_EVENT_EVIDENCE } from '../../../lib/server-catalog.js';
+import { buildCatalogCandidates, formatCatalogSummary, resolveDecisionSounds, SFX_EVENT_EVIDENCE } from '../../../lib/server-catalog.js';
+import { getCatalogFiles } from '../../../lib/catalog-source.js';
 import { addTimingHeaders, logApiMetric } from '../../../lib/server-observability.js';
 import { checkRateLimit, rateLimitHeaders } from '../../../lib/rate-limit.js';
 
@@ -22,7 +23,13 @@ const SOUND_MATCH_THRESHOLD = Number(process.env.SOUND_MATCH_THRESHOLD ?? 0.55);
 
 let _openai;
 function getOpenAI() {
-  return (_openai ??= new OpenAI({ apiKey: process.env.OPENAI_API_KEY }));
+  // A hung upstream must degrade to the local classifier quickly: the client
+  // schedules the next analysis a few seconds later anyway.
+  return (_openai ??= new OpenAI({
+    apiKey: process.env.OPENAI_API_KEY,
+    timeout: Number(process.env.OPENAI_ANALYZE_TIMEOUT_MS) || 12_000,
+    maxRetries: 1,
+  }));
 }
 
 // --- Response cache (hash-based dedup for identical transcripts) ---
@@ -30,8 +37,24 @@ const CACHE_TTL_MS = 30_000; // 30 seconds
 const MAX_CACHE_SIZE = 500;
 const responseCache = new Map(); // hash -> { data, expiresAt }
 
+// Key on the inputs that change the answer. The raw context carries per call
+// timing fields (sceneStabilityMs, activeSfx, consumedEvents) that made every
+// key unique, so the dedup cache never hit; the client already gates replays
+// of active/consumed sounds on its side.
 function getCacheKey(transcript, mode, context) {
-  const raw = JSON.stringify({ transcript: transcript.trim().toLowerCase(), mode, context });
+  const stable = context && typeof context === 'object'
+    ? {
+        sceneState: context.sceneState ?? null,
+        storyTitle: context.storyTitle ?? null,
+        sessionContext: context.sessionContext ?? null,
+        creatorMode: !!context.creatorMode,
+        singState: context.singState ?? null,
+        singGenre: context.singGenre ?? null,
+        worldState: context.worldState ?? null,
+        recentMusic: context.recentMusic ?? null,
+      }
+    : null;
+  const raw = JSON.stringify({ transcript: transcript.trim().toLowerCase(), mode, context: stable });
   return crypto.createHash('sha256').update(raw).digest('hex').slice(0, 16);
 }
 
@@ -117,8 +140,8 @@ OTHER RULES:
 - When "sceneStabilityMs" is low (< 10000), be cautious: set sfx confidence 0.5+ only if you are sure, else drop the sfx.
 - When "creatorMode" is true (live streamer context), you may be slightly more responsive with SFX, but still never duplicate active or consumed sounds.`;
 
-function buildSystemPrompt(transcript, mode, context) {
-  return SYSTEM_PROMPT + buildCatalogSummary({ transcript, mode, context });
+function buildSystemPrompt(candidates) {
+  return SYSTEM_PROMPT + formatCatalogSummary(candidates);
 }
 
 function buildUserMessage(transcript, mode, context) {
@@ -245,6 +268,9 @@ export async function POST(request) {
   }
 
   const userMessage = buildUserMessage(transcript, mode, context);
+  // Offer the model the live catalog (promoted sounds included), not just the shipped file.
+  const { files: catalogFiles, source: catalogSource } = await getCatalogFiles();
+  const candidates = buildCatalogCandidates({ transcript, mode, context, files: catalogFiles });
 
   try {
     const completion = await getOpenAI().chat.completions.create({
@@ -253,15 +279,18 @@ export async function POST(request) {
       temperature: 0.4,
       response_format: { type: 'json_object' },
       messages: [
-        { role: 'system', content: buildSystemPrompt(transcript, mode, context) },
+        { role: 'system', content: buildSystemPrompt(candidates) },
         { role: 'user', content: userMessage },
       ],
     });
 
     const raw = completion.choices[0]?.message?.content;
     if (!raw) throw new Error('Empty response from OpenAI');
-    const data = JSON.parse(raw);
+    const parsed = JSON.parse(raw);
+    // Only sounds the model was actually offered may reach the client.
+    const { decision: data, droppedSfx, snappedSfx } = resolveDecisionSounds(parsed, candidates);
     data.missingSound = sanitizeMissingSound(data.missingSound, transcript, data.confidence);
+    if (droppedSfx.length) console.warn('[/api/analyze] dropped non-candidate sfx:', droppedSfx.join(', '));
 
     // Cache the response for dedup
     setCache(cacheKey, data);
@@ -269,7 +298,17 @@ export async function POST(request) {
     const res = NextResponse.json(data);
     res.headers.set('X-RateLimit-Remaining', String(rate.remaining));
     res.headers.set('X-Cache', 'MISS');
-    logApiMetric('/api/analyze', startedAt, { status: 200, cache: 'MISS', mode, transcriptChars: transcript.length, sfxCount: data?.sfx?.length || 0 });
+    logApiMetric('/api/analyze', startedAt, {
+      status: 200,
+      cache: 'MISS',
+      mode,
+      transcriptChars: transcript.length,
+      sfxCount: data?.sfx?.length || 0,
+      sfxDropped: droppedSfx.length,
+      sfxSnapped: snappedSfx,
+      sfxCandidates: candidates.sfx.length,
+      catalogSource,
+    });
     return addTimingHeaders(res, 'analyze', startedAt);
   } catch (err) {
     console.error('[/api/analyze]', err);

@@ -3240,14 +3240,23 @@ button:focus-visible {
     }
 }
 
-/* Reduced motion support */
+/* Reduced motion support.
+   Collapse durations rather than removing animations outright so end events
+   still fire, focus rings still appear, and state driven classes still apply. */
 @media (prefers-reduced-motion: reduce) {
-    * { animation: none !important; transition: none !important; }
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
 
-.reduced-motion * {
-    animation: none !important;
-    transition: none !important;
+.reduced-motion *, .reduced-motion *::before, .reduced-motion *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
 }
 
 /* Skip link for accessibility */
@@ -4919,6 +4928,7 @@ kbd {
 /* Use dynamic viewport height so content isn't hidden behind iOS Safari's bottom bar */
 #platformShell { min-height: 100dvh; }
 #platformSidebar { height: 100dvh; }
+body, .tutorial-page, .landing, .auth-page, .not-found, #hubScreen { min-height: 100dvh; }
 
 /* Prevent horizontal overflow on the main content area */
 #platformMain {
