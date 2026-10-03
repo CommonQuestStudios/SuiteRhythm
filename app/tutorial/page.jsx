@@ -37,6 +37,7 @@ const tutorialSections = [
       'Negated or finished sounds stay quiet: there was no gunshot, the rain had stopped, no one knocked.',
       'Voice commands only run when spoken on their own in a short phrase, or after the wake phrase Suite Rhythm. Try: Suite Rhythm, stop all. Suite Rhythm, quieter music. Suite Rhythm, play thunder. Saying silence or play inside a story will not trigger anything.',
       'Mood bias affects whether the app leans calm, tense, heroic, eerie, or intense.',
+      'When a cue misfires, press Wrong in the status bar. The sound stops, that cue stays quiet for the session, and three wrong marks disable the sound until you re-enable it in Sound Library. Settings shows what is muted.',
       'If a sound is not right for your session, disable it in Sound Library so it stops being selected.',
     ],
     workflow: ['Press the listen control', 'Speak naturally', 'Let music and SFX respond', 'Use undo music if needed', 'Tune disabled sounds in the library'],

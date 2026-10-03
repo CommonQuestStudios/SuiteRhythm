@@ -2,9 +2,10 @@
  * Upload all sound files from the local "Saved sounds" folder to Cloudflare R2.
  * Files are uploaded under the "sounds/" prefix to match the Supabase `file` column.
  *
- * Usage: node scripts/upload-sounds-to-r2.js
+ * Usage: node scripts/upload-sounds-to-r2.js [--dry-run] [--dir <folder>]
  *
- * Requires .env.local to be loaded (uses dotenv).
+ * Requires .env.local to be loaded (uses dotenv). The source folder defaults to
+ * SOUNDS_SOURCE_DIR from the environment.
  */
 
 import 'dotenv/config';
@@ -12,7 +13,13 @@ import { S3Client, PutObjectCommand, HeadObjectCommand } from '@aws-sdk/client-s
 import { readdir, readFile, stat } from 'fs/promises';
 import { join, extname } from 'path';
 
-const SOUNDS_DIR = 'c:\\Users\\jenna\\Desktop\\Portfolio projects\\CueAI\\Saved sounds';
+const DRY_RUN = process.argv.includes('--dry-run');
+const dirFlag = process.argv.indexOf('--dir');
+const SOUNDS_DIR = dirFlag !== -1 ? process.argv[dirFlag + 1] : process.env.SOUNDS_SOURCE_DIR;
+if (!SOUNDS_DIR) {
+  console.error('Set SOUNDS_SOURCE_DIR in .env.local or pass --dir <folder>.');
+  process.exit(1);
+}
 const BUCKET = process.env.R2_BUCKET_NAME || 'cueai-media';
 const PREFIX = 'sounds/';
 
@@ -47,7 +54,7 @@ async function uploadAll() {
   const files = await readdir(SOUNDS_DIR);
   const audioFiles = files.filter(f => Object.keys(MIME_TYPES).includes(extname(f).toLowerCase()));
 
-  console.log(`Found ${audioFiles.length} audio files to upload to R2 bucket "${BUCKET}"`);
+  console.log(`Found ${audioFiles.length} audio files to upload to R2 bucket "${BUCKET}"${DRY_RUN ? ' (dry run, nothing will be written)' : ''}`);
 
   let uploaded = 0;
   let skipped = 0;
@@ -67,8 +74,14 @@ async function uploadAll() {
 
     try {
       const filePath = join(SOUNDS_DIR, file);
-      const body = await readFile(filePath);
       const fileStats = await stat(filePath);
+      const sizeMB = (fileStats.size / 1024 / 1024).toFixed(1);
+      if (DRY_RUN) {
+        uploaded++;
+        process.stdout.write(`  [would upload] ${key} (${sizeMB} MB)\r\n`);
+        continue;
+      }
+      const body = await readFile(filePath);
 
       await r2.send(new PutObjectCommand({
         Bucket: BUCKET,
@@ -79,7 +92,6 @@ async function uploadAll() {
       }));
 
       uploaded++;
-      const sizeMB = (fileStats.size / 1024 / 1024).toFixed(1);
       process.stdout.write(`  [${uploaded}/${audioFiles.length}] ${file} (${sizeMB} MB)\r\n`);
     } catch (err) {
       failed++;

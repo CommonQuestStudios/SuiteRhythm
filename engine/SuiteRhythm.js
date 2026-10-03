@@ -40,6 +40,7 @@ import { readStoredNumber } from '../lib/modules/stored-settings.js';
 import { nextRecognitionRestartDelay, wasHealthyRecognitionSession } from '../lib/modules/recognition-restart.js';
 import { PHRASE_TRIGGERS, matchPhraseTriggers, resolvePhraseSound } from '../lib/modules/phrase-triggers.js';
 import { normalizeSoundName } from '../lib/sound-catalog.js';
+import { normalizeSuppressions, recordWrong as recordFeedbackWrong, recordCorrect as recordFeedbackCorrect, isSuppressed as isFeedbackSuppressed, pruneSuppressions } from '../lib/modules/feedback-suppression.js';
 
 // Expose CONFIG globally for modules that read window.CONFIG (e.g., api.js debugLog)
 try { window.CONFIG = CONFIG; window.Howler = Howler; } catch (_) {}
@@ -232,6 +233,9 @@ class SuiteRhythm {
         // Sound history for playback feedback
         this.soundHistory = [];
         this.soundFeedback = [];
+        try {
+            this.soundSuppressions = pruneSuppressions(normalizeSuppressions(JSON.parse(localStorage.getItem('SuiteRhythm_sound_suppressions') || '{}')));
+        } catch { this.soundSuppressions = {}; }
     // Playback preferences
     try { this.musicEnabled = JSON.parse(localStorage.getItem('SuiteRhythm_music_enabled') ?? 'true'); } catch { this.musicEnabled = true; }
     try { this.sfxEnabled = JSON.parse(localStorage.getItem('SuiteRhythm_sfx_enabled') ?? 'true'); } catch { this.sfxEnabled = true; }
@@ -3486,17 +3490,35 @@ class SuiteRhythm {
                 const phraseInput = document.getElementById('customPhraseInput');
                 const queryInput = document.getElementById('customPhraseQuery');
                 const volumeInput = document.getElementById('customPhraseVolume');
+                const hint = document.getElementById('customPhraseHint');
                 const phrase = (phraseInput?.value || '').trim();
                 const query = (queryInput?.value || '').trim();
                 const volume = parseFloat(volumeInput?.value || '0.8');
-                if (!phrase || !query) { alert('Enter both a phrase and a sound query.'); return; }
-                this.addCustomPhrase([phrase], query, volume);
+                if (!phrase || !query) { if (hint) hint.textContent = 'Enter both a phrase and a sound name.'; return; }
+                // A phrase only ever fires if its sound resolves, so tell the user now, not never.
+                const resolved = resolvePhraseSound({ patterns: [phrase], query }, this.soundCatalog)
+                    || (() => { const m = tfidfMatch(query, 'sfx', this.savedSounds?.files || []); return m ? this.soundCatalog.find(s => s.src === m.file) : null; })();
+                if (!resolved) {
+                    if (hint) hint.textContent = `No sound in the library matches "${query}". Try a name from Sound Library.`;
+                    return;
+                }
+                this.addCustomPhrase([phrase], resolved.name || query, volume);
+                if (hint) hint.textContent = `"${phrase}" will play ${resolved.name}.`;
                 if (phraseInput) phraseInput.value = '';
                 if (queryInput) queryInput.value = '';
                 if (volumeInput) volumeInput.value = '0.8';
                 this._renderCustomPhrasesList();
             });
         }
+
+        // Feedback suppressions UI
+        this._renderFeedbackSuppressions();
+        document.getElementById('clearFeedbackSuppressionsBtn')?.addEventListener('click', () => {
+            this.soundSuppressions = {};
+            try { localStorage.removeItem('SuiteRhythm_sound_suppressions'); } catch (_) {}
+            this._renderFeedbackSuppressions();
+            this.updateStatus('Feedback mutes cleared');
+        });
         // ===== OBS WebSocket Integration =====
         this._setupObsBridge();
 
@@ -5486,6 +5508,7 @@ class SuiteRhythm {
                 // Skip keywords whose event was already consumed (e.g. the train already passed)
                 if (this._isEventConsumed(keyword)) return true;
                 if (config.file && this._isEventConsumed(config.file)) return true;
+                if (this._isSuppressedByFeedback(keyword, config.file)) return true;
                 return false;
             };
 
@@ -5536,6 +5559,7 @@ class SuiteRhythm {
                 continue;
             }
             if (this._isEventConsumed(sound.id) || this._getActiveSfxIds().includes(sound.id)) continue;
+            if (this._isSuppressedByFeedback(entry.matchedPattern || entry.query, sound.id)) continue;
             this.instantKeywordCooldowns.set(bucketKey, now);
             debugLog('Phrase trigger:', entry.patterns[0], '->', sound.name || sound.id);
             this.bumpStat('keywords');
@@ -5575,6 +5599,12 @@ class SuiteRhythm {
             const latencyStart = config._triggerStart || performance.now();
             // Track last played instant sound so 'again' can replay it
             this._lastInstantSound = { config: { ...config }, keyword, intensityMul };
+            const record = () => this._recordTriggeredSound({
+                id: config.file || config.query || keyword,
+                name: config.query || keyword,
+                keyword,
+                source: 'keyword',
+            });
             const cached = this.instantKeywordBuffers.get(keyword);
             if (cached) {
                 debugLog(`Playing instant keyword from cache: ${keyword}`);
@@ -5582,7 +5612,8 @@ class SuiteRhythm {
                 const latency = Math.round(performance.now() - latencyStart);
                 this.logActivity(`Play: ${keyword} (cached, ${latency}ms)`, 'play');
                 this._lastSoundLatency = latency;
-                this.playBufferDirect(cached.url, cached.buffer, (cached.volume || config.volume) * intensityMul);
+                this.playBufferDirect(cached.url, cached.buffer, (cached.volume || config.volume) * intensityMul, false, config.file);
+                record();
                 return;
             }
             
@@ -5592,21 +5623,24 @@ class SuiteRhythm {
                 debugLog(`Playing instant keyword from file: ${keyword} -> ${config.file}`);
                 // Try to play from activeBuffers if already decoded
                 if (this.activeBuffers?.has(url)) {
-                    this.playBufferDirect(url, this.activeBuffers.get(url), config.volume * intensityMul);
+                    this.playBufferDirect(url, this.activeBuffers.get(url), config.volume * intensityMul, false, config.file);
+                    record();
                     return;
                 }
                 // Otherwise play via Howler (still fast for local files)
                 await this.playSoundEffect({ query: config.query, priority: 10, volume: config.volume * intensityMul, directUrl: url });
+                record();
                 return;
             }
             
             // Fallback to normal search path (slower but still works)
             debugLog(`Playing instant keyword via search: ${keyword}`);
             await this.playSoundEffect({ query: config.query, priority: 10, volume: config.volume * intensityMul });
+            record();
         }
         
         // Play audio buffer directly without decoding
-        playBufferDirect(url, buffer, volume = 0.7, loop = false) {
+        playBufferDirect(url, buffer, volume = 0.7, loop = false, name = '') {
             if (!this.audioContext || !buffer) return;
 
             // Resume suspended AudioContext (mobile safety net)
@@ -5667,6 +5701,7 @@ class SuiteRhythm {
                 } catch (_) {}
                 this.activeSounds.set(id, {
                     type: 'sfx',
+                    name: name || '',
                     source,
                     gainNode,
                     budgetToken,
@@ -6501,6 +6536,10 @@ class SuiteRhythm {
         if (sfxData.id && this.disabledSounds.has(sfxData.id)) {
             return;
         }
+        if (sfxData.id && this._isSuppressedByFeedback(sfxData.trigger || (Array.isArray(sfxData.tags) && sfxData.tags[0]) || '', sfxData.id)) {
+            debugLog('Suppressed by user feedback:', sfxData.id);
+            return;
+        }
 
         // Keyword-suppress gate: a dramatic-keyword instant SFX just fired,
         // skip AI-driven SFX for a moment so they don't overlap.
@@ -6677,7 +6716,75 @@ class SuiteRhythm {
         try {
             localStorage.setItem('SuiteRhythm_sound_feedback', JSON.stringify(this.soundFeedback));
         } catch (_) {}
+
+        const pairing = { trigger: entry.keyword, soundId: entry.id };
+        if (normalizedRating === 'wrong') {
+            this._stopSoundByName(entry.id, 250);
+            const result = recordFeedbackWrong(this.soundSuppressions, pairing);
+            this.soundSuppressions = result.store;
+            if (result.disableSound && !this.disabledSounds.has(entry.id)) {
+                this.disabledSounds.add(entry.id);
+                try { localStorage.setItem('SuiteRhythm_disabled_sounds', JSON.stringify([...this.disabledSounds])); } catch (_) {}
+                this.showToast(`"${entry.name}" disabled after repeated wrong marks. Re-enable it in Sound Library.`, 'info', 6000);
+                this.logActivity(`Disabled by feedback: ${entry.name}`, 'info');
+            } else {
+                this.updateStatus(`Won't play "${entry.name}" for "${entry.keyword || 'that cue'}" this session`);
+            }
+        } else {
+            this.soundSuppressions = recordFeedbackCorrect(this.soundSuppressions, pairing);
+        }
+        try {
+            localStorage.setItem('SuiteRhythm_sound_suppressions', JSON.stringify(this.soundSuppressions));
+        } catch (_) {}
+        this._renderFeedbackSuppressions();
         this.logActivity(`Feedback: ${normalizedRating} — ${entry.name}`, 'info');
+    }
+
+    // Suppression lookup shared by the keyword, phrase and AI paths.
+    _isSuppressedByFeedback(trigger, soundId) {
+        return isFeedbackSuppressed(this.soundSuppressions, { trigger, soundId });
+    }
+
+    _renderFeedbackSuppressions() {
+        const list = document.getElementById('feedbackSuppressionsList');
+        if (!list) return;
+        const now = Date.now();
+        const active = Object.entries(this.soundSuppressions || {}).filter(([, v]) => v.until > now);
+        const pairedSounds = new Set(active.filter(([k]) => !k.startsWith('|')).map(([k]) => k.split('|')[1]));
+        const rows = active
+            // The sound only entry mirrors a pairing; show it alone only when no pairing exists.
+            .filter(([key]) => !key.startsWith('|') || !pairedSounds.has(key.slice(1)))
+            .map(([key, v]) => {
+                const [trigger, soundId] = key.split('|');
+                const sound = this.soundCatalog.find(s => String(s.id).toLowerCase() === soundId);
+                const label = sound?.name || soundId.split('/').pop();
+                return `<div class="info-text" style="display:flex;justify-content:space-between;gap:8px;font-size:0.8rem"><span>${escapeHtml(trigger ? `"${trigger}" → ${label}` : label)}</span><span>${v.strikes} wrong</span></div>`;
+            });
+        list.innerHTML = rows.length ? rows.join('') : '<div class="info-text" style="font-size:0.8rem">Nothing muted. Use the thumbs down in the status bar when a cue misfires.</div>';
+    }
+
+    // Fade out every active cue whose tracked name matches (ids are catalog src paths).
+    _stopSoundByName(name, fadeMs = 250) {
+        if (!name) return;
+        const wanted = String(name).toLowerCase();
+        for (const [id, snd] of this.activeSounds) {
+            if (!snd || String(snd.name || '').toLowerCase() !== wanted) continue;
+            try {
+                if (snd._howl) {
+                    snd._howl.fade(snd._howl.volume(), 0, fadeMs);
+                    setTimeout(() => { try { snd._howl.stop(); snd._howl.unload(); } catch (_) {} this._releaseSoundSlot(id); }, fadeMs + 50);
+                } else if (snd.gainNode && this.audioContext) {
+                    const t = this.audioContext.currentTime;
+                    snd.gainNode.gain.setValueAtTime(snd.gainNode.gain.value, t);
+                    snd.gainNode.gain.linearRampToValueAtTime(0, t + fadeMs / 1000);
+                    setTimeout(() => { try { snd.source?.stop(); } catch (_) {} this._releaseSoundSlot(id); }, fadeMs + 50);
+                } else {
+                    this._releaseSoundSlot(id);
+                }
+            } catch (_) {
+                this._releaseSoundSlot(id);
+            }
+        }
     }
 
     // Normalize and bucket SFX queries so variants like "door creak" and "door slam" share cooldown
@@ -7055,7 +7162,7 @@ class SuiteRhythm {
         const cachedBuffer = this.getFromBufferCache(url);
         if (cachedBuffer && options.type === 'sfx') {
             debugLog(`⚡ Playing from buffer cache: ${options.name || url}`);
-            this.playBufferDirect(url, cachedBuffer, options.volume, !!options.loop);
+            this.playBufferDirect(url, cachedBuffer, options.volume, !!options.loop, options.name || options.id || '');
             return { cached: true }; // Signal success
         }
         

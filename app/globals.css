@@ -6040,6 +6040,16 @@ textarea:focus-visible,
     cursor: pointer;
 }
 
+/* Keep the strip compact on desktop but give fingers a real target on touch screens. */
+@media (pointer: coarse) {
+    .np-feedback-btn {
+        min-height: 36px;
+        min-width: 44px;
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+}
+
 .np-feedback-btn:hover,
 .np-feedback-btn.active {
     border-color: rgba(3, 218, 198, 0.7);
@@ -7208,4 +7218,24 @@ button:disabled { opacity: 0.55; cursor: not-allowed; }
 @media (max-width: 760px) {
     .look-card { grid-template-columns: 64px 1fr; }
     .look-preview { width: 64px; }
+}
+
+/* ===== TOUCH TARGETS =====
+   Dense desktop controls stay compact with a mouse; on touch screens every
+   tappable control gets at least a 40px hit area (measured at 375px: scene
+   presets 30px, review and preview buttons 28px, board toolbar 25px). */
+@media (pointer: coarse) {
+    .scene-preset-btn,
+    .cb-tab,
+    .cb-btn-sm,
+    .sound-chip-preview,
+    .sound-review-queue,
+    .sound-lib-preview,
+    .sound-lib-toggle,
+    .sound-review-btn {
+        min-height: 40px;
+        min-width: 40px;
+    }
+    .sound-review-btn { padding: 0 12px; }
+    .sound-chip-preview { padding: 8px 14px; }
 }

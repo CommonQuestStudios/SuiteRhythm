@@ -2,7 +2,8 @@
  * scripts/seed.js
  * Seeds the Supabase database with sounds and stories from the original JSON files.
  *
- * Run with:  node scripts/seed.js
+ * Run with:  node scripts/seed.js            (writes to Supabase)
+ *            node scripts/seed.js --dry-run  (prints what would be written)
  *
  * Requires SUPABASE_SERVICE_ROLE_KEY in .env.local — the anon key cannot insert data.
  */
@@ -12,6 +13,8 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { createClient } from '@supabase/supabase-js';
 import dotenv from 'dotenv';
+
+const DRY_RUN = process.argv.includes('--dry-run');
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
@@ -51,7 +54,13 @@ async function seedSounds() {
     loop: s.loop ?? false,
   }));
 
-  console.log(`Seeding ${rows.length} sounds...`);
+  console.log(`${DRY_RUN ? '[dry run] Would seed' : 'Seeding'} ${rows.length} sounds...`);
+  if (DRY_RUN) {
+    const byType = rows.reduce((acc, r) => { acc[r.type] = (acc[r.type] || 0) + 1; return acc; }, {});
+    console.log('  By type:', byType);
+    console.log('  Sample:', rows.slice(0, 3));
+    return;
+  }
 
   // Upsert in batches of 100
   for (let i = 0; i < rows.length; i += 100) {
@@ -82,7 +91,11 @@ async function seedStories() {
     demo: s.demo ?? false,
   }));
 
-  console.log(`Seeding ${rows.length} stories...`);
+  console.log(`${DRY_RUN ? '[dry run] Would seed' : 'Seeding'} ${rows.length} stories...`);
+  if (DRY_RUN) {
+    console.log('  Titles:', rows.map((r) => r.title));
+    return;
+  }
 
   const { error } = await supabase.from('stories').upsert(rows, { onConflict: 'id' });
   if (error) {

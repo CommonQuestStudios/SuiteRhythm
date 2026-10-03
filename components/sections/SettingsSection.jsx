@@ -411,6 +411,25 @@ export default function SettingsSection() {
                 Add
               </button>
             </div>
+            <p id="customPhraseHint" className="info-text" aria-live="polite" style={{ marginTop: 8 }} />
+          </div>
+        </section>
+
+        {/* Feedback suppressions */}
+        <section className="menu-section">
+          <button className="menu-toggle" id="feedbackSuppressionsToggle">
+            Muted by Feedback
+            <span className="toggle-indicator">&#9660;</span>
+          </button>
+          <div className="menu-content hidden" id="feedbackSuppressionsContent">
+            <p className="info-text">
+              Marking a cue wrong in the status bar stops that sound for the cue that fired it. Three
+              wrong marks disable the sound until you re-enable it in Sound Library.
+            </p>
+            <div id="feedbackSuppressionsList" />
+            <button id="clearFeedbackSuppressionsBtn" className="btn-secondary" style={{ marginTop: 12, width: '100%', fontSize: '0.85rem' }}>
+              Clear Feedback Mutes
+            </button>
           </div>
         </section>
 

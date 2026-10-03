@@ -237,6 +237,8 @@ window.postMessage({ suiterhythm: 'trigger', query: 'thunder' }, '*');
 | `npm run sounds:migrate-prefix` | Run the R2 and catalog prefix migration |
 | `node scripts/eval-narration.mjs "line"` | Show which instant keywords and phrase triggers a narration line fires |
 | `node scripts/eval-search.mjs "query" [type]` | Show which catalog sound a search query resolves to |
+| `node scripts/seed.js --dry-run` | Preview the Supabase seed without writing |
+| `node scripts/upload-sounds-to-r2.js --dry-run --dir <folder>` | Preview an R2 upload without writing |
 
 ## Deployment
 
