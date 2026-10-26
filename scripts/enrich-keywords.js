@@ -38,6 +38,9 @@ const STOPWORDS = new Set([
     'a', 'an', 'the', 'and', 'or', 'of', 'to', 'in', 'on', 'at', 'by',
     'for', 'with', 'from', 'into', 'onto', 'up', 'down',
     'is', 'it', 'its', 'be', 'as', 'so',
+    // Pronouns and auxiliaries from track titles ("you are near", "we are the visitors").
+    'i', 'me', 'my', 'you', 'your', 'we', 'us', 'our', 'they', 'them', 'their',
+    'he', 'she', 'his', 'her', 'am', 'are', 'was', 'were', 'this', 'that',
     'music', 'sfx', 'sound', 'effect', 'ambience', 'ambient',
     'loop', 'looping',
 ]);

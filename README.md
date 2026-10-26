@@ -52,9 +52,9 @@ The catalog currently contains:
 
 | Type | Count |
 | --- | ---: |
-| Music | 271 |
-| SFX | 1,047 |
-| Ambience | 200 |
+| Music | 283 |
+| SFX | 1,029 |
+| Ambience | 206 |
 | Total | 1,518 |
 
 Audio metadata lives in Supabase and the static fallback catalog at [public/saved-sounds.json](public/saved-sounds.json). Audio files live in Cloudflare R2 under the `sounds/` prefix. Legacy `Saved sounds/` routes still resolve as a compatibility bridge, but new catalog entries and scripts use `sounds/`.

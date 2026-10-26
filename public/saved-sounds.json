@@ -838,7 +838,6 @@
         "coco",
         "grand",
         "heroic",
-        "his",
         "brave",
         "majestic",
         "regal"
@@ -2187,7 +2186,6 @@
         "creepy",
         "evil",
         "fear",
-        "he",
         "ominous",
         "said",
         "sinister",
@@ -2357,8 +2355,6 @@
         "see",
         "sneak",
         "tense",
-        "they",
-        "us",
         "eerie",
         "thief",
         "unsettling"
@@ -3230,8 +3226,7 @@
         "warning",
         "now",
         "suspense",
-        "tension",
-        "that"
+        "tension"
       ]
     },
     {
@@ -3547,7 +3542,6 @@
       "file": "sounds/ES_Quiet My Soul-music - JOYSPRING.mp3",
       "keywords": [
         "quiet",
-        "my",
         "soul",
         "calm",
         "gentle",
@@ -3832,7 +3826,6 @@
         "back",
         "bring",
         "celebration",
-        "my",
         "winter"
       ]
     },
@@ -3975,7 +3968,7 @@
       ]
     },
     {
-      "type": "sfx",
+      "type": "ambience",
       "name": "something in the basement",
       "file": "sounds/ES_Something in the Basement - Lennon Hutton.mp3",
       "keywords": [
@@ -3999,7 +3992,8 @@
         "tense",
         "tension",
         "undead"
-      ]
+      ],
+      "loop": true
     },
     {
       "type": "sfx",
@@ -4047,17 +4041,21 @@
       ]
     },
     {
-      "type": "sfx",
+      "type": "ambience",
       "name": "static breath",
       "file": "sounds/ES_Static Breath - Lennon Hutton.mp3",
       "keywords": [
         "eerie",
-        "horror",
-        "breathing",
+        "breath",
         "whisper",
+        "drone",
+        "horror",
+        "dark",
+        "tension",
+        "presence",
+        "breathing",
         "ghost",
         "haunting",
-        "breath",
         "creepy",
         "fear",
         "scary",
@@ -4066,11 +4064,9 @@
         "static",
         "undead",
         "unsettling",
-        "death",
-        "monster",
-        "beast",
-        "creature"
-      ]
+        "death"
+      ],
+      "loop": true
     },
     {
       "type": "sfx",
@@ -4096,22 +4092,25 @@
       ]
     },
     {
-      "type": "sfx",
+      "type": "ambience",
       "name": "suburban kids",
       "file": "sounds/ES_Suburban Kids - Marc Torch.mp3",
       "keywords": [
+        "suburban",
+        "kids",
         "children",
         "playing",
-        "outdoor",
         "neighborhood",
+        "outdoor",
+        "laughter",
+        "afternoon",
         "casual",
-        "kids",
-        "daytime",
-        "suburban"
-      ]
+        "daytime"
+      ],
+      "loop": true
     },
     {
-      "type": "sfx",
+      "type": "music",
       "name": "sunflower dance",
       "file": "sounds/ES_Sunflower Dance - Helmut Schenker.mp3",
       "keywords": [
@@ -4133,7 +4132,7 @@
       ]
     },
     {
-      "type": "sfx",
+      "type": "music",
       "name": "superhero story 1",
       "file": "sounds/ES_Superhero Story 1 - Fredrik Ekstrom.mp3",
       "keywords": [
@@ -4467,7 +4466,7 @@
       ]
     },
     {
-      "type": "sfx",
+      "type": "music",
       "name": "the battle with torches",
       "file": "sounds/ES_The Battle With Torches - Bonnie Grace.mp3",
       "keywords": [
@@ -4493,7 +4492,7 @@
       ]
     },
     {
-      "type": "sfx",
+      "type": "music",
       "name": "the dark wizard",
       "file": "sounds/ES_The Dark Wizard - Christoffer Moe Ditlevsen.mp3",
       "keywords": [
@@ -4520,7 +4519,7 @@
       ]
     },
     {
-      "type": "sfx",
+      "type": "music",
       "name": "the fairy dance",
       "file": "sounds/ES_The Fairy Dance - Bonnie Grace.mp3",
       "keywords": [
@@ -4541,7 +4540,7 @@
       ]
     },
     {
-      "type": "sfx",
+      "type": "music",
       "name": "the ghost pirate ship",
       "file": "sounds/ES_The Ghost Pirate Ship - Luella Gren.mp3",
       "keywords": [
@@ -4568,7 +4567,7 @@
       ]
     },
     {
-      "type": "sfx",
+      "type": "music",
       "name": "the great war",
       "file": "sounds/ES_The Great War - Jon Bjork.mp3",
       "keywords": [
@@ -4618,7 +4617,7 @@
       ]
     },
     {
-      "type": "sfx",
+      "type": "ambience",
       "name": "the old house",
       "file": "sounds/ES_The Old House - Rikard From.mp3",
       "keywords": [
@@ -4633,10 +4632,11 @@
         "fear",
         "scary",
         "unsettling"
-      ]
+      ],
+      "loop": true
     },
     {
-      "type": "sfx",
+      "type": "ambience",
       "name": "they walk among us",
       "file": "sounds/ES_They Walk among Us - Lennon Hutton.mp3",
       "keywords": [
@@ -4655,12 +4655,11 @@
         "monster",
         "movement",
         "scary",
-        "they",
         "beast",
         "creature",
-        "us",
         "walk"
-      ]
+      ],
+      "loop": true
     },
     {
       "type": "sfx",
@@ -4680,7 +4679,7 @@
       ]
     },
     {
-      "type": "sfx",
+      "type": "music",
       "name": "thrill of the chase",
       "file": "sounds/ES_Thrill of the Chase - Dream Cave.mp3",
       "keywords": [
@@ -4838,7 +4837,7 @@
       ]
     },
     {
-      "type": "sfx",
+      "type": "music",
       "name": "till osterland vill jag fara",
       "file": "sounds/ES_Till Osterland Vill Jag Fara - Traditional.mp3",
       "keywords": [
@@ -4947,7 +4946,7 @@
       ]
     },
     {
-      "type": "sfx",
+      "type": "ambience",
       "name": "trapped in the sewers",
       "file": "sounds/ES_Trapped in the Sewers - Experia.mp3",
       "keywords": [
@@ -4971,7 +4970,8 @@
         "cavern",
         "dnd",
         "foreboding"
-      ]
+      ],
+      "loop": true
     },
     {
       "type": "sfx",
@@ -5108,7 +5108,7 @@
       ]
     },
     {
-      "type": "sfx",
+      "type": "music",
       "name": "waiting for you",
       "file": "sounds/ES_Waiting for You - Daniel Fridell.mp3",
       "keywords": [
@@ -5122,7 +5122,6 @@
         "romantic",
         "sorrow",
         "waiting",
-        "you",
         "calm",
         "love",
         "reflective",
@@ -5214,7 +5213,7 @@
       ]
     },
     {
-      "type": "sfx",
+      "type": "music",
       "name": "we are the visitors",
       "file": "sounds/ES_We Are the Visitors - Curved Mirror.mp3",
       "keywords": [
@@ -5224,7 +5223,6 @@
         "sci-fi",
         "approaching",
         "scifi",
-        "are",
         "creepy",
         "futuristic",
         "horror",
@@ -5236,8 +5234,7 @@
         "visitors",
         "cosmic",
         "fear",
-        "scary",
-        "we"
+        "scary"
       ]
     },
     {
@@ -5525,25 +5522,27 @@
       ]
     },
     {
-      "type": "sfx",
+      "type": "music",
       "name": "you are near",
       "file": "sounds/ES_You Are Near - Bonn Fields.mp3",
       "keywords": [
-        "horror",
-        "threat",
-        "eerie",
-        "suspense",
-        "close",
-        "presence",
-        "are",
-        "creepy",
-        "fear",
-        "near",
-        "scary",
-        "tense",
-        "tension",
-        "unsettling",
-        "you"
+        "happy",
+        "adventure",
+        "fantasy",
+        "castle",
+        "journey",
+        "exploration",
+        "uplifting",
+        "bright",
+        "medieval",
+        "orchestral",
+        "hopeful",
+        "wonder",
+        "discovery",
+        "magical",
+        "quest",
+        "cheerful",
+        "near"
       ]
     },
     {
@@ -23682,8 +23681,7 @@
         "whisper",
         "body",
         "breath",
-        "human",
-        "you"
+        "human"
       ]
     },
     {
