@@ -40,7 +40,7 @@ Example moments:
 | Story Teller | Narrative playback support with reactive story cues |
 | Creator Studio | Live mode, studio media tools, transcript support, cue map preview, and render export |
 | Sing Backing | Vocal energy and tempo aware accompaniment tools |
-| Sound Library | 1,506 catalog entries with search, type filters, tag filters, discovery lanes, and review state |
+| Sound Library | 1,518 catalog entries with search, type filters, tag filters, discovery lanes, and review state |
 | Control Board | Manual sound board buttons for music, ambience, SFX, and custom recordings |
 | Voice Recorder | Local custom audio recording with gain, gate, monitor mode, and voice effects |
 | Sound Audit | `/admin/sounds` catalog audit page plus in app audit metrics |
@@ -53,9 +53,9 @@ The catalog currently contains:
 | Type | Count |
 | --- | ---: |
 | Music | 278 |
-| SFX | 1,038 |
-| Ambience | 190 |
-| Total | 1,506 |
+| SFX | 1,047 |
+| Ambience | 193 |
+| Total | 1,518 |
 
 Audio metadata lives in Supabase and the static fallback catalog at [public/saved-sounds.json](public/saved-sounds.json). Audio files live in Cloudflare R2 under the `sounds/` prefix. Legacy `Saved sounds/` routes still resolve as a compatibility bridge, but new catalog entries and scripts use `sounds/`.
 
