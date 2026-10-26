@@ -1,5 +1,5 @@
 /**
- * Update Supabase keywords for the 12 new emergency-vehicle sounds.
+ * Update Supabase keywords for emergency sounds and the relabeled shop alarm.
  * One-off maintenance script — safe to re-run.
  *
  * Usage: node scripts/update-emergency-keywords.js
@@ -38,16 +38,12 @@ const UPDATES = [
     keywords: ['distant', 'siren', 'sirens', 'city', 'urban', 'downtown', 'background', 'ambience', 'night', 'nighttime', 'traffic', 'cityscape', 'metropolis'],
   },
   {
-    name: 'air raid siren warning',
-    keywords: ['raid', 'siren', 'sirens', 'warning', 'alarm', 'alert', 'war', 'wartime', 'wwii', 'evacuation', 'bombing', 'blitz', 'danger', 'wail', 'klaxon'],
+    name: 'shop security alarm',
+    keywords: ['shop', 'store', 'alarm', 'security', 'burglar', 'theft', 'intrusion', 'warning', 'alert', 'retail', 'business'],
   },
   {
-    name: 'air raid siren single wail',
-    keywords: ['raid', 'siren', 'wail', 'wailing', 'wailed', 'warning', 'alarm', 'alert', 'single', 'lone', 'distant'],
-  },
-  {
-    name: 'tornado civil defense siren',
-    keywords: ['tornado', 'twister', 'cyclone', 'siren', 'sirens', 'storm', 'warning', 'alarm', 'weather', 'shelter', 'emergency', 'warbling', 'midwest'],
+    name: 'tornado siren warning',
+    keywords: ['tornado', 'siren', 'sirens', 'warning', 'alert', 'alarm', 'weather', 'shelter', 'emergency', 'civil', 'defense', 'twister', 'cyclone'],
   },
   {
     name: 'police radio dispatch chatter',

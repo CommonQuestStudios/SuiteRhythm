@@ -2053,7 +2053,7 @@ class SuiteRhythm {
     // =====================================================================
     _sceneBedQueries = {
         weather:     ['wind howling', 'rain ambient', 'thunder distant rumble', 'blizzard howling'],
-        fire:        ['fire crackling professional', 'torch crackle', 'campfire ambient gentle'],
+        fire:        ['fire crackling professional', 'campfire ambient gentle'],
         water:       ['stream water trickle gentle', 'ocean waves', 'underground cave river'],
         atmosphere:  ['eerie dark ambience', 'cave dripping echo', 'castle courtyard ambience'],
         forest:      ['forest birds ambient', 'wind through trees', 'forest ambience daytime', 'rainy forest ambience'],
@@ -2328,7 +2328,7 @@ class SuiteRhythm {
     static _scenePreloadBundles = {
         combat:      ['sword clash metal', 'shield block', 'arrow whoosh', 'battle cry', 'armor clank', 'sword draw'],
         weather:     ['wind howling', 'thunder rumble', 'rain ambient', 'lightning strike'],
-        fire:        ['fire crackling professional', 'torch crackle', 'match strike ignite'],
+        fire:        ['fire crackling professional', 'torch whoosh', 'match strike ignite'],
         creature:    ['dragon growl', 'wolf howl', 'creature screech', 'owl hoot'],
         water:       ['ocean waves', 'stream water trickle gentle', 'water drip', 'splash'],
         magic:       ['magic spell cast', 'magic shimmer sparkle', 'dark magic', 'healing magic'],
@@ -8647,7 +8647,7 @@ class SuiteRhythm {
             contextPredictions.push('rain', 'thunder', 'wind');
         }
         if (/fire|flame|torch/.test(t)) {
-            contextPredictions.push('fire crackling', 'torch crackle');
+            contextPredictions.push('fire crackling', 'torch whoosh');
         }
         
         // Mode-specific predictions

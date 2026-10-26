@@ -6298,29 +6298,17 @@
     },
     {
       "type": "sfx",
-      "name": "torch crackle",
+      "name": "torch whoosh",
       "file": "sounds/torch-crackle.mp3",
       "keywords": [
         "torch",
-        "crackle",
+        "whoosh",
+        "woosh",
+        "swoosh",
         "flame",
         "fire",
-        "dungeon",
-        "burning",
-        "flickering",
-        "wall",
-        "light",
-        "cave",
-        "fantasy",
-        "cavern",
-        "dnd",
         "heat",
-        "magical",
-        "medieval",
-        "arcane",
-        "historic",
-        "magic",
-        "underground"
+        "foley"
       ]
     },
     {
@@ -24832,17 +24820,19 @@
     },
     {
       "type": "sfx",
-      "name": "watering can pour",
+      "name": "foliage rustling",
       "file": "sounds/watering-can-pour.mp3",
       "keywords": [
-        "watering",
-        "can",
-        "pour",
-        "garden",
+        "foliage",
+        "rustling",
+        "rustle",
+        "leaves",
+        "weeds",
+        "grass",
         "plants",
-        "water",
-        "sprinkle",
-        "outdoor"
+        "outdoor",
+        "foley",
+        "nature"
       ]
     },
     {
@@ -25198,21 +25188,6 @@
         "plane",
         "ding",
         "travel"
-      ]
-    },
-    {
-      "type": "sfx",
-      "name": "tornado roar",
-      "file": "sounds/tornado-roar.mp3",
-      "keywords": [
-        "tornado",
-        "roar",
-        "storm",
-        "wind",
-        "twister",
-        "disaster",
-        "debris",
-        "weather"
       ]
     },
     {
@@ -25952,24 +25927,6 @@
         "guard",
         "weapon",
         "dnd"
-      ]
-    },
-    {
-      "type": "sfx",
-      "name": "bow draw release",
-      "file": "sounds/bow-draw-release.mp3",
-      "keywords": [
-        "bow",
-        "draw",
-        "release",
-        "arrow",
-        "string",
-        "creak",
-        "archer",
-        "dnd",
-        "combat",
-        "ranged",
-        "weapon"
       ]
     },
     {
@@ -27635,29 +27592,6 @@
     },
     {
       "type": "ambience",
-      "name": "wasteland wind ruins ambience",
-      "file": "sounds/wasteland-wind-ruins-ambience.mp3",
-      "keywords": [
-        "wasteland",
-        "wind",
-        "ruins",
-        "post",
-        "apocalyptic",
-        "desolate",
-        "metal",
-        "creak",
-        "ambience",
-        "ambient",
-        "background",
-        "ancient",
-        "breeze",
-        "ruined",
-        "weather"
-      ],
-      "loop": true
-    },
-    {
-      "type": "ambience",
       "name": "zombie horde distant ambience",
       "file": "sounds/zombie-horde-distant-ambience.mp3",
       "keywords": [
@@ -28442,19 +28376,18 @@
     },
     {
       "type": "sfx",
-      "name": "wolf attack snarl bite",
+      "name": "human taking a bite",
       "file": "sounds/wolf-attack-snarl-bite.mp3",
       "keywords": [
-        "wolf",
-        "attack",
-        "snarl",
+        "human",
         "bite",
-        "lunge",
-        "beast",
-        "teeth",
-        "danger",
-        "canine",
-        "combat"
+        "eating",
+        "food",
+        "mouth",
+        "foley",
+        "person",
+        "chomp",
+        "taking"
       ]
     },
     {
@@ -28699,69 +28632,43 @@
     },
     {
       "type": "sfx",
-      "name": "air raid siren warning",
-      "file": "sounds/air-raid-siren-warning.mp3",
+      "name": "shop security alarm",
+      "file": "sounds/tornado-civil-defense-siren.mp3",
       "keywords": [
-        "raid",
-        "siren",
-        "sirens",
-        "warning",
+        "shop",
+        "store",
         "alarm",
+        "security",
+        "burglar",
+        "theft",
+        "intrusion",
+        "warning",
         "alert",
-        "war",
-        "wartime",
-        "wwii",
-        "evacuation",
-        "bombing",
-        "blitz",
-        "danger",
-        "wail",
-        "klaxon",
-        "air"
+        "retail",
+        "business"
       ],
       "loop": true
     },
     {
       "type": "sfx",
-      "name": "air raid siren single wail",
-      "file": "sounds/air-raid-siren-single-wail.mp3",
-      "keywords": [
-        "raid",
-        "siren",
-        "wail",
-        "wailing",
-        "wailed",
-        "warning",
-        "alarm",
-        "alert",
-        "single",
-        "lone",
-        "distant",
-        "air"
-      ]
-    },
-    {
-      "type": "sfx",
-      "name": "tornado civil defense siren",
-      "file": "sounds/tornado-civil-defense-siren.mp3",
+      "name": "tornado siren warning",
+      "file": "sounds/tornado-sirens.mp3",
       "keywords": [
         "tornado",
-        "twister",
-        "cyclone",
         "siren",
         "sirens",
-        "storm",
         "warning",
+        "alert",
         "alarm",
         "weather",
         "shelter",
         "emergency",
-        "warbling",
-        "midwest",
         "civil",
-        "defense"
+        "defense",
+        "twister",
+        "cyclone"
       ],
-      "loop": true
+      "loop": false
     },
     {
       "type": "sfx",

@@ -225,7 +225,6 @@ const SOUNDS = [
     ambience('ghost ship deck ambience', 'topup', ['ghost', 'ship', 'deck', 'haunted', 'creak', 'fog', 'whispers', 'sea'], 'Haunted ghost ship: slow hull creaks, tattered sails flapping, dead calm water and faint spectral whispers.'),
     ambience('steampunk workshop ambience', 'topup', ['steampunk', 'workshop', 'gears', 'steam', 'tinker', 'clock', 'brass', 'inventor'], 'Steampunk inventor workshop: ticking clockwork, periodic steam puffs, tinkering tools and whirring gears.'),
     ambience('spaceport hangar ambience', 'topup', ['spaceport', 'hangar', 'scifi', 'ships', 'engines', 'crew', 'loading', 'echo'], 'Busy spaceport hangar: distant ship engines idling, loading machinery, PA tones and echoing crew activity, no clear words.'),
-    ambience('wasteland wind ruins ambience', 'topup', ['wasteland', 'wind', 'ruins', 'post', 'apocalyptic', 'desolate', 'metal', 'creak'], 'Post-apocalyptic wasteland: dry wind through ruined structures, creaking metal signs and distant rumbles.'),
     ambience('zombie horde distant ambience', 'topup', ['zombie', 'horde', 'distant', 'moans', 'horror', 'undead', 'apocalypse', 'shuffle'], 'Distant zombie horde: mass of shuffling feet and overlapping undead moans approaching slowly, no words.'),
     ambience('harvest festival ambience', 'topup', ['harvest', 'festival', 'autumn', 'village', 'fiddle', 'crowd', 'medieval', 'celebration'], 'Village harvest festival: cheerful crowd, distant fiddle, laughter, clinking mugs and crackling bonfire.'),
     ambience('snowy village night ambience', 'topup', ['snowy', 'village', 'night', 'winter', 'quiet', 'wind', 'fire', 'medieval'], 'Snowy medieval village at night: soft wind, snow crunch footsteps passing, a distant dog and crackling hearths behind shutters.'),
@@ -399,7 +398,11 @@ const SOUNDS = [
     sfx('coffee machine brewing', 6, 'foley', ['coffee', 'machine', 'brewing', 'kitchen', 'morning', 'drip', 'gurgle', 'appliance'], 'Coffee machine brewing, gurgling, dripping and a final steam hiss, no music'),
     sfx('ice cubes in glass', 3, 'foley', ['ice', 'cubes', 'glass', 'drink', 'clink', 'bar', 'whiskey', 'pour'], 'Ice cubes dropped into a glass and swirled with clinking, no music'),
     sfx('shovel digging dirt', 5, 'foley', ['shovel', 'digging', 'dirt', 'dig', 'grave', 'garden', 'soil', 'scoop'], 'Shovel digging into dirt, several scoops with soil tossed aside, outdoor Foley, no music'),
-    sfx('watering can pour', 4, 'foley', ['watering', 'can', 'pour', 'garden', 'plants', 'water', 'sprinkle', 'outdoor'], 'Watering can pouring onto garden soil and leaves, soft sprinkling stream, no music'),
+    {
+        ...sfx('foliage rustling', 4, 'foley', ['foliage', 'rustling', 'rustle', 'leaves', 'weeds', 'grass', 'plants', 'outdoor', 'foley', 'nature'], 'Foliage rustling as leaves and tall weeds are brushed aside, no water pouring, no voices, no music'),
+        // Preserve the existing audio key after the listener-corrected label.
+        filename: 'watering-can-pour.mp3',
+    },
     sfx('sewing machine', 5, 'foley', ['sewing', 'machine', 'stitch', 'fabric', 'tailor', 'needle', 'craft', 'motor'], 'Sewing machine running in short bursts, rapid needle stitching and motor hum, no music'),
     sfx('scissors cutting paper', 3, 'foley', ['scissors', 'cutting', 'paper', 'snip', 'craft', 'office', 'cut', 'school'], 'Scissors snipping through a sheet of paper, several crisp cuts, no music'),
     sfx('car keys drop', 1, 'foley', ['car', 'keys', 'drop', 'jingle', 'floor', 'table', 'metal', 'fall'], 'Set of keys dropped onto a hard table with a metallic jingle, no music'),
@@ -427,7 +430,6 @@ const SOUNDS = [
     sfx('airplane cabin chime', 2, 'vehicles', ['airplane', 'cabin', 'chime', 'seatbelt', 'flight', 'plane', 'ding', 'travel'], 'Airplane cabin seatbelt chime, soft two-tone ding with cabin hum underneath, no voices'),
 
     // ── SFX: nature one-shots ──
-    sfx('tornado roar', 8, 'nature', ['tornado', 'roar', 'storm', 'wind', 'twister', 'disaster', 'debris', 'weather'], 'Tornado approaching, massive roaring wind like a freight train with debris and whipping gusts, no music'),
     sfx('rain first drops starting', 6, 'nature', ['rain', 'first', 'drops', 'starting', 'weather', 'storm', 'begin', 'patter'], 'Rain beginning, a few scattered first drops on leaves and pavement building into a light shower, no music'),
     sfx('geyser erupting', 6, 'nature', ['geyser', 'erupting', 'steam', 'water', 'hot', 'spring', 'burst', 'volcanic'], 'Geyser erupting, rumbling buildup then a towering blast of water and steam, no music'),
     sfx('lake ice crack', 3, 'nature', ['lake', 'ice', 'crack', 'frozen', 'winter', 'danger', 'thin', 'echo'], 'Frozen lake ice cracking with a sharp echoing boom and a laser-like ping resonance, no music'),
@@ -480,7 +482,6 @@ const SOUNDS = [
     sfx('axe throw spin impact', 3, 'combat', ['axe', 'throw', 'spin', 'impact', 'thrown', 'wood', 'weapon', 'dnd'], 'Throwing axe spinning through the air and burying itself in wood with a heavy thunk, no music'),
     sfx('spear thrust whoosh', 2, 'combat', ['spear', 'thrust', 'whoosh', 'polearm', 'jab', 'weapon', 'dnd', 'attack'], 'Spear thrust forward with a quick sharp whoosh and shaft creak, no impact, no music'),
     sfx('halberd swing', 2, 'combat', ['halberd', 'swing', 'polearm', 'heavy', 'whoosh', 'guard', 'weapon', 'dnd'], 'Halberd swung in a wide heavy arc, long weapon whoosh with a slight metal ring, no music'),
-    sfx('bow draw release', 3, 'combat', ['bow', 'draw', 'release', 'arrow', 'string', 'creak', 'archer', 'dnd'], 'Longbow drawn back with creaking wood and string tension then released with a twang and arrow whoosh, no music'),
     sfx('armor hit sword glance', 2, 'combat', ['armor', 'hit', 'sword', 'glance', 'plate', 'deflect', 'metal', 'dnd'], 'Sword glancing off plate armor, sharp metallic scrape and clang, no music'),
     sfx('knife throw hit wood', 2, 'combat', ['knife', 'throw', 'hit', 'wood', 'thrown', 'dagger', 'thunk', 'target'], 'Throwing knife whistling briefly and sticking into a wooden board with a sharp thunk, no music'),
     sfx('club wooden smash', 2, 'combat', ['club', 'wooden', 'smash', 'bludgeon', 'hit', 'ogre', 'weapon', 'dnd'], 'Heavy wooden club smashing down with a cracking impact, no music'),
@@ -629,7 +630,11 @@ const SOUNDS = [
     sfx('baby dragon chirp', 3, 'topup', ['baby', 'dragon', 'chirp', 'hatchling', 'cute', 'fantasy', 'squeak', 'dnd'], 'Baby dragon hatchling chirping and squeaking curiously with a tiny puff of flame, no music'),
     sfx('kitten mew', 2, 'topup', ['kitten', 'mew', 'cat', 'cute', 'small', 'pet', 'meow', 'tiny'], 'Tiny kitten mewing softly twice, no music'),
     sfx('puppy whimper bark', 3, 'topup', ['puppy', 'whimper', 'bark', 'dog', 'cute', 'pet', 'yip', 'small'], 'Puppy whimpering then giving a small excited yip bark, no music'),
-    sfx('wolf attack snarl bite', 3, 'topup', ['wolf', 'attack', 'snarl', 'bite', 'lunge', 'beast', 'teeth', 'danger'], 'Wolf lunging and attacking, vicious snarl with snapping bite, no voices, no music'),
+    {
+        ...sfx('human taking a bite', 3, 'topup', ['human', 'bite', 'eating', 'food', 'mouth', 'foley', 'person', 'chomp', 'taking'], 'A person taking a bite of food, close-up mouth foley, no animal sounds, no speech, no music'),
+        // Preserve the existing audio key after the listener-corrected label.
+        filename: 'wolf-attack-snarl-bite.mp3',
+    },
     sfx('bear attack roar maul', 4, 'topup', ['bear', 'attack', 'roar', 'maul', 'charge', 'forest', 'danger', 'beast'], 'Bear charging and roaring in attack with heavy swipes, no voices, no music'),
     sfx('snake strike hiss', 2, 'topup', ['snake', 'strike', 'hiss', 'bite', 'lunge', 'venom', 'danger', 'fast'], 'Snake hissing then striking fast with a sharp lunge, no music'),
     sfx('rats scurrying many', 4, 'topup', ['rats', 'scurrying', 'many', 'sewer', 'squeaks', 'swarm', 'dungeon', 'vermin'], 'Many rats scurrying across a stone floor with squeaks and scratching claws, no music'),
