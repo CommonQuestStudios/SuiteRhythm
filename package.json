@@ -31,7 +31,9 @@
     "sounds:priority:plan": "node scripts/generate-priority-sounds.js --dry-run",
     "sounds:priority:generate": "node scripts/generate-priority-sounds.js",
     "sounds:needed:plan": "node scripts/generate-needed-sounds.js --dry-run",
-    "sounds:needed:generate": "node scripts/generate-needed-sounds.js"
+    "sounds:needed:generate": "node scripts/generate-needed-sounds.js",
+    "sounds:gaps:plan": "node scripts/generate-coverage-gaps.js --dry-run",
+    "sounds:gaps:generate": "node scripts/generate-coverage-gaps.js"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1024.0",

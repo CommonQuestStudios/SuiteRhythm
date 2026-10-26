@@ -9,11 +9,13 @@ vi.mock('../lib/supabase.js', () => ({
     return {
       from: () => ({
         select: () => ({
-          order: async () => {
-            selectCalls += 1;
-            if (failWith) return { data: null, error: failWith };
-            return { data: rows, error: null };
-          },
+          order: () => ({
+            range: async (from, to) => {
+              selectCalls += 1;
+              if (failWith) return { data: null, error: failWith };
+              return { data: rows.slice(from, to + 1), error: null };
+            },
+          }),
         }),
       }),
     };
@@ -78,6 +80,21 @@ describe('catalog source', () => {
     const result = await getCatalogFiles();
     expect(result.source).toBe('supabase-stale');
     expect(result.files.map((f) => f.name)).toContain('door slam heavy');
+  });
+
+  it('pages past the PostgREST 1000 row cap so no sounds are dropped', async () => {
+    rows = Array.from({ length: 1506 }, (_, i) => ({
+      type: 'sfx',
+      name: `sound ${String(i).padStart(4, '0')}`,
+      file: `sounds/sound-${i}.mp3`,
+      keywords: ['sound'],
+      loop: false,
+    }));
+    const { files, source } = await getCatalogFiles();
+    expect(source).toBe('supabase');
+    expect(files).toHaveLength(1506);
+    expect(files.at(-1).name).toBe('sound 1505');
+    expect(selectCalls).toBe(2);
   });
 
   it('dedupes concurrent refreshes', async () => {

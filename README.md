@@ -40,7 +40,7 @@ Example moments:
 | Story Teller | Narrative playback support with reactive story cues |
 | Creator Studio | Live mode, studio media tools, transcript support, cue map preview, and render export |
 | Sing Backing | Vocal energy and tempo aware accompaniment tools |
-| Sound Library | 999 catalog entries with search, type filters, tag filters, discovery lanes, and review state |
+| Sound Library | 1,506 catalog entries with search, type filters, tag filters, discovery lanes, and review state |
 | Control Board | Manual sound board buttons for music, ambience, SFX, and custom recordings |
 | Voice Recorder | Local custom audio recording with gain, gate, monitor mode, and voice effects |
 | Sound Audit | `/admin/sounds` catalog audit page plus in app audit metrics |
@@ -53,9 +53,9 @@ The catalog currently contains:
 | Type | Count |
 | --- | ---: |
 | Music | 278 |
-| SFX | 664 |
-| Ambience | 57 |
-| Total | 999 |
+| SFX | 1,038 |
+| Ambience | 190 |
+| Total | 1,506 |
 
 Audio metadata lives in Supabase and the static fallback catalog at [public/saved-sounds.json](public/saved-sounds.json). Audio files live in Cloudflare R2 under the `sounds/` prefix. Legacy `Saved sounds/` routes still resolve as a compatibility bridge, but new catalog entries and scripts use `sounds/`.
 
@@ -234,6 +234,8 @@ window.postMessage({ suiterhythm: 'trigger', query: 'thunder' }, '*');
 | `npm run catalog:health:r2` | Check every catalog object exists in R2 |
 | `npm run sounds:plan` | Dry run the curated ElevenLabs batch |
 | `npm run sounds:generate` | Generate the curated ElevenLabs batch |
+| `npm run sounds:gaps:plan` | Dry run the coverage-gap ElevenLabs batch (sci-fi, modern, western, horror, stingers, 30s ambience loops) |
+| `npm run sounds:gaps:generate` | Generate the coverage-gap batch; skips cataloged sounds and stops when credits run out |
 | `npm run sounds:migrate-prefix` | Run the R2 and catalog prefix migration |
 | `node scripts/eval-narration.mjs "line"` | Show which instant keywords and phrase triggers a narration line fires |
 | `node scripts/eval-search.mjs "query" [type]` | Show which catalog sound a search query resolves to |
@@ -255,7 +257,7 @@ Known follow ups:
 * Add a custom R2 CDN domain.
 * Move custom recordings from browser local storage to user owned R2 objects.
 * Add an in app review workflow for approving generated audio before publishing.
-* Finish the remaining ElevenLabs batch when credits reset.
+* Listen through the October 2026 coverage-gap batch (507 generated sounds) and prune any weak takes.
 
 ## Contact
 

@@ -19745,6 +19745,8844 @@
         "fire",
         "heat"
       ]
+    },
+    {
+      "type": "ambience",
+      "name": "spaceship bridge hum ambience",
+      "file": "sounds/spaceship-bridge-hum-ambience.mp3",
+      "keywords": [
+        "spaceship",
+        "bridge",
+        "hum",
+        "scifi",
+        "space",
+        "console",
+        "beeps",
+        "starship",
+        "ambience",
+        "ambient",
+        "background",
+        "futuristic",
+        "sci-fi"
+      ],
+      "loop": true
+    },
+    {
+      "type": "sfx",
+      "name": "man laughing hearty",
+      "file": "sounds/man-laughing-hearty.mp3",
+      "keywords": [
+        "man",
+        "laughing",
+        "hearty",
+        "laugh",
+        "male",
+        "belly",
+        "joy",
+        "voice"
+      ]
+    },
+    {
+      "type": "ambience",
+      "name": "space station corridor ambience",
+      "file": "sounds/space-station-corridor-ambience.mp3",
+      "keywords": [
+        "space",
+        "station",
+        "corridor",
+        "scifi",
+        "hallway",
+        "vent",
+        "hum",
+        "metal",
+        "ambience",
+        "ambient",
+        "background",
+        "cosmic",
+        "futuristic",
+        "sci-fi",
+        "stars"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "derelict spacecraft creaking ambience",
+      "file": "sounds/derelict-spacecraft-creaking-ambience.mp3",
+      "keywords": [
+        "derelict",
+        "spacecraft",
+        "creaking",
+        "scifi",
+        "abandoned",
+        "hull",
+        "groan",
+        "eerie",
+        "ambience",
+        "ambient",
+        "background",
+        "futuristic",
+        "sci-fi"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "alien planet wind ambience",
+      "file": "sounds/alien-planet-wind-ambience.mp3",
+      "keywords": [
+        "alien",
+        "planet",
+        "wind",
+        "scifi",
+        "otherworldly",
+        "desolate",
+        "strange",
+        "atmosphere",
+        "ambience",
+        "ambient",
+        "background",
+        "breeze",
+        "futuristic",
+        "sci-fi",
+        "weather"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "cyberpunk rain street ambience",
+      "file": "sounds/cyberpunk-rain-street-ambience.mp3",
+      "keywords": [
+        "cyberpunk",
+        "rain",
+        "street",
+        "neon",
+        "city",
+        "scifi",
+        "futuristic",
+        "night",
+        "ambience",
+        "ambient",
+        "background",
+        "weather",
+        "sci-fi",
+        "storm",
+        "water"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "laboratory equipment hum ambience",
+      "file": "sounds/laboratory-equipment-hum-ambience.mp3",
+      "keywords": [
+        "laboratory",
+        "lab",
+        "equipment",
+        "hum",
+        "science",
+        "beeps",
+        "research",
+        "sterile",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "server room fans ambience",
+      "file": "sounds/server-room-fans-ambience.mp3",
+      "keywords": [
+        "server",
+        "room",
+        "fans",
+        "computer",
+        "data",
+        "center",
+        "hum",
+        "tech",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "cryo bay cold hum ambience",
+      "file": "sounds/cryo-bay-cold-hum-ambience.mp3",
+      "keywords": [
+        "cryo",
+        "bay",
+        "cold",
+        "hum",
+        "scifi",
+        "frozen",
+        "pods",
+        "hiss",
+        "ambience",
+        "ambient",
+        "background",
+        "futuristic",
+        "ice",
+        "sci-fi",
+        "winter"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "hospital ward ambience",
+      "file": "sounds/hospital-ward-ambience.mp3",
+      "keywords": [
+        "hospital",
+        "ward",
+        "medical",
+        "monitor",
+        "beeps",
+        "nurses",
+        "clinic",
+        "room",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "school hallway ambience",
+      "file": "sounds/school-hallway-ambience.mp3",
+      "keywords": [
+        "school",
+        "hallway",
+        "students",
+        "lockers",
+        "chatter",
+        "class",
+        "corridor",
+        "teen",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "airport terminal ambience",
+      "file": "sounds/airport-terminal-ambience.mp3",
+      "keywords": [
+        "airport",
+        "terminal",
+        "travel",
+        "announcements",
+        "crowd",
+        "luggage",
+        "flight",
+        "hall",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "train station platform ambience",
+      "file": "sounds/train-station-platform-ambience.mp3",
+      "keywords": [
+        "train",
+        "station",
+        "platform",
+        "travel",
+        "crowd",
+        "announcement",
+        "rail",
+        "commute",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "subway car interior ambience",
+      "file": "sounds/subway-car-interior-ambience.mp3",
+      "keywords": [
+        "subway",
+        "car",
+        "interior",
+        "metro",
+        "train",
+        "rails",
+        "commute",
+        "rumble",
+        "ambience",
+        "ambient",
+        "background",
+        "modern",
+        "vehicle"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "busy cafe espresso ambience",
+      "file": "sounds/busy-cafe-espresso-ambience.mp3",
+      "keywords": [
+        "cafe",
+        "coffee",
+        "shop",
+        "espresso",
+        "chatter",
+        "cups",
+        "barista",
+        "indoor",
+        "ambience",
+        "ambient",
+        "background",
+        "busy"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "nightclub muffled bass ambience",
+      "file": "sounds/nightclub-muffled-bass-ambience.mp3",
+      "keywords": [
+        "nightclub",
+        "club",
+        "muffled",
+        "bass",
+        "party",
+        "crowd",
+        "dance",
+        "wall",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "parking garage ambience",
+      "file": "sounds/parking-garage-ambience.mp3",
+      "keywords": [
+        "parking",
+        "garage",
+        "concrete",
+        "echo",
+        "cars",
+        "fluorescent",
+        "underground",
+        "urban",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "empty warehouse echo ambience",
+      "file": "sounds/empty-warehouse-echo-ambience.mp3",
+      "keywords": [
+        "warehouse",
+        "empty",
+        "echo",
+        "industrial",
+        "large",
+        "space",
+        "abandoned",
+        "drip",
+        "ambience",
+        "ambient",
+        "background",
+        "scifi",
+        "futuristic",
+        "sci-fi"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "prison cellblock ambience",
+      "file": "sounds/prison-cellblock-ambience.mp3",
+      "keywords": [
+        "prison",
+        "cellblock",
+        "jail",
+        "cell",
+        "bars",
+        "inmates",
+        "echo",
+        "guard",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "police station office ambience",
+      "file": "sounds/police-station-office-ambience.mp3",
+      "keywords": [
+        "police",
+        "station",
+        "office",
+        "radio",
+        "phones",
+        "detective",
+        "precinct",
+        "indoor",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "suburban evening sprinklers ambience",
+      "file": "sounds/suburban-evening-sprinklers-ambience.mp3",
+      "keywords": [
+        "suburban",
+        "evening",
+        "sprinklers",
+        "neighborhood",
+        "lawn",
+        "dog",
+        "quiet",
+        "street",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "highway distant traffic night ambience",
+      "file": "sounds/highway-distant-traffic-night-ambience.mp3",
+      "keywords": [
+        "highway",
+        "traffic",
+        "distant",
+        "night",
+        "road",
+        "cars",
+        "motel",
+        "urban",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "construction site distant ambience",
+      "file": "sounds/construction-site-distant-ambience.mp3",
+      "keywords": [
+        "construction",
+        "site",
+        "distant",
+        "machinery",
+        "hammering",
+        "city",
+        "work",
+        "urban",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "beach day gentle waves ambience",
+      "file": "sounds/beach-day-gentle-waves-ambience.mp3",
+      "keywords": [
+        "beach",
+        "day",
+        "gentle",
+        "waves",
+        "seagulls",
+        "shore",
+        "summer",
+        "ocean",
+        "ambience",
+        "ambient",
+        "background",
+        "nature",
+        "calm",
+        "soft"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "snowfall quiet ambience",
+      "file": "sounds/snowfall-quiet-ambience.mp3",
+      "keywords": [
+        "snowfall",
+        "quiet",
+        "snow",
+        "winter",
+        "calm",
+        "hush",
+        "cold",
+        "still",
+        "ambience",
+        "ambient",
+        "background",
+        "weather",
+        "peaceful",
+        "soft"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "pond frogs evening ambience",
+      "file": "sounds/pond-frogs-evening-ambience.mp3",
+      "keywords": [
+        "pond",
+        "frogs",
+        "evening",
+        "croaking",
+        "water",
+        "insects",
+        "marsh",
+        "dusk",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "lake shore morning ambience",
+      "file": "sounds/lake-shore-morning-ambience.mp3",
+      "keywords": [
+        "lake",
+        "shore",
+        "morning",
+        "water",
+        "lapping",
+        "birds",
+        "loon",
+        "calm",
+        "ambience",
+        "ambient",
+        "background",
+        "nature"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "deep cave wind ambience",
+      "file": "sounds/deep-cave-wind-ambience.mp3",
+      "keywords": [
+        "deep",
+        "cave",
+        "wind",
+        "hollow",
+        "drip",
+        "underground",
+        "echo",
+        "cavern",
+        "ambience",
+        "ambient",
+        "background",
+        "breeze",
+        "weather"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "arctic tundra wind ambience",
+      "file": "sounds/arctic-tundra-wind-ambience.mp3",
+      "keywords": [
+        "arctic",
+        "tundra",
+        "wind",
+        "ice",
+        "cold",
+        "frozen",
+        "desolate",
+        "snow",
+        "ambience",
+        "ambient",
+        "background",
+        "weather",
+        "breeze",
+        "winter"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "volcanic cavern rumble ambience",
+      "file": "sounds/volcanic-cavern-rumble-ambience.mp3",
+      "keywords": [
+        "volcanic",
+        "cavern",
+        "rumble",
+        "lava",
+        "heat",
+        "magma",
+        "underground",
+        "fire",
+        "ambience",
+        "ambient",
+        "background",
+        "cave",
+        "volcano"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "thunderstorm indoors ambience",
+      "file": "sounds/thunderstorm-indoors-ambience.mp3",
+      "keywords": [
+        "thunderstorm",
+        "indoors",
+        "rain",
+        "thunder",
+        "window",
+        "storm",
+        "cozy",
+        "house",
+        "ambience",
+        "ambient",
+        "background",
+        "weather"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "bamboo forest breeze ambience",
+      "file": "sounds/bamboo-forest-breeze-ambience.mp3",
+      "keywords": [
+        "bamboo",
+        "forest",
+        "breeze",
+        "leaves",
+        "creak",
+        "asia",
+        "calm",
+        "wind",
+        "ambience",
+        "ambient",
+        "background",
+        "nature",
+        "trees",
+        "weather",
+        "woodland"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "savanna evening ambience",
+      "file": "sounds/savanna-evening-ambience.mp3",
+      "keywords": [
+        "savanna",
+        "evening",
+        "africa",
+        "insects",
+        "grassland",
+        "distant",
+        "animals",
+        "warm",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "haunted house interior ambience",
+      "file": "sounds/haunted-house-interior-ambience.mp3",
+      "keywords": [
+        "haunted",
+        "house",
+        "interior",
+        "creak",
+        "horror",
+        "ghost",
+        "spooky",
+        "old",
+        "ambience",
+        "ambient",
+        "background",
+        "halloween"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "wizard tower study ambience",
+      "file": "sounds/wizard-tower-study-ambience.mp3",
+      "keywords": [
+        "wizard",
+        "tower",
+        "study",
+        "magic",
+        "arcane",
+        "candles",
+        "books",
+        "fantasy",
+        "ambience",
+        "ambient",
+        "background",
+        "mage"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "elven forest magical ambience",
+      "file": "sounds/elven-forest-magical-ambience.mp3",
+      "keywords": [
+        "elven",
+        "forest",
+        "magical",
+        "elf",
+        "fantasy",
+        "shimmer",
+        "birds",
+        "enchanted",
+        "ambience",
+        "ambient",
+        "background",
+        "nature",
+        "arcane",
+        "magic",
+        "spell",
+        "trees",
+        "woodland"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "underdark cavern ambience",
+      "file": "sounds/underdark-cavern-ambience.mp3",
+      "keywords": [
+        "underdark",
+        "cavern",
+        "dnd",
+        "fantasy",
+        "dark",
+        "drip",
+        "skitter",
+        "deep",
+        "ambience",
+        "ambient",
+        "background",
+        "cave",
+        "underground"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "pirate ship deck sailing ambience",
+      "file": "sounds/pirate-ship-deck-sailing-ambience.mp3",
+      "keywords": [
+        "pirate",
+        "ship",
+        "deck",
+        "sailing",
+        "sea",
+        "rigging",
+        "waves",
+        "creak",
+        "ambience",
+        "ambient",
+        "background",
+        "nature",
+        "boat",
+        "nautical"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "siege camp night ambience",
+      "file": "sounds/siege-camp-night-ambience.mp3",
+      "keywords": [
+        "siege",
+        "camp",
+        "night",
+        "army",
+        "medieval",
+        "fires",
+        "soldiers",
+        "war",
+        "ambience",
+        "ambient",
+        "background",
+        "fantasy",
+        "battle",
+        "combat"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "distant battlefield ambience",
+      "file": "sounds/distant-battlefield-ambience.mp3",
+      "keywords": [
+        "distant",
+        "battlefield",
+        "battle",
+        "war",
+        "medieval",
+        "clash",
+        "shouts",
+        "drums",
+        "ambience",
+        "ambient",
+        "background",
+        "fantasy",
+        "combat",
+        "death"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "church interior quiet ambience",
+      "file": "sounds/church-interior-quiet-ambience.mp3",
+      "keywords": [
+        "church",
+        "interior",
+        "quiet",
+        "cathedral",
+        "reverent",
+        "stone",
+        "echo",
+        "holy",
+        "ambience",
+        "ambient",
+        "background",
+        "peaceful",
+        "soft"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "royal throne room ambience",
+      "file": "sounds/royal-throne-room-ambience.mp3",
+      "keywords": [
+        "royal",
+        "throne",
+        "room",
+        "court",
+        "castle",
+        "king",
+        "murmur",
+        "hall",
+        "ambience",
+        "ambient",
+        "background",
+        "fantasy",
+        "noble",
+        "queen"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "mine shaft deep ambience",
+      "file": "sounds/mine-shaft-deep-ambience.mp3",
+      "keywords": [
+        "mine",
+        "shaft",
+        "deep",
+        "pickaxe",
+        "dwarf",
+        "tunnel",
+        "drip",
+        "underground",
+        "ambience",
+        "ambient",
+        "background",
+        "fantasy"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "dwarven forge hall ambience",
+      "file": "sounds/dwarven-forge-hall-ambience.mp3",
+      "keywords": [
+        "dwarven",
+        "forge",
+        "hall",
+        "dwarf",
+        "anvil",
+        "furnace",
+        "fantasy",
+        "hammer",
+        "ambience",
+        "ambient",
+        "background",
+        "blacksmith",
+        "blunt",
+        "melee",
+        "smith",
+        "weapon"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "graveyard fog night ambience",
+      "file": "sounds/graveyard-fog-night-ambience.mp3",
+      "keywords": [
+        "graveyard",
+        "fog",
+        "night",
+        "cemetery",
+        "owl",
+        "wind",
+        "horror",
+        "spooky",
+        "ambience",
+        "ambient",
+        "background",
+        "halloween",
+        "dead",
+        "eerie",
+        "mist",
+        "undead",
+        "weather"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "carnival fairground ambience",
+      "file": "sounds/carnival-fairground-ambience.mp3",
+      "keywords": [
+        "carnival",
+        "fairground",
+        "fair",
+        "rides",
+        "crowd",
+        "games",
+        "festival",
+        "fun",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "stadium crowd roar ambience",
+      "file": "sounds/stadium-crowd-roar-ambience.mp3",
+      "keywords": [
+        "stadium",
+        "crowd",
+        "roar",
+        "sports",
+        "fans",
+        "arena",
+        "cheer",
+        "match",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "farm morning ambience",
+      "file": "sounds/farm-morning-ambience.mp3",
+      "keywords": [
+        "farm",
+        "morning",
+        "rooster",
+        "cows",
+        "barn",
+        "rural",
+        "countryside",
+        "animals",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "rain on tent canvas ambience",
+      "file": "sounds/rain-on-tent-canvas-ambience.mp3",
+      "keywords": [
+        "rain",
+        "tent",
+        "canvas",
+        "camping",
+        "cozy",
+        "drops",
+        "outdoor",
+        "night",
+        "ambience",
+        "ambient",
+        "background",
+        "weather",
+        "storm",
+        "water"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "spa relaxing water ambience",
+      "file": "sounds/spa-relaxing-water-ambience.mp3",
+      "keywords": [
+        "spa",
+        "relaxing",
+        "water",
+        "calm",
+        "fountain",
+        "trickle",
+        "peaceful",
+        "zen",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "starship engine room ambience",
+      "file": "sounds/starship-engine-room-ambience.mp3",
+      "keywords": [
+        "starship",
+        "engine",
+        "room",
+        "reactor",
+        "scifi",
+        "throb",
+        "machinery",
+        "power",
+        "ambience",
+        "ambient",
+        "background",
+        "futuristic",
+        "motor",
+        "sci-fi",
+        "vehicle"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "alien hive interior ambience",
+      "file": "sounds/alien-hive-interior-ambience.mp3",
+      "keywords": [
+        "alien",
+        "hive",
+        "interior",
+        "scifi",
+        "organic",
+        "wet",
+        "skitter",
+        "horror",
+        "ambience",
+        "ambient",
+        "background",
+        "futuristic",
+        "sci-fi"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "space debris field ambience",
+      "file": "sounds/space-debris-field-ambience.mp3",
+      "keywords": [
+        "space",
+        "debris",
+        "field",
+        "hull",
+        "pings",
+        "scifi",
+        "wreckage",
+        "drift",
+        "ambience",
+        "ambient",
+        "background",
+        "cosmic",
+        "futuristic",
+        "sci-fi",
+        "stars"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "orbital observation deck ambience",
+      "file": "sounds/orbital-observation-deck-ambience.mp3",
+      "keywords": [
+        "orbital",
+        "observation",
+        "deck",
+        "station",
+        "scifi",
+        "quiet",
+        "hum",
+        "window",
+        "ambience",
+        "ambient",
+        "background",
+        "futuristic",
+        "sci-fi"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "mars colony habitat ambience",
+      "file": "sounds/mars-colony-habitat-ambience.mp3",
+      "keywords": [
+        "mars",
+        "colony",
+        "habitat",
+        "scifi",
+        "dome",
+        "air",
+        "pumps",
+        "wind",
+        "ambience",
+        "ambient",
+        "background",
+        "futuristic",
+        "sci-fi"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "cyberpunk night market ambience",
+      "file": "sounds/cyberpunk-night-market-ambience.mp3",
+      "keywords": [
+        "cyberpunk",
+        "night",
+        "market",
+        "crowd",
+        "neon",
+        "vendors",
+        "scifi",
+        "city",
+        "ambience",
+        "ambient",
+        "background",
+        "bazaar",
+        "futuristic",
+        "marketplace",
+        "sci-fi"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "hotel lobby ambience",
+      "file": "sounds/hotel-lobby-ambience.mp3",
+      "keywords": [
+        "hotel",
+        "lobby",
+        "reception",
+        "luggage",
+        "murmur",
+        "elevator",
+        "travel",
+        "indoor",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "shopping mall ambience",
+      "file": "sounds/shopping-mall-ambience.mp3",
+      "keywords": [
+        "shopping",
+        "mall",
+        "crowd",
+        "stores",
+        "escalator",
+        "indoor",
+        "retail",
+        "murmur",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "restaurant kitchen rush ambience",
+      "file": "sounds/restaurant-kitchen-rush-ambience.mp3",
+      "keywords": [
+        "restaurant",
+        "kitchen",
+        "rush",
+        "cooking",
+        "pans",
+        "sizzle",
+        "chef",
+        "busy",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "gym weights ambience",
+      "file": "sounds/gym-weights-ambience.mp3",
+      "keywords": [
+        "gym",
+        "weights",
+        "fitness",
+        "clank",
+        "treadmill",
+        "workout",
+        "indoor",
+        "exercise",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "elevator ride hum ambience",
+      "file": "sounds/elevator-ride-hum-ambience.mp3",
+      "keywords": [
+        "elevator",
+        "ride",
+        "hum",
+        "lift",
+        "cables",
+        "building",
+        "indoor",
+        "quiet",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "apartment night city window ambience",
+      "file": "sounds/apartment-night-city-window-ambience.mp3",
+      "keywords": [
+        "apartment",
+        "night",
+        "city",
+        "window",
+        "traffic",
+        "siren",
+        "urban",
+        "quiet",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "laundromat ambience",
+      "file": "sounds/laundromat-ambience.mp3",
+      "keywords": [
+        "laundromat",
+        "washers",
+        "dryers",
+        "tumble",
+        "coins",
+        "indoor",
+        "hum",
+        "spin",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "bus ride interior ambience",
+      "file": "sounds/bus-ride-interior-ambience.mp3",
+      "keywords": [
+        "bus",
+        "ride",
+        "interior",
+        "engine",
+        "city",
+        "transit",
+        "rattle",
+        "commute",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "airplane cabin cruising ambience",
+      "file": "sounds/airplane-cabin-cruising-ambience.mp3",
+      "keywords": [
+        "airplane",
+        "cabin",
+        "cruising",
+        "flight",
+        "engine",
+        "drone",
+        "travel",
+        "passengers",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "emergency room ambience",
+      "file": "sounds/emergency-room-ambience.mp3",
+      "keywords": [
+        "emergency",
+        "room",
+        "hospital",
+        "er",
+        "monitors",
+        "urgent",
+        "medical",
+        "busy",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "courtroom murmur ambience",
+      "file": "sounds/courtroom-murmur-ambience.mp3",
+      "keywords": [
+        "courtroom",
+        "murmur",
+        "court",
+        "trial",
+        "gallery",
+        "judge",
+        "legal",
+        "indoor",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "casino floor ambience",
+      "file": "sounds/casino-floor-ambience.mp3",
+      "keywords": [
+        "casino",
+        "floor",
+        "slots",
+        "gambling",
+        "chips",
+        "crowd",
+        "bells",
+        "vegas",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "bowling alley ambience",
+      "file": "sounds/bowling-alley-ambience.mp3",
+      "keywords": [
+        "bowling",
+        "alley",
+        "pins",
+        "strike",
+        "lanes",
+        "crowd",
+        "indoor",
+        "fun",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "indoor swimming pool ambience",
+      "file": "sounds/indoor-swimming-pool-ambience.mp3",
+      "keywords": [
+        "indoor",
+        "swimming",
+        "pool",
+        "splash",
+        "echo",
+        "water",
+        "kids",
+        "natatorium",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "rooftop city wind ambience",
+      "file": "sounds/rooftop-city-wind-ambience.mp3",
+      "keywords": [
+        "rooftop",
+        "city",
+        "wind",
+        "skyline",
+        "traffic",
+        "height",
+        "urban",
+        "night",
+        "ambience",
+        "ambient",
+        "background",
+        "breeze",
+        "weather"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "abandoned asylum ambience",
+      "file": "sounds/abandoned-asylum-ambience.mp3",
+      "keywords": [
+        "abandoned",
+        "asylum",
+        "horror",
+        "drip",
+        "creak",
+        "eerie",
+        "hospital",
+        "haunted",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "bunker generator hum ambience",
+      "file": "sounds/bunker-generator-hum-ambience.mp3",
+      "keywords": [
+        "bunker",
+        "generator",
+        "hum",
+        "underground",
+        "concrete",
+        "military",
+        "shelter",
+        "diesel",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "tropical rainforest rain ambience",
+      "file": "sounds/tropical-rainforest-rain-ambience.mp3",
+      "keywords": [
+        "tropical",
+        "rainforest",
+        "rain",
+        "jungle",
+        "birds",
+        "frogs",
+        "canopy",
+        "humid",
+        "ambience",
+        "ambient",
+        "background",
+        "nature",
+        "weather",
+        "storm",
+        "water"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "alpine mountain stream ambience",
+      "file": "sounds/alpine-mountain-stream-ambience.mp3",
+      "keywords": [
+        "alpine",
+        "mountain",
+        "stream",
+        "water",
+        "rocks",
+        "wind",
+        "birds",
+        "fresh",
+        "ambience",
+        "ambient",
+        "background",
+        "nature",
+        "altitude",
+        "creek",
+        "peak",
+        "river"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "canyon wind echo ambience",
+      "file": "sounds/canyon-wind-echo-ambience.mp3",
+      "keywords": [
+        "canyon",
+        "wind",
+        "echo",
+        "desert",
+        "rock",
+        "vast",
+        "hawk",
+        "empty",
+        "ambience",
+        "ambient",
+        "background",
+        "breeze",
+        "weather"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "wetlands dawn birds ambience",
+      "file": "sounds/wetlands-dawn-birds-ambience.mp3",
+      "keywords": [
+        "wetlands",
+        "dawn",
+        "birds",
+        "marsh",
+        "reeds",
+        "ducks",
+        "water",
+        "morning",
+        "ambience",
+        "ambient",
+        "background",
+        "nature"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "pine forest night wind ambience",
+      "file": "sounds/pine-forest-night-wind-ambience.mp3",
+      "keywords": [
+        "pine",
+        "forest",
+        "night",
+        "wind",
+        "owl",
+        "trees",
+        "dark",
+        "creak",
+        "ambience",
+        "ambient",
+        "background",
+        "nature",
+        "breeze",
+        "weather",
+        "woodland"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "summer meadow bees ambience",
+      "file": "sounds/summer-meadow-bees-ambience.mp3",
+      "keywords": [
+        "summer",
+        "meadow",
+        "bees",
+        "flowers",
+        "insects",
+        "birds",
+        "warm",
+        "field",
+        "ambience",
+        "ambient",
+        "background",
+        "nature",
+        "grass",
+        "peaceful"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "coastal cliffs seabirds ambience",
+      "file": "sounds/coastal-cliffs-seabirds-ambience.mp3",
+      "keywords": [
+        "coastal",
+        "cliffs",
+        "seabirds",
+        "ocean",
+        "wind",
+        "gulls",
+        "waves",
+        "shore",
+        "ambience",
+        "ambient",
+        "background",
+        "nature",
+        "coast",
+        "sea"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "glacier creaking ambience",
+      "file": "sounds/glacier-creaking-ambience.mp3",
+      "keywords": [
+        "glacier",
+        "creaking",
+        "ice",
+        "cold",
+        "arctic",
+        "groan",
+        "wind",
+        "frozen",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "desert day heat ambience",
+      "file": "sounds/desert-day-heat-ambience.mp3",
+      "keywords": [
+        "desert",
+        "day",
+        "heat",
+        "sun",
+        "dry",
+        "wind",
+        "insects",
+        "barren",
+        "ambience",
+        "ambient",
+        "background",
+        "arid",
+        "sand"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "prairie wind grass ambience",
+      "file": "sounds/prairie-wind-grass-ambience.mp3",
+      "keywords": [
+        "prairie",
+        "wind",
+        "grass",
+        "plains",
+        "open",
+        "meadowlark",
+        "western",
+        "field",
+        "ambience",
+        "ambient",
+        "background",
+        "breeze",
+        "weather"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "thunderstorm open field ambience",
+      "file": "sounds/thunderstorm-open-field-ambience.mp3",
+      "keywords": [
+        "thunderstorm",
+        "open",
+        "field",
+        "rain",
+        "thunder",
+        "storm",
+        "heavy",
+        "outdoor",
+        "ambience",
+        "ambient",
+        "background",
+        "weather"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "tide pools ambience",
+      "file": "sounds/tide-pools-ambience.mp3",
+      "keywords": [
+        "tide",
+        "pools",
+        "rocks",
+        "ocean",
+        "trickle",
+        "gulls",
+        "shore",
+        "coast",
+        "ambience",
+        "ambient",
+        "background",
+        "nature"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "mangrove swamp night ambience",
+      "file": "sounds/mangrove-swamp-night-ambience.mp3",
+      "keywords": [
+        "mangrove",
+        "swamp",
+        "night",
+        "insects",
+        "water",
+        "frogs",
+        "humid",
+        "tropical",
+        "ambience",
+        "ambient",
+        "background",
+        "bog",
+        "marsh",
+        "wetland"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "cave waterfall ambience",
+      "file": "sounds/cave-waterfall-ambience.mp3",
+      "keywords": [
+        "cave",
+        "waterfall",
+        "underground",
+        "water",
+        "echo",
+        "rush",
+        "drip",
+        "cavern",
+        "ambience",
+        "ambient",
+        "background",
+        "nature",
+        "cascade"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "hurricane winds ambience",
+      "file": "sounds/hurricane-winds-ambience.mp3",
+      "keywords": [
+        "hurricane",
+        "winds",
+        "storm",
+        "gale",
+        "rain",
+        "debris",
+        "disaster",
+        "weather",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "dragon lair ambience",
+      "file": "sounds/dragon-lair-ambience.mp3",
+      "keywords": [
+        "dragon",
+        "lair",
+        "cave",
+        "treasure",
+        "breathing",
+        "fantasy",
+        "embers",
+        "danger",
+        "ambience",
+        "ambient",
+        "background",
+        "beast",
+        "boss",
+        "monster"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "goblin camp ambience",
+      "file": "sounds/goblin-camp-ambience.mp3",
+      "keywords": [
+        "goblin",
+        "camp",
+        "fantasy",
+        "chittering",
+        "fire",
+        "dnd",
+        "squabble",
+        "night",
+        "ambience",
+        "ambient",
+        "background",
+        "humanoid",
+        "monster"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "orc war camp drums ambience",
+      "file": "sounds/orc-war-camp-drums-ambience.mp3",
+      "keywords": [
+        "orc",
+        "war",
+        "camp",
+        "drums",
+        "fantasy",
+        "dnd",
+        "chanting",
+        "fire",
+        "ambience",
+        "ambient",
+        "background",
+        "battle",
+        "combat",
+        "humanoid",
+        "monster"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "fairy glade ambience",
+      "file": "sounds/fairy-glade-ambience.mp3",
+      "keywords": [
+        "fairy",
+        "glade",
+        "fey",
+        "magical",
+        "sparkle",
+        "forest",
+        "fantasy",
+        "enchanted",
+        "ambience",
+        "ambient",
+        "background",
+        "nature"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "witch hut swamp ambience",
+      "file": "sounds/witch-hut-swamp-ambience.mp3",
+      "keywords": [
+        "witch",
+        "hut",
+        "swamp",
+        "cauldron",
+        "bubbling",
+        "halloween",
+        "creak",
+        "fantasy",
+        "ambience",
+        "ambient",
+        "background",
+        "bog",
+        "horror",
+        "marsh",
+        "spooky",
+        "wetland"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "abandoned temple ambience",
+      "file": "sounds/abandoned-temple-ambience.mp3",
+      "keywords": [
+        "abandoned",
+        "temple",
+        "ruins",
+        "wind",
+        "drip",
+        "ancient",
+        "fantasy",
+        "echo",
+        "ambience",
+        "ambient",
+        "background",
+        "holy",
+        "religious",
+        "ruined",
+        "sacred"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "ancient library whispers ambience",
+      "file": "sounds/ancient-library-whispers-ambience.mp3",
+      "keywords": [
+        "ancient",
+        "library",
+        "whispers",
+        "books",
+        "magic",
+        "fantasy",
+        "pages",
+        "quiet",
+        "ambience",
+        "ambient",
+        "background",
+        "historic",
+        "old",
+        "scholar",
+        "study"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "alchemist lab bubbling ambience",
+      "file": "sounds/alchemist-lab-bubbling-ambience.mp3",
+      "keywords": [
+        "alchemist",
+        "lab",
+        "bubbling",
+        "potions",
+        "glass",
+        "fantasy",
+        "fire",
+        "brew",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "torture chamber dungeon ambience",
+      "file": "sounds/torture-chamber-dungeon-ambience.mp3",
+      "keywords": [
+        "torture",
+        "chamber",
+        "dungeon",
+        "chains",
+        "drip",
+        "horror",
+        "fantasy",
+        "moan",
+        "ambience",
+        "ambient",
+        "background",
+        "dnd",
+        "underground"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "medieval rooftops night ambience",
+      "file": "sounds/medieval-rooftops-night-ambience.mp3",
+      "keywords": [
+        "medieval",
+        "rooftops",
+        "night",
+        "city",
+        "wind",
+        "thief",
+        "fantasy",
+        "bells",
+        "ambience",
+        "ambient",
+        "background",
+        "historic"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "elven city ambience",
+      "file": "sounds/elven-city-ambience.mp3",
+      "keywords": [
+        "elven",
+        "city",
+        "elf",
+        "fantasy",
+        "fountains",
+        "chimes",
+        "serene",
+        "graceful",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "frozen fortress ambience",
+      "file": "sounds/frozen-fortress-ambience.mp3",
+      "keywords": [
+        "frozen",
+        "fortress",
+        "ice",
+        "castle",
+        "wind",
+        "fantasy",
+        "cold",
+        "echo",
+        "ambience",
+        "ambient",
+        "background",
+        "medieval",
+        "winter"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "haunted forest ambience",
+      "file": "sounds/haunted-forest-ambience.mp3",
+      "keywords": [
+        "haunted",
+        "forest",
+        "horror",
+        "whispers",
+        "crows",
+        "dead",
+        "trees",
+        "fog",
+        "ambience",
+        "ambient",
+        "background",
+        "nature",
+        "woodland"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "necropolis undead ambience",
+      "file": "sounds/necropolis-undead-ambience.mp3",
+      "keywords": [
+        "necropolis",
+        "undead",
+        "graves",
+        "moans",
+        "horror",
+        "fantasy",
+        "bones",
+        "dark",
+        "ambience",
+        "ambient",
+        "background",
+        "death",
+        "monster"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "feywild shimmering ambience",
+      "file": "sounds/feywild-shimmering-ambience.mp3",
+      "keywords": [
+        "feywild",
+        "shimmering",
+        "fey",
+        "dnd",
+        "magic",
+        "dreamlike",
+        "fantasy",
+        "wild",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "shadowfell drone ambience",
+      "file": "sounds/shadowfell-drone-ambience.mp3",
+      "keywords": [
+        "shadowfell",
+        "drone",
+        "dark",
+        "dnd",
+        "gloom",
+        "despair",
+        "fantasy",
+        "eerie",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "hell fire brimstone ambience",
+      "file": "sounds/hell-fire-brimstone-ambience.mp3",
+      "keywords": [
+        "hell",
+        "fire",
+        "brimstone",
+        "demons",
+        "lava",
+        "screams",
+        "fantasy",
+        "infernal",
+        "ambience",
+        "ambient",
+        "background",
+        "flame",
+        "heat"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "celestial realm ambience",
+      "file": "sounds/celestial-realm-ambience.mp3",
+      "keywords": [
+        "celestial",
+        "realm",
+        "heaven",
+        "choir",
+        "light",
+        "holy",
+        "fantasy",
+        "serene",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "ship below deck ambience",
+      "file": "sounds/ship-below-deck-ambience.mp3",
+      "keywords": [
+        "ship",
+        "below",
+        "deck",
+        "hull",
+        "creak",
+        "water",
+        "sailors",
+        "hammock",
+        "ambience",
+        "ambient",
+        "background",
+        "boat",
+        "nautical"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "monastery chanting ambience",
+      "file": "sounds/monastery-chanting-ambience.mp3",
+      "keywords": [
+        "monastery",
+        "chanting",
+        "monks",
+        "temple",
+        "meditation",
+        "bells",
+        "holy",
+        "calm",
+        "ambience",
+        "ambient",
+        "background",
+        "religious",
+        "sacred"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "coliseum arena crowd ambience",
+      "file": "sounds/coliseum-arena-crowd-ambience.mp3",
+      "keywords": [
+        "coliseum",
+        "arena",
+        "crowd",
+        "gladiator",
+        "roar",
+        "ancient",
+        "fantasy",
+        "fight",
+        "ambience",
+        "ambient",
+        "background",
+        "combat"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "jousting tournament ambience",
+      "file": "sounds/jousting-tournament-ambience.mp3",
+      "keywords": [
+        "jousting",
+        "tournament",
+        "medieval",
+        "crowd",
+        "horses",
+        "trumpets",
+        "fantasy",
+        "fair",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "royal banquet feast ambience",
+      "file": "sounds/royal-banquet-feast-ambience.mp3",
+      "keywords": [
+        "royal",
+        "banquet",
+        "feast",
+        "castle",
+        "laughter",
+        "goblets",
+        "fantasy",
+        "hall",
+        "ambience",
+        "ambient",
+        "background",
+        "king",
+        "noble",
+        "throne"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "windmill farm ambience",
+      "file": "sounds/windmill-farm-ambience.mp3",
+      "keywords": [
+        "windmill",
+        "farm",
+        "creak",
+        "wind",
+        "rural",
+        "medieval",
+        "fantasy",
+        "blades",
+        "ambience",
+        "ambient",
+        "background",
+        "countryside"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "desert bazaar ambience",
+      "file": "sounds/desert-bazaar-ambience.mp3",
+      "keywords": [
+        "desert",
+        "bazaar",
+        "market",
+        "merchants",
+        "crowd",
+        "arabian",
+        "spices",
+        "fantasy",
+        "ambience",
+        "ambient",
+        "background",
+        "arid",
+        "dry",
+        "exotic",
+        "sand"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "caravan camels travel ambience",
+      "file": "sounds/caravan-camels-travel-ambience.mp3",
+      "keywords": [
+        "caravan",
+        "camels",
+        "travel",
+        "desert",
+        "bells",
+        "sand",
+        "wind",
+        "journey",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "christmas market ambience",
+      "file": "sounds/christmas-market-ambience.mp3",
+      "keywords": [
+        "christmas",
+        "market",
+        "holiday",
+        "crowd",
+        "bells",
+        "festive",
+        "winter",
+        "snow",
+        "ambience",
+        "ambient",
+        "background",
+        "weather",
+        "bazaar",
+        "marketplace",
+        "vendors"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "halloween night street ambience",
+      "file": "sounds/halloween-night-street-ambience.mp3",
+      "keywords": [
+        "halloween",
+        "night",
+        "street",
+        "trick",
+        "treat",
+        "kids",
+        "spooky",
+        "wind",
+        "ambience",
+        "ambient",
+        "background",
+        "horror"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "summer bbq backyard ambience",
+      "file": "sounds/summer-bbq-backyard-ambience.mp3",
+      "keywords": [
+        "summer",
+        "bbq",
+        "backyard",
+        "grill",
+        "sizzle",
+        "party",
+        "laughter",
+        "outdoor",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "cozy bookshop ambience",
+      "file": "sounds/cozy-bookshop-ambience.mp3",
+      "keywords": [
+        "cozy",
+        "bookshop",
+        "books",
+        "pages",
+        "quiet",
+        "shop",
+        "bell",
+        "indoor",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "train ride countryside ambience",
+      "file": "sounds/train-ride-countryside-ambience.mp3",
+      "keywords": [
+        "train",
+        "ride",
+        "countryside",
+        "rails",
+        "clatter",
+        "journey",
+        "window",
+        "travel",
+        "ambience",
+        "ambient",
+        "background",
+        "farm",
+        "rural"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "wedding reception ambience",
+      "file": "sounds/wedding-reception-ambience.mp3",
+      "keywords": [
+        "wedding",
+        "reception",
+        "party",
+        "toast",
+        "glasses",
+        "laughter",
+        "celebration",
+        "indoor",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "classroom lecture murmur ambience",
+      "file": "sounds/classroom-lecture-murmur-ambience.mp3",
+      "keywords": [
+        "classroom",
+        "lecture",
+        "murmur",
+        "school",
+        "students",
+        "chalk",
+        "pens",
+        "indoor",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "empty theater stage ambience",
+      "file": "sounds/empty-theater-stage-ambience.mp3",
+      "keywords": [
+        "empty",
+        "theater",
+        "stage",
+        "quiet",
+        "creak",
+        "echo",
+        "curtain",
+        "indoor",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "sfx",
+      "name": "airlock door hiss open",
+      "file": "sounds/airlock-door-hiss-open.mp3",
+      "keywords": [
+        "airlock",
+        "door",
+        "hiss",
+        "open",
+        "scifi",
+        "space",
+        "pressure",
+        "seal",
+        "futuristic",
+        "sci-fi"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "scifi door slide open",
+      "file": "sounds/scifi-door-slide-open.mp3",
+      "keywords": [
+        "scifi",
+        "door",
+        "slide",
+        "open",
+        "automatic",
+        "whoosh",
+        "future",
+        "station",
+        "futuristic",
+        "sci-fi"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "hologram activate flicker",
+      "file": "sounds/hologram-activate-flicker.mp3",
+      "keywords": [
+        "hologram",
+        "activate",
+        "flicker",
+        "scifi",
+        "projection",
+        "glitch",
+        "hum",
+        "display",
+        "futuristic",
+        "sci-fi"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "computer hacking keystrokes",
+      "file": "sounds/computer-hacking-keystrokes.mp3",
+      "keywords": [
+        "computer",
+        "hacking",
+        "keystrokes",
+        "typing",
+        "hacker",
+        "beeps",
+        "code",
+        "terminal"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "drone hover pass",
+      "file": "sounds/drone-hover-pass.mp3",
+      "keywords": [
+        "drone",
+        "hover",
+        "pass",
+        "quadcopter",
+        "buzz",
+        "flyby",
+        "surveillance",
+        "rotor"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "mech footsteps heavy",
+      "file": "sounds/mech-footsteps-heavy.mp3",
+      "keywords": [
+        "mech",
+        "footsteps",
+        "heavy",
+        "robot",
+        "giant",
+        "metal",
+        "hydraulic",
+        "stomp",
+        "scifi",
+        "futuristic",
+        "humanoid",
+        "intense",
+        "monster",
+        "movement",
+        "powerful",
+        "sci-fi",
+        "walking"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "energy shield impact",
+      "file": "sounds/energy-shield-impact.mp3",
+      "keywords": [
+        "energy",
+        "shield",
+        "impact",
+        "scifi",
+        "force",
+        "field",
+        "deflect",
+        "zap",
+        "combat",
+        "block",
+        "defense",
+        "futuristic",
+        "sci-fi"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "plasma rifle shot",
+      "file": "sounds/plasma-rifle-shot.mp3",
+      "keywords": [
+        "plasma",
+        "rifle",
+        "shot",
+        "scifi",
+        "gun",
+        "blaster",
+        "energy",
+        "fire",
+        "combat",
+        "futuristic",
+        "sci-fi"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "jetpack thrust burst",
+      "file": "sounds/jetpack-thrust-burst.mp3",
+      "keywords": [
+        "jetpack",
+        "thrust",
+        "burst",
+        "rocket",
+        "flight",
+        "scifi",
+        "boost",
+        "fire",
+        "futuristic",
+        "sci-fi"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "teleporter pad energize",
+      "file": "sounds/teleporter-pad-energize.mp3",
+      "keywords": [
+        "teleporter",
+        "pad",
+        "energize",
+        "scifi",
+        "beam",
+        "transport",
+        "shimmer",
+        "dematerialize",
+        "futuristic",
+        "sci-fi"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "laser cannon charge fire",
+      "file": "sounds/laser-cannon-charge-fire.mp3",
+      "keywords": [
+        "laser",
+        "cannon",
+        "charge",
+        "fire",
+        "scifi",
+        "weapon",
+        "beam",
+        "blast",
+        "attack",
+        "combat",
+        "firearm",
+        "flame",
+        "futuristic",
+        "heat",
+        "ranged",
+        "sci-fi",
+        "siege"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "spaceship engine startup",
+      "file": "sounds/spaceship-engine-startup.mp3",
+      "keywords": [
+        "spaceship",
+        "engine",
+        "startup",
+        "scifi",
+        "power",
+        "ignition",
+        "thrusters",
+        "launch",
+        "futuristic",
+        "motor",
+        "sci-fi",
+        "vehicle"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "hyperdrive jump",
+      "file": "sounds/hyperdrive-jump.mp3",
+      "keywords": [
+        "hyperdrive",
+        "jump",
+        "warp",
+        "lightspeed",
+        "scifi",
+        "space",
+        "whoosh",
+        "travel",
+        "futuristic",
+        "sci-fi"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "alien communication chatter",
+      "file": "sounds/alien-communication-chatter.mp3",
+      "keywords": [
+        "alien",
+        "communication",
+        "chatter",
+        "scifi",
+        "signal",
+        "language",
+        "strange",
+        "radio",
+        "futuristic",
+        "sci-fi"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "robot malfunction glitch",
+      "file": "sounds/robot-malfunction-glitch.mp3",
+      "keywords": [
+        "robot",
+        "malfunction",
+        "glitch",
+        "scifi",
+        "error",
+        "sparks",
+        "broken",
+        "short",
+        "futuristic",
+        "sci-fi"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "scifi scanner sweep",
+      "file": "sounds/scifi-scanner-sweep.mp3",
+      "keywords": [
+        "scifi",
+        "scanner",
+        "sweep",
+        "scan",
+        "beam",
+        "detect",
+        "analysis",
+        "beep",
+        "futuristic",
+        "sci-fi"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "cryo pod open hiss",
+      "file": "sounds/cryo-pod-open-hiss.mp3",
+      "keywords": [
+        "cryo",
+        "pod",
+        "open",
+        "hiss",
+        "scifi",
+        "frozen",
+        "awaken",
+        "steam",
+        "futuristic",
+        "sci-fi"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "energy blade ignite hum",
+      "file": "sounds/energy-blade-ignite-hum.mp3",
+      "keywords": [
+        "energy",
+        "blade",
+        "ignite",
+        "hum",
+        "scifi",
+        "sword",
+        "plasma",
+        "weapon",
+        "fantasy",
+        "combat",
+        "futuristic",
+        "melee",
+        "sci-fi"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "scifi computer error beep",
+      "file": "sounds/scifi-computer-error-beep.mp3",
+      "keywords": [
+        "scifi",
+        "computer",
+        "error",
+        "beep",
+        "alert",
+        "denied",
+        "warning",
+        "console",
+        "futuristic",
+        "sci-fi"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "missile launch whoosh",
+      "file": "sounds/missile-launch-whoosh.mp3",
+      "keywords": [
+        "missile",
+        "launch",
+        "whoosh",
+        "rocket",
+        "weapon",
+        "fire",
+        "military",
+        "scifi",
+        "arcane",
+        "cast",
+        "futuristic",
+        "projectile",
+        "sci-fi",
+        "spell"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "spaceship landing thrusters",
+      "file": "sounds/spaceship-landing-thrusters.mp3",
+      "keywords": [
+        "spaceship",
+        "landing",
+        "thrusters",
+        "scifi",
+        "touchdown",
+        "descent",
+        "engine",
+        "hiss",
+        "futuristic",
+        "sci-fi"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "blaster reload clip",
+      "file": "sounds/blaster-reload-clip.mp3",
+      "keywords": [
+        "blaster",
+        "reload",
+        "clip",
+        "scifi",
+        "weapon",
+        "energy",
+        "cell",
+        "click",
+        "futuristic",
+        "sci-fi"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "pistol shot close",
+      "file": "sounds/pistol-shot-close.mp3",
+      "keywords": [
+        "pistol",
+        "shot",
+        "close",
+        "gun",
+        "handgun",
+        "fire",
+        "bang",
+        "modern",
+        "combat",
+        "firearm",
+        "ranged"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "pistol reload magazine",
+      "file": "sounds/pistol-reload-magazine.mp3",
+      "keywords": [
+        "pistol",
+        "reload",
+        "magazine",
+        "gun",
+        "handgun",
+        "clip",
+        "slide",
+        "rack",
+        "combat",
+        "firearm",
+        "ranged"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "shotgun pump rack",
+      "file": "sounds/shotgun-pump-rack.mp3",
+      "keywords": [
+        "shotgun",
+        "pump",
+        "rack",
+        "gun",
+        "chamber",
+        "weapon",
+        "cock",
+        "threat"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "shotgun blast",
+      "file": "sounds/shotgun-blast.mp3",
+      "keywords": [
+        "shotgun",
+        "blast",
+        "gun",
+        "shot",
+        "boom",
+        "fire",
+        "weapon",
+        "loud",
+        "intense",
+        "powerful"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "assault rifle burst",
+      "file": "sounds/assault-rifle-burst.mp3",
+      "keywords": [
+        "assault",
+        "rifle",
+        "burst",
+        "gun",
+        "automatic",
+        "fire",
+        "military",
+        "shots",
+        "combat"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "machine gun long burst",
+      "file": "sounds/machine-gun-long-burst.mp3",
+      "keywords": [
+        "machine",
+        "gun",
+        "long",
+        "burst",
+        "automatic",
+        "fire",
+        "military",
+        "heavy"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "silenced pistol shot",
+      "file": "sounds/silenced-pistol-shot.mp3",
+      "keywords": [
+        "silenced",
+        "pistol",
+        "shot",
+        "suppressor",
+        "gun",
+        "stealth",
+        "quiet",
+        "spy",
+        "combat",
+        "firearm",
+        "ranged"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "sniper rifle shot distant",
+      "file": "sounds/sniper-rifle-shot-distant.mp3",
+      "keywords": [
+        "sniper",
+        "rifle",
+        "shot",
+        "distant",
+        "gun",
+        "echo",
+        "long",
+        "range",
+        "combat"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "bullet impact metal",
+      "file": "sounds/bullet-impact-metal.mp3",
+      "keywords": [
+        "bullet",
+        "impact",
+        "metal",
+        "ricochet",
+        "hit",
+        "ping",
+        "steel",
+        "gunfight"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "bullet impact wood",
+      "file": "sounds/bullet-impact-wood.mp3",
+      "keywords": [
+        "bullet",
+        "impact",
+        "wood",
+        "hit",
+        "splinter",
+        "thunk",
+        "cover",
+        "gunfight"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "handcuffs click ratchet",
+      "file": "sounds/handcuffs-click-ratchet.mp3",
+      "keywords": [
+        "handcuffs",
+        "click",
+        "ratchet",
+        "police",
+        "arrest",
+        "cuffs",
+        "metal",
+        "lock"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "jail cell door slam",
+      "file": "sounds/jail-cell-door-slam.mp3",
+      "keywords": [
+        "jail",
+        "cell",
+        "door",
+        "slam",
+        "prison",
+        "bars",
+        "lock",
+        "metal"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "police radio chatter static",
+      "file": "sounds/police-radio-chatter-static.mp3",
+      "keywords": [
+        "police",
+        "radio",
+        "chatter",
+        "static",
+        "dispatch",
+        "walkie",
+        "cop",
+        "squelch"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "car crash collision",
+      "file": "sounds/car-crash-collision.mp3",
+      "keywords": [
+        "car",
+        "crash",
+        "collision",
+        "accident",
+        "metal",
+        "glass",
+        "impact",
+        "wreck",
+        "modern",
+        "vehicle"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "tires skid long",
+      "file": "sounds/tires-skid-long.mp3",
+      "keywords": [
+        "tires",
+        "skid",
+        "long",
+        "screech",
+        "brakes",
+        "car",
+        "chase",
+        "asphalt",
+        "modern",
+        "vehicle"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "car alarm blaring",
+      "file": "sounds/car-alarm-blaring.mp3",
+      "keywords": [
+        "car",
+        "alarm",
+        "blaring",
+        "siren",
+        "street",
+        "honk",
+        "security",
+        "urban",
+        "modern",
+        "vehicle"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "car door slam",
+      "file": "sounds/car-door-slam.mp3",
+      "keywords": [
+        "car",
+        "door",
+        "slam",
+        "shut",
+        "vehicle",
+        "close",
+        "thunk",
+        "exit",
+        "modern"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "jet fighter flyby",
+      "file": "sounds/jet-fighter-flyby.mp3",
+      "keywords": [
+        "jet",
+        "fighter",
+        "flyby",
+        "plane",
+        "military",
+        "roar",
+        "aircraft",
+        "fast",
+        "combat",
+        "energetic",
+        "quick",
+        "warrior"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "helicopter close hover",
+      "file": "sounds/helicopter-close-hover.mp3",
+      "keywords": [
+        "helicopter",
+        "close",
+        "hover",
+        "rotor",
+        "chopper",
+        "blades",
+        "military",
+        "loud",
+        "intense",
+        "powerful"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "tank treads rumble",
+      "file": "sounds/tank-treads-rumble.mp3",
+      "keywords": [
+        "tank",
+        "treads",
+        "rumble",
+        "military",
+        "armor",
+        "tracks",
+        "war",
+        "engine"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "grenade explosion",
+      "file": "sounds/grenade-explosion.mp3",
+      "keywords": [
+        "grenade",
+        "explosion",
+        "blast",
+        "military",
+        "boom",
+        "debris",
+        "war",
+        "combat",
+        "detonation",
+        "impact"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "large window smash",
+      "file": "sounds/large-window-smash.mp3",
+      "keywords": [
+        "large",
+        "window",
+        "smash",
+        "glass",
+        "shatter",
+        "crash",
+        "break",
+        "burst"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "door kicked open",
+      "file": "sounds/door-kicked-open.mp3",
+      "keywords": [
+        "door",
+        "kicked",
+        "open",
+        "breach",
+        "kick",
+        "burst",
+        "splinter",
+        "police"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "taser crackle",
+      "file": "sounds/taser-crackle.mp3",
+      "keywords": [
+        "taser",
+        "crackle",
+        "stun",
+        "electric",
+        "zap",
+        "police",
+        "shock",
+        "weapon"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "revolver hammer cock",
+      "file": "sounds/revolver-hammer-cock.mp3",
+      "keywords": [
+        "revolver",
+        "hammer",
+        "cock",
+        "gun",
+        "western",
+        "cowboy",
+        "click",
+        "standoff",
+        "blunt",
+        "melee",
+        "weapon",
+        "combat"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "revolver fire single",
+      "file": "sounds/revolver-fire-single.mp3",
+      "keywords": [
+        "revolver",
+        "fire",
+        "single",
+        "gunshot",
+        "western",
+        "cowboy",
+        "six",
+        "shooter",
+        "flame",
+        "heat"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "revolver cylinder spin",
+      "file": "sounds/revolver-cylinder-spin.mp3",
+      "keywords": [
+        "revolver",
+        "cylinder",
+        "spin",
+        "gun",
+        "western",
+        "roulette",
+        "click",
+        "cowboy"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "saloon doors swing",
+      "file": "sounds/saloon-doors-swing.mp3",
+      "keywords": [
+        "saloon",
+        "doors",
+        "swing",
+        "western",
+        "bar",
+        "creak",
+        "entrance",
+        "cowboy"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "lasso rope whirl throw",
+      "file": "sounds/lasso-rope-whirl-throw.mp3",
+      "keywords": [
+        "lasso",
+        "rope",
+        "whirl",
+        "throw",
+        "cowboy",
+        "western",
+        "rodeo",
+        "catch"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "harmonica lonely sting",
+      "file": "sounds/harmonica-lonely-sting.mp3",
+      "keywords": [
+        "harmonica",
+        "lonely",
+        "sting",
+        "western",
+        "cowboy",
+        "desert",
+        "blues",
+        "solo"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "spittoon ping",
+      "file": "sounds/spittoon-ping.mp3",
+      "keywords": [
+        "spittoon",
+        "ping",
+        "western",
+        "saloon",
+        "spit",
+        "brass",
+        "cowboy",
+        "comic"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "gold pan sifting gravel",
+      "file": "sounds/gold-pan-sifting-gravel.mp3",
+      "keywords": [
+        "gold",
+        "pan",
+        "sifting",
+        "gravel",
+        "prospector",
+        "river",
+        "western",
+        "mining",
+        "nature",
+        "footsteps",
+        "ground",
+        "outdoor"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "stagecoach passing",
+      "file": "sounds/stagecoach-passing.mp3",
+      "keywords": [
+        "stagecoach",
+        "passing",
+        "horses",
+        "wagon",
+        "western",
+        "wheels",
+        "gallop",
+        "dirt"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "boots on wooden porch",
+      "file": "sounds/boots-on-wooden-porch.mp3",
+      "keywords": [
+        "boots",
+        "wooden",
+        "porch",
+        "footsteps",
+        "western",
+        "cowboy",
+        "spurs",
+        "walk",
+        "walking"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "dynamite explosion",
+      "file": "sounds/dynamite-explosion.mp3",
+      "keywords": [
+        "dynamite",
+        "explosion",
+        "blast",
+        "western",
+        "mine",
+        "tnt",
+        "boom",
+        "rocks",
+        "detonation",
+        "impact"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "steam valve hiss release",
+      "file": "sounds/steam-valve-hiss-release.mp3",
+      "keywords": [
+        "steam",
+        "valve",
+        "hiss",
+        "release",
+        "steampunk",
+        "pipe",
+        "pressure",
+        "boiler",
+        "clockwork",
+        "industrial",
+        "victorian"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "clockwork gears turning",
+      "file": "sounds/clockwork-gears-turning.mp3",
+      "keywords": [
+        "clockwork",
+        "gears",
+        "turning",
+        "steampunk",
+        "mechanism",
+        "ticking",
+        "cogs",
+        "machine",
+        "industrial",
+        "victorian"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "pressure gauge creak groan",
+      "file": "sounds/pressure-gauge-creak-groan.mp3",
+      "keywords": [
+        "pressure",
+        "gauge",
+        "creak",
+        "groan",
+        "steampunk",
+        "metal",
+        "strain",
+        "pipe",
+        "clockwork",
+        "industrial",
+        "victorian"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "airship propeller drone",
+      "file": "sounds/airship-propeller-drone.mp3",
+      "keywords": [
+        "airship",
+        "propeller",
+        "drone",
+        "steampunk",
+        "zeppelin",
+        "engine",
+        "flight",
+        "sky",
+        "aerial",
+        "air",
+        "clockwork",
+        "industrial",
+        "victorian"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "factory machinery clank",
+      "file": "sounds/factory-machinery-clank.mp3",
+      "keywords": [
+        "factory",
+        "machinery",
+        "clank",
+        "industrial",
+        "press",
+        "rhythm",
+        "metal",
+        "production"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "jackhammer pavement",
+      "file": "sounds/jackhammer-pavement.mp3",
+      "keywords": [
+        "jackhammer",
+        "pavement",
+        "construction",
+        "drill",
+        "concrete",
+        "loud",
+        "street",
+        "work",
+        "intense",
+        "powerful"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "power drill",
+      "file": "sounds/power-drill.mp3",
+      "keywords": [
+        "power",
+        "drill",
+        "tool",
+        "electric",
+        "screw",
+        "construction",
+        "motor",
+        "workshop"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "welding sparks sizzle",
+      "file": "sounds/welding-sparks-sizzle.mp3",
+      "keywords": [
+        "welding",
+        "sparks",
+        "sizzle",
+        "torch",
+        "metal",
+        "workshop",
+        "arc",
+        "industrial"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "hydraulic press slam",
+      "file": "sounds/hydraulic-press-slam.mp3",
+      "keywords": [
+        "hydraulic",
+        "press",
+        "slam",
+        "industrial",
+        "crush",
+        "machine",
+        "metal",
+        "heavy"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "conveyor belt rolling",
+      "file": "sounds/conveyor-belt-rolling.mp3",
+      "keywords": [
+        "conveyor",
+        "belt",
+        "rolling",
+        "factory",
+        "industrial",
+        "rollers",
+        "motor",
+        "warehouse"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "chainsaw rev cutting",
+      "file": "sounds/chainsaw-rev-cutting.mp3",
+      "keywords": [
+        "chainsaw",
+        "rev",
+        "cutting",
+        "saw",
+        "wood",
+        "log",
+        "engine",
+        "lumber"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "hammer nails wood",
+      "file": "sounds/hammer-nails-wood.mp3",
+      "keywords": [
+        "hammer",
+        "nails",
+        "wood",
+        "carpentry",
+        "build",
+        "construction",
+        "tap",
+        "workshop",
+        "blunt",
+        "melee",
+        "weapon",
+        "combat"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "hand saw wood",
+      "file": "sounds/hand-saw-wood.mp3",
+      "keywords": [
+        "hand",
+        "saw",
+        "wood",
+        "cutting",
+        "carpentry",
+        "sawing",
+        "plank",
+        "workshop"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "metal grinder sparks",
+      "file": "sounds/metal-grinder-sparks.mp3",
+      "keywords": [
+        "metal",
+        "grinder",
+        "sparks",
+        "angle",
+        "workshop",
+        "steel",
+        "screech",
+        "industrial"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "creepy music box",
+      "file": "sounds/creepy-music-box.mp3",
+      "keywords": [
+        "creepy",
+        "box",
+        "horror",
+        "eerie",
+        "lullaby",
+        "haunted",
+        "toy",
+        "unsettling"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "eerie children giggling distant",
+      "file": "sounds/eerie-children-giggling-distant.mp3",
+      "keywords": [
+        "eerie",
+        "children",
+        "giggling",
+        "distant",
+        "horror",
+        "ghost",
+        "laugh",
+        "creepy",
+        "unsettling"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "overlapping whispers",
+      "file": "sounds/overlapping-whispers.mp3",
+      "keywords": [
+        "overlapping",
+        "whispers",
+        "voices",
+        "horror",
+        "haunted",
+        "unintelligible",
+        "creepy",
+        "madness"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "flies buzzing corpse",
+      "file": "sounds/flies-buzzing-corpse.mp3",
+      "keywords": [
+        "flies",
+        "buzzing",
+        "corpse",
+        "horror",
+        "swarm",
+        "dead",
+        "rot",
+        "insects"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "tv static white noise",
+      "file": "sounds/tv-static-white-noise.mp3",
+      "keywords": [
+        "tv",
+        "static",
+        "white",
+        "noise",
+        "television",
+        "horror",
+        "signal",
+        "broken"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "radio tuning dial",
+      "file": "sounds/radio-tuning-dial.mp3",
+      "keywords": [
+        "radio",
+        "tuning",
+        "dial",
+        "static",
+        "stations",
+        "vintage",
+        "frequency",
+        "search"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "pounding inside walls",
+      "file": "sounds/pounding-inside-walls.mp3",
+      "keywords": [
+        "pounding",
+        "inside",
+        "walls",
+        "horror",
+        "knocking",
+        "trapped",
+        "thump",
+        "haunted"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "door closing by itself creak",
+      "file": "sounds/door-closing-by-itself-creak.mp3",
+      "keywords": [
+        "door",
+        "closing",
+        "itself",
+        "creak",
+        "horror",
+        "slow",
+        "haunted",
+        "latch",
+        "relaxed"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "fingernails scraping wood",
+      "file": "sounds/fingernails-scraping-wood.mp3",
+      "keywords": [
+        "fingernails",
+        "scraping",
+        "wood",
+        "horror",
+        "scratch",
+        "claw",
+        "coffin",
+        "creepy"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "breathing behind you",
+      "file": "sounds/breathing-behind-you.mp3",
+      "keywords": [
+        "breathing",
+        "behind",
+        "horror",
+        "close",
+        "raspy",
+        "stalker",
+        "creepy",
+        "whisper",
+        "body",
+        "breath",
+        "human",
+        "you"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "ghostly moan wail",
+      "file": "sounds/ghostly-moan-wail.mp3",
+      "keywords": [
+        "ghostly",
+        "moan",
+        "wail",
+        "ghost",
+        "horror",
+        "spirit",
+        "haunted",
+        "echo"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "chains dragging floor",
+      "file": "sounds/chains-dragging-floor.mp3",
+      "keywords": [
+        "chains",
+        "dragging",
+        "floor",
+        "horror",
+        "metal",
+        "ghost",
+        "dungeon",
+        "heavy",
+        "fantasy"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "heavy footsteps upstairs",
+      "file": "sounds/heavy-footsteps-upstairs.mp3",
+      "keywords": [
+        "heavy",
+        "footsteps",
+        "upstairs",
+        "horror",
+        "ceiling",
+        "creak",
+        "intruder",
+        "house",
+        "intense",
+        "movement",
+        "powerful",
+        "walking"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "jump scare sting",
+      "file": "sounds/jump-scare-sting.mp3",
+      "keywords": [
+        "jump",
+        "scare",
+        "sting",
+        "horror",
+        "shock",
+        "hit",
+        "stinger",
+        "scream"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "witch cackle",
+      "file": "sounds/witch-cackle.mp3",
+      "keywords": [
+        "witch",
+        "cackle",
+        "laugh",
+        "halloween",
+        "evil",
+        "hag",
+        "horror",
+        "spooky"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "werewolf transformation",
+      "file": "sounds/werewolf-transformation.mp3",
+      "keywords": [
+        "werewolf",
+        "transformation",
+        "horror",
+        "bones",
+        "growl",
+        "monster",
+        "moon",
+        "change"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "vampire hiss",
+      "file": "sounds/vampire-hiss.mp3",
+      "keywords": [
+        "vampire",
+        "hiss",
+        "horror",
+        "fangs",
+        "undead",
+        "snarl",
+        "dracula",
+        "threat",
+        "gothic",
+        "monster"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "blood splatter wet",
+      "file": "sounds/blood-splatter-wet.mp3",
+      "keywords": [
+        "blood",
+        "splatter",
+        "wet",
+        "gore",
+        "horror",
+        "splash",
+        "slash",
+        "impact"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "bees buzzing hive",
+      "file": "sounds/bees-buzzing-hive.mp3",
+      "keywords": [
+        "bees",
+        "buzzing",
+        "hive",
+        "swarm",
+        "honey",
+        "insects",
+        "garden",
+        "summer"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "mosquito whine close",
+      "file": "sounds/mosquito-whine-close.mp3",
+      "keywords": [
+        "mosquito",
+        "whine",
+        "close",
+        "insect",
+        "buzz",
+        "ear",
+        "annoying",
+        "night",
+        "bug"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "duck quack pond",
+      "file": "sounds/duck-quack-pond.mp3",
+      "keywords": [
+        "duck",
+        "quack",
+        "pond",
+        "bird",
+        "water",
+        "farm",
+        "mallard",
+        "park"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "geese honking flock",
+      "file": "sounds/geese-honking-flock.mp3",
+      "keywords": [
+        "geese",
+        "honking",
+        "flock",
+        "birds",
+        "goose",
+        "migration",
+        "sky",
+        "farm",
+        "nature",
+        "aerial",
+        "air"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "sheep bleating",
+      "file": "sounds/sheep-bleating.mp3",
+      "keywords": [
+        "sheep",
+        "bleating",
+        "baa",
+        "farm",
+        "flock",
+        "lamb",
+        "pasture",
+        "animal"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "goat bleat",
+      "file": "sounds/goat-bleat.mp3",
+      "keywords": [
+        "goat",
+        "bleat",
+        "farm",
+        "animal",
+        "maa",
+        "barn",
+        "pasture",
+        "funny"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "turkey gobble",
+      "file": "sounds/turkey-gobble.mp3",
+      "keywords": [
+        "turkey",
+        "gobble",
+        "bird",
+        "farm",
+        "thanksgiving",
+        "animal",
+        "call",
+        "fowl"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "coyote yip howl",
+      "file": "sounds/coyote-yip-howl.mp3",
+      "keywords": [
+        "coyote",
+        "yip",
+        "howl",
+        "desert",
+        "night",
+        "wild",
+        "pack",
+        "western"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "hyena laughing",
+      "file": "sounds/hyena-laughing.mp3",
+      "keywords": [
+        "hyena",
+        "laughing",
+        "cackle",
+        "africa",
+        "savanna",
+        "wild",
+        "predator",
+        "night"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "dolphin clicks whistle",
+      "file": "sounds/dolphin-clicks-whistle.mp3",
+      "keywords": [
+        "dolphin",
+        "clicks",
+        "whistle",
+        "ocean",
+        "sea",
+        "marine",
+        "playful",
+        "underwater",
+        "nature"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "parrot squawk talk",
+      "file": "sounds/parrot-squawk-talk.mp3",
+      "keywords": [
+        "parrot",
+        "squawk",
+        "talk",
+        "bird",
+        "tropical",
+        "pirate",
+        "macaw",
+        "jungle",
+        "nautical",
+        "sailing",
+        "sea"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "rattlesnake rattle warning",
+      "file": "sounds/rattlesnake-rattle-warning.mp3",
+      "keywords": [
+        "rattlesnake",
+        "rattle",
+        "warning",
+        "snake",
+        "desert",
+        "danger",
+        "western",
+        "hiss"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "bull snort stomp",
+      "file": "sounds/bull-snort-stomp.mp3",
+      "keywords": [
+        "bull",
+        "snort",
+        "stomp",
+        "cattle",
+        "angry",
+        "charge",
+        "farm",
+        "rodeo",
+        "attack",
+        "combat"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "pigeons flutter coo",
+      "file": "sounds/pigeons-flutter-coo.mp3",
+      "keywords": [
+        "pigeons",
+        "flutter",
+        "coo",
+        "birds",
+        "city",
+        "wings",
+        "park",
+        "urban",
+        "nature"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "woodpecker pecking",
+      "file": "sounds/woodpecker-pecking.mp3",
+      "keywords": [
+        "woodpecker",
+        "pecking",
+        "bird",
+        "forest",
+        "tree",
+        "drumming",
+        "tap",
+        "nature"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "gorilla chest beat roar",
+      "file": "sounds/gorilla-chest-beat-roar.mp3",
+      "keywords": [
+        "gorilla",
+        "chest",
+        "beat",
+        "roar",
+        "ape",
+        "jungle",
+        "primate",
+        "threat"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "acid splash sizzle spell",
+      "file": "sounds/acid-splash-sizzle-spell.mp3",
+      "keywords": [
+        "acid",
+        "splash",
+        "sizzle",
+        "spell",
+        "magic",
+        "dnd",
+        "corrosive",
+        "cantrip",
+        "arcane",
+        "cast",
+        "casting"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "water spell wave splash",
+      "file": "sounds/water-spell-wave-splash.mp3",
+      "keywords": [
+        "water",
+        "spell",
+        "wave",
+        "splash",
+        "magic",
+        "dnd",
+        "tidal",
+        "cast",
+        "nature",
+        "arcane",
+        "casting"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "chain lightning crackle",
+      "file": "sounds/chain-lightning-crackle.mp3",
+      "keywords": [
+        "chain",
+        "lightning",
+        "crackle",
+        "spell",
+        "magic",
+        "dnd",
+        "electric",
+        "arc",
+        "storm",
+        "thunder"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "poison cloud spell",
+      "file": "sounds/poison-cloud-spell.mp3",
+      "keywords": [
+        "poison",
+        "cloud",
+        "spell",
+        "magic",
+        "dnd",
+        "gas",
+        "toxic",
+        "cast",
+        "arcane",
+        "casting",
+        "dark"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "illusion shimmer spell",
+      "file": "sounds/illusion-shimmer-spell.mp3",
+      "keywords": [
+        "illusion",
+        "shimmer",
+        "spell",
+        "magic",
+        "dnd",
+        "trick",
+        "glamour",
+        "cast",
+        "arcane",
+        "casting"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "polymorph transform spell",
+      "file": "sounds/polymorph-transform-spell.mp3",
+      "keywords": [
+        "polymorph",
+        "transform",
+        "spell",
+        "magic",
+        "dnd",
+        "shapeshift",
+        "morph",
+        "cast",
+        "arcane",
+        "casting"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "haste spell whoosh",
+      "file": "sounds/haste-spell-whoosh.mp3",
+      "keywords": [
+        "haste",
+        "spell",
+        "whoosh",
+        "magic",
+        "dnd",
+        "speed",
+        "fast",
+        "buff",
+        "arcane",
+        "cast",
+        "casting",
+        "energetic",
+        "quick"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "slow spell time drone",
+      "file": "sounds/slow-spell-time-drone.mp3",
+      "keywords": [
+        "slow",
+        "spell",
+        "time",
+        "drone",
+        "magic",
+        "dnd",
+        "debuff",
+        "warp",
+        "arcane",
+        "cast",
+        "casting",
+        "relaxed"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "misty step blink",
+      "file": "sounds/misty-step-blink.mp3",
+      "keywords": [
+        "misty",
+        "step",
+        "blink",
+        "teleport",
+        "spell",
+        "magic",
+        "dnd",
+        "vanish"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "thunderclap spell",
+      "file": "sounds/thunderclap-spell.mp3",
+      "keywords": [
+        "thunderclap",
+        "spell",
+        "magic",
+        "dnd",
+        "boom",
+        "shockwave",
+        "cast",
+        "burst",
+        "arcane",
+        "casting"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "fire bolt launch",
+      "file": "sounds/fire-bolt-launch.mp3",
+      "keywords": [
+        "fire",
+        "bolt",
+        "launch",
+        "spell",
+        "magic",
+        "dnd",
+        "cantrip",
+        "flame",
+        "heat",
+        "ranged",
+        "weapon"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "mage hand spell",
+      "file": "sounds/mage-hand-spell.mp3",
+      "keywords": [
+        "mage",
+        "hand",
+        "spell",
+        "magic",
+        "dnd",
+        "spectral",
+        "cantrip",
+        "telekinetic",
+        "arcane",
+        "cast",
+        "casting",
+        "wizard",
+        "fantasy"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "divination vision chime",
+      "file": "sounds/divination-vision-chime.mp3",
+      "keywords": [
+        "divination",
+        "vision",
+        "chime",
+        "spell",
+        "magic",
+        "dnd",
+        "prophecy",
+        "oracle"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "bless holy chime",
+      "file": "sounds/bless-holy-chime.mp3",
+      "keywords": [
+        "bless",
+        "holy",
+        "chime",
+        "spell",
+        "cleric",
+        "dnd",
+        "divine",
+        "buff"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "fear spell dark scream",
+      "file": "sounds/fear-spell-dark-scream.mp3",
+      "keywords": [
+        "fear",
+        "spell",
+        "dark",
+        "scream",
+        "magic",
+        "dnd",
+        "terror",
+        "necromancy",
+        "horror",
+        "arcane",
+        "cast",
+        "casting",
+        "evil",
+        "ominous",
+        "sinister"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "sleep spell lullaby shimmer",
+      "file": "sounds/sleep-spell-lullaby-shimmer.mp3",
+      "keywords": [
+        "sleep",
+        "spell",
+        "lullaby",
+        "shimmer",
+        "magic",
+        "dnd",
+        "enchantment",
+        "drowsy",
+        "arcane",
+        "cast",
+        "casting"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "entangle vines growing",
+      "file": "sounds/entangle-vines-growing.mp3",
+      "keywords": [
+        "entangle",
+        "vines",
+        "growing",
+        "spell",
+        "druid",
+        "dnd",
+        "nature",
+        "roots",
+        "magic"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "stoneskin spell harden",
+      "file": "sounds/stoneskin-spell-harden.mp3",
+      "keywords": [
+        "stoneskin",
+        "spell",
+        "harden",
+        "magic",
+        "dnd",
+        "stone",
+        "protection",
+        "buff",
+        "arcane",
+        "cast",
+        "casting"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "level up chime",
+      "file": "sounds/level-up-chime.mp3",
+      "keywords": [
+        "level",
+        "chime",
+        "game",
+        "ui",
+        "reward",
+        "success",
+        "rpg",
+        "fantasy"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "achievement unlocked",
+      "file": "sounds/achievement-unlocked.mp3",
+      "keywords": [
+        "achievement",
+        "unlocked",
+        "game",
+        "ui",
+        "reward",
+        "trophy",
+        "notification",
+        "win"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "error buzz negative",
+      "file": "sounds/error-buzz-negative.mp3",
+      "keywords": [
+        "error",
+        "buzz",
+        "negative",
+        "game",
+        "ui",
+        "wrong",
+        "denied",
+        "fail"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "menu select click",
+      "file": "sounds/menu-select-click.mp3",
+      "keywords": [
+        "menu",
+        "select",
+        "click",
+        "game",
+        "ui",
+        "confirm",
+        "button",
+        "interface"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "menu hover blip",
+      "file": "sounds/menu-hover-blip.mp3",
+      "keywords": [
+        "menu",
+        "hover",
+        "blip",
+        "game",
+        "ui",
+        "cursor",
+        "move",
+        "interface"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "quest complete fanfare",
+      "file": "sounds/quest-complete-fanfare.mp3",
+      "keywords": [
+        "quest",
+        "complete",
+        "fanfare",
+        "game",
+        "rpg",
+        "victory",
+        "reward",
+        "success",
+        "fantasy"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "item pickup sparkle",
+      "file": "sounds/item-pickup-sparkle.mp3",
+      "keywords": [
+        "item",
+        "pickup",
+        "sparkle",
+        "game",
+        "loot",
+        "collect",
+        "ui",
+        "rpg",
+        "fantasy"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "success chime",
+      "file": "sounds/success-chime.mp3",
+      "keywords": [
+        "success",
+        "chime",
+        "correct",
+        "game",
+        "ui",
+        "positive",
+        "ding",
+        "complete"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "failure sting",
+      "file": "sounds/failure-sting.mp3",
+      "keywords": [
+        "failure",
+        "sting",
+        "game",
+        "lose",
+        "defeat",
+        "wrong",
+        "ui",
+        "sad"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "countdown beep three",
+      "file": "sounds/countdown-beep-three.mp3",
+      "keywords": [
+        "countdown",
+        "beep",
+        "three",
+        "timer",
+        "start",
+        "race",
+        "go",
+        "game"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "referee whistle",
+      "file": "sounds/referee-whistle.mp3",
+      "keywords": [
+        "referee",
+        "whistle",
+        "sports",
+        "foul",
+        "game",
+        "coach",
+        "blow",
+        "stop"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "game show buzzer wrong",
+      "file": "sounds/game-show-buzzer-wrong.mp3",
+      "keywords": [
+        "game",
+        "show",
+        "buzzer",
+        "wrong",
+        "quiz",
+        "incorrect",
+        "tv",
+        "loud",
+        "intense",
+        "powerful"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "game show ding correct",
+      "file": "sounds/game-show-ding-correct.mp3",
+      "keywords": [
+        "game",
+        "show",
+        "ding",
+        "correct",
+        "quiz",
+        "bell",
+        "right",
+        "tv"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "basketball dribble bounce",
+      "file": "sounds/basketball-dribble-bounce.mp3",
+      "keywords": [
+        "basketball",
+        "dribble",
+        "bounce",
+        "sports",
+        "court",
+        "ball",
+        "gym",
+        "squeak"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "baseball bat crack",
+      "file": "sounds/baseball-bat-crack.mp3",
+      "keywords": [
+        "baseball",
+        "bat",
+        "crack",
+        "sports",
+        "hit",
+        "home",
+        "run",
+        "ball"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "goal air horn",
+      "file": "sounds/goal-air-horn.mp3",
+      "keywords": [
+        "goal",
+        "air",
+        "horn",
+        "sports",
+        "hockey",
+        "score",
+        "arena",
+        "celebration"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "stadium crowd chant",
+      "file": "sounds/stadium-crowd-chant.mp3",
+      "keywords": [
+        "stadium",
+        "crowd",
+        "chant",
+        "sports",
+        "fans",
+        "clap",
+        "rhythm",
+        "arena"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "starting pistol race",
+      "file": "sounds/starting-pistol-race.mp3",
+      "keywords": [
+        "starting",
+        "pistol",
+        "race",
+        "sports",
+        "track",
+        "gun",
+        "begin",
+        "athletics",
+        "combat",
+        "firearm",
+        "ranged"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "boxing bell round",
+      "file": "sounds/boxing-bell-round.mp3",
+      "keywords": [
+        "boxing",
+        "bell",
+        "round",
+        "ring",
+        "fight",
+        "sports",
+        "start",
+        "ding",
+        "combat"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "slot machine jackpot",
+      "file": "sounds/slot-machine-jackpot.mp3",
+      "keywords": [
+        "slot",
+        "machine",
+        "jackpot",
+        "casino",
+        "coins",
+        "win",
+        "gambling",
+        "bells"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "card shuffle deal",
+      "file": "sounds/card-shuffle-deal.mp3",
+      "keywords": [
+        "card",
+        "shuffle",
+        "deal",
+        "poker",
+        "casino",
+        "cards",
+        "deck",
+        "table"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "poker chips stack",
+      "file": "sounds/poker-chips-stack.mp3",
+      "keywords": [
+        "poker",
+        "chips",
+        "stack",
+        "casino",
+        "bet",
+        "gambling",
+        "clay",
+        "table"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "beer pour foam glass",
+      "file": "sounds/beer-pour-foam-glass.mp3",
+      "keywords": [
+        "beer",
+        "pour",
+        "foam",
+        "glass",
+        "drink",
+        "bar",
+        "tap",
+        "pub",
+        "tavern",
+        "fantasy"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "wine pour bottle",
+      "file": "sounds/wine-pour-bottle.mp3",
+      "keywords": [
+        "wine",
+        "pour",
+        "bottle",
+        "glass",
+        "drink",
+        "dinner",
+        "glug",
+        "restaurant"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "champagne cork pop",
+      "file": "sounds/champagne-cork-pop.mp3",
+      "keywords": [
+        "champagne",
+        "cork",
+        "pop",
+        "celebration",
+        "bottle",
+        "party",
+        "fizz",
+        "toast"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "cutlery plates clatter",
+      "file": "sounds/cutlery-plates-clatter.mp3",
+      "keywords": [
+        "cutlery",
+        "plates",
+        "clatter",
+        "dishes",
+        "kitchen",
+        "dinner",
+        "silverware",
+        "table"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "blender whir",
+      "file": "sounds/blender-whir.mp3",
+      "keywords": [
+        "blender",
+        "whir",
+        "kitchen",
+        "smoothie",
+        "appliance",
+        "motor",
+        "blend",
+        "loud",
+        "intense",
+        "powerful"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "coffee machine brewing",
+      "file": "sounds/coffee-machine-brewing.mp3",
+      "keywords": [
+        "coffee",
+        "machine",
+        "brewing",
+        "kitchen",
+        "morning",
+        "drip",
+        "gurgle",
+        "appliance"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "ice cubes in glass",
+      "file": "sounds/ice-cubes-in-glass.mp3",
+      "keywords": [
+        "ice",
+        "cubes",
+        "glass",
+        "drink",
+        "clink",
+        "bar",
+        "whiskey",
+        "pour",
+        "cold",
+        "frozen",
+        "winter"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "shovel digging dirt",
+      "file": "sounds/shovel-digging-dirt.mp3",
+      "keywords": [
+        "shovel",
+        "digging",
+        "dirt",
+        "dig",
+        "grave",
+        "garden",
+        "soil",
+        "scoop"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "watering can pour",
+      "file": "sounds/watering-can-pour.mp3",
+      "keywords": [
+        "watering",
+        "can",
+        "pour",
+        "garden",
+        "plants",
+        "water",
+        "sprinkle",
+        "outdoor"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "sewing machine",
+      "file": "sounds/sewing-machine.mp3",
+      "keywords": [
+        "sewing",
+        "machine",
+        "stitch",
+        "fabric",
+        "tailor",
+        "needle",
+        "craft",
+        "motor"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "scissors cutting paper",
+      "file": "sounds/scissors-cutting-paper.mp3",
+      "keywords": [
+        "scissors",
+        "cutting",
+        "paper",
+        "snip",
+        "craft",
+        "office",
+        "cut",
+        "school",
+        "foley",
+        "writing"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "car keys drop",
+      "file": "sounds/car-keys-drop.mp3",
+      "keywords": [
+        "car",
+        "keys",
+        "drop",
+        "jingle",
+        "floor",
+        "table",
+        "metal",
+        "fall",
+        "modern",
+        "vehicle"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "suitcase wheels rolling",
+      "file": "sounds/suitcase-wheels-rolling.mp3",
+      "keywords": [
+        "suitcase",
+        "wheels",
+        "rolling",
+        "luggage",
+        "travel",
+        "airport",
+        "pavement",
+        "rattle"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "umbrella open",
+      "file": "sounds/umbrella-open.mp3",
+      "keywords": [
+        "umbrella",
+        "open",
+        "rain",
+        "snap",
+        "fabric",
+        "click",
+        "weather",
+        "street"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "bath filling water",
+      "file": "sounds/bath-filling-water.mp3",
+      "keywords": [
+        "bath",
+        "filling",
+        "water",
+        "tub",
+        "faucet",
+        "bathroom",
+        "running",
+        "relax"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "hair dryer",
+      "file": "sounds/hair-dryer.mp3",
+      "keywords": [
+        "hair",
+        "dryer",
+        "bathroom",
+        "blow",
+        "appliance",
+        "morning",
+        "air",
+        "motor"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "electric razor",
+      "file": "sounds/electric-razor.mp3",
+      "keywords": [
+        "electric",
+        "razor",
+        "shaver",
+        "bathroom",
+        "buzz",
+        "morning",
+        "groom",
+        "trimmer"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "shopping cart rattle",
+      "file": "sounds/shopping-cart-rattle.mp3",
+      "keywords": [
+        "shopping",
+        "cart",
+        "rattle",
+        "store",
+        "grocery",
+        "wheels",
+        "supermarket",
+        "metal"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "vending machine drop",
+      "file": "sounds/vending-machine-drop.mp3",
+      "keywords": [
+        "vending",
+        "machine",
+        "drop",
+        "snack",
+        "coin",
+        "thunk",
+        "office",
+        "buy"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "atm beeps cash",
+      "file": "sounds/atm-beeps-cash.mp3",
+      "keywords": [
+        "atm",
+        "beeps",
+        "cash",
+        "bank",
+        "money",
+        "withdraw",
+        "machine",
+        "card"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "text message send whoosh",
+      "file": "sounds/text-message-send-whoosh.mp3",
+      "keywords": [
+        "text",
+        "message",
+        "send",
+        "whoosh",
+        "phone",
+        "app",
+        "chat",
+        "notification"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "baby giggle",
+      "file": "sounds/baby-giggle.mp3",
+      "keywords": [
+        "baby",
+        "giggle",
+        "laugh",
+        "infant",
+        "happy",
+        "cute",
+        "child",
+        "family"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "bicycle chain pedaling",
+      "file": "sounds/bicycle-chain-pedaling.mp3",
+      "keywords": [
+        "bicycle",
+        "chain",
+        "pedaling",
+        "bike",
+        "ride",
+        "gears",
+        "wheels",
+        "street"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "skateboard rolling trick",
+      "file": "sounds/skateboard-rolling-trick.mp3",
+      "keywords": [
+        "skateboard",
+        "rolling",
+        "trick",
+        "skate",
+        "wheels",
+        "kickflip",
+        "pavement",
+        "street"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "outboard boat motor",
+      "file": "sounds/outboard-boat-motor.mp3",
+      "keywords": [
+        "outboard",
+        "boat",
+        "motor",
+        "engine",
+        "lake",
+        "fishing",
+        "water",
+        "putter",
+        "nature"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "speedboat pass",
+      "file": "sounds/speedboat-pass.mp3",
+      "keywords": [
+        "speedboat",
+        "pass",
+        "boat",
+        "fast",
+        "engine",
+        "water",
+        "wake",
+        "lake",
+        "nature",
+        "energetic",
+        "quick"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "jet ski pass",
+      "file": "sounds/jet-ski-pass.mp3",
+      "keywords": [
+        "jet",
+        "ski",
+        "pass",
+        "watercraft",
+        "beach",
+        "engine",
+        "summer",
+        "wave",
+        "nature"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "tram bell ding",
+      "file": "sounds/tram-bell-ding.mp3",
+      "keywords": [
+        "tram",
+        "bell",
+        "ding",
+        "streetcar",
+        "trolley",
+        "city",
+        "transit",
+        "warning"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "hot air balloon burner",
+      "file": "sounds/hot-air-balloon-burner.mp3",
+      "keywords": [
+        "hot",
+        "air",
+        "balloon",
+        "burner",
+        "flame",
+        "blast",
+        "flight",
+        "sky",
+        "aerial"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "submarine sonar ping",
+      "file": "sounds/submarine-sonar-ping.mp3",
+      "keywords": [
+        "submarine",
+        "sonar",
+        "ping",
+        "navy",
+        "underwater",
+        "echo",
+        "military",
+        "depth"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "train brakes squeal",
+      "file": "sounds/train-brakes-squeal.mp3",
+      "keywords": [
+        "train",
+        "brakes",
+        "squeal",
+        "rail",
+        "stop",
+        "metal",
+        "station",
+        "screech"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "airplane cabin chime",
+      "file": "sounds/airplane-cabin-chime.mp3",
+      "keywords": [
+        "airplane",
+        "cabin",
+        "chime",
+        "seatbelt",
+        "flight",
+        "plane",
+        "ding",
+        "travel"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "tornado roar",
+      "file": "sounds/tornado-roar.mp3",
+      "keywords": [
+        "tornado",
+        "roar",
+        "storm",
+        "wind",
+        "twister",
+        "disaster",
+        "debris",
+        "weather"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "rain first drops starting",
+      "file": "sounds/rain-first-drops-starting.mp3",
+      "keywords": [
+        "rain",
+        "first",
+        "drops",
+        "starting",
+        "weather",
+        "storm",
+        "begin",
+        "patter",
+        "water"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "geyser erupting",
+      "file": "sounds/geyser-erupting.mp3",
+      "keywords": [
+        "geyser",
+        "erupting",
+        "steam",
+        "water",
+        "hot",
+        "spring",
+        "burst",
+        "volcanic"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "lake ice crack",
+      "file": "sounds/lake-ice-crack.mp3",
+      "keywords": [
+        "lake",
+        "ice",
+        "crack",
+        "frozen",
+        "winter",
+        "danger",
+        "thin",
+        "echo",
+        "nature",
+        "cold",
+        "water"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "mud bubble pop",
+      "file": "sounds/mud-bubble-pop.mp3",
+      "keywords": [
+        "mud",
+        "bubble",
+        "pop",
+        "swamp",
+        "bog",
+        "wet",
+        "squelch",
+        "gurgle"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "meteor streak impact",
+      "file": "sounds/meteor-streak-impact.mp3",
+      "keywords": [
+        "meteor",
+        "streak",
+        "impact",
+        "space",
+        "fireball",
+        "crash",
+        "sky",
+        "boom",
+        "scifi",
+        "aerial",
+        "air",
+        "evocation",
+        "fire",
+        "futuristic",
+        "magic",
+        "sci-fi",
+        "spell"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "river rapids rushing",
+      "file": "sounds/river-rapids-rushing.mp3",
+      "keywords": [
+        "river",
+        "rapids",
+        "rushing",
+        "whitewater",
+        "water",
+        "fast",
+        "rocks",
+        "roar",
+        "nature",
+        "energetic",
+        "quick",
+        "stream"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "dust storm gust",
+      "file": "sounds/dust-storm-gust.mp3",
+      "keywords": [
+        "dust",
+        "storm",
+        "gust",
+        "sand",
+        "desert",
+        "wind",
+        "haboob",
+        "grit",
+        "weather",
+        "rain",
+        "thunder"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "woman laughing",
+      "file": "sounds/woman-laughing.mp3",
+      "keywords": [
+        "woman",
+        "laughing",
+        "laugh",
+        "female",
+        "giggle",
+        "joy",
+        "amused",
+        "voice"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "kids cheering",
+      "file": "sounds/kids-cheering.mp3",
+      "keywords": [
+        "kids",
+        "cheering",
+        "children",
+        "yay",
+        "excited",
+        "party",
+        "group",
+        "happy"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "group shush quiet",
+      "file": "sounds/group-shush-quiet.mp3",
+      "keywords": [
+        "group",
+        "shush",
+        "quiet",
+        "hush",
+        "library",
+        "silence",
+        "whisper",
+        "voice",
+        "books",
+        "peaceful",
+        "scholar",
+        "soft",
+        "study"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "yawn stretch",
+      "file": "sounds/yawn-stretch.mp3",
+      "keywords": [
+        "yawn",
+        "stretch",
+        "tired",
+        "sleepy",
+        "morning",
+        "human",
+        "wake",
+        "voice"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "slurp drink straw",
+      "file": "sounds/slurp-drink-straw.mp3",
+      "keywords": [
+        "slurp",
+        "drink",
+        "straw",
+        "cup",
+        "soda",
+        "empty",
+        "funny",
+        "mouth"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "burp loud",
+      "file": "sounds/burp-loud.mp3",
+      "keywords": [
+        "burp",
+        "loud",
+        "belch",
+        "funny",
+        "gross",
+        "comic",
+        "mouth",
+        "body",
+        "intense",
+        "powerful"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "hiccup single",
+      "file": "sounds/hiccup-single.mp3",
+      "keywords": [
+        "hiccup",
+        "single",
+        "human",
+        "funny",
+        "drunk",
+        "reaction",
+        "body",
+        "voice"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "teeth chattering cold",
+      "file": "sounds/teeth-chattering-cold.mp3",
+      "keywords": [
+        "teeth",
+        "chattering",
+        "cold",
+        "shiver",
+        "freezing",
+        "winter",
+        "human",
+        "body",
+        "ice"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "footsteps running concrete",
+      "file": "sounds/footsteps-running-concrete.mp3",
+      "keywords": [
+        "footsteps",
+        "running",
+        "concrete",
+        "chase",
+        "sprint",
+        "city",
+        "shoes",
+        "pavement",
+        "movement",
+        "walking"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "griffin screech",
+      "file": "sounds/griffin-screech.mp3",
+      "keywords": [
+        "griffin",
+        "screech",
+        "eagle",
+        "lion",
+        "fantasy",
+        "dnd",
+        "beast",
+        "flying"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "hydra multiple hisses",
+      "file": "sounds/hydra-multiple-hisses.mp3",
+      "keywords": [
+        "hydra",
+        "multiple",
+        "hisses",
+        "heads",
+        "serpent",
+        "fantasy",
+        "dnd",
+        "monster"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "basilisk hiss rattle",
+      "file": "sounds/basilisk-hiss-rattle.mp3",
+      "keywords": [
+        "basilisk",
+        "hiss",
+        "rattle",
+        "serpent",
+        "petrify",
+        "fantasy",
+        "dnd",
+        "monster"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "owlbear roar",
+      "file": "sounds/owlbear-roar.mp3",
+      "keywords": [
+        "owlbear",
+        "roar",
+        "bear",
+        "owl",
+        "screech",
+        "fantasy",
+        "dnd",
+        "monster",
+        "beast"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "mimic chest snap",
+      "file": "sounds/mimic-chest-snap.mp3",
+      "keywords": [
+        "mimic",
+        "chest",
+        "snap",
+        "teeth",
+        "trap",
+        "fantasy",
+        "dnd",
+        "monster"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "gelatinous cube squelch",
+      "file": "sounds/gelatinous-cube-squelch.mp3",
+      "keywords": [
+        "gelatinous",
+        "cube",
+        "squelch",
+        "ooze",
+        "slime",
+        "fantasy",
+        "dnd",
+        "monster"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "beholder eye ray hum",
+      "file": "sounds/beholder-eye-ray-hum.mp3",
+      "keywords": [
+        "beholder",
+        "eye",
+        "ray",
+        "hum",
+        "magic",
+        "fantasy",
+        "dnd",
+        "monster"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "lich whisper spell",
+      "file": "sounds/lich-whisper-spell.mp3",
+      "keywords": [
+        "lich",
+        "whisper",
+        "spell",
+        "undead",
+        "necromancer",
+        "fantasy",
+        "dnd",
+        "dark",
+        "arcane",
+        "cast",
+        "casting",
+        "magic"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "ghoul snarl",
+      "file": "sounds/ghoul-snarl.mp3",
+      "keywords": [
+        "ghoul",
+        "snarl",
+        "undead",
+        "horror",
+        "fantasy",
+        "dnd",
+        "monster",
+        "hungry"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "banshee wail",
+      "file": "sounds/banshee-wail.mp3",
+      "keywords": [
+        "banshee",
+        "wail",
+        "scream",
+        "ghost",
+        "horror",
+        "fantasy",
+        "dnd",
+        "undead"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "kraken tentacle slam water",
+      "file": "sounds/kraken-tentacle-slam-water.mp3",
+      "keywords": [
+        "kraken",
+        "tentacle",
+        "slam",
+        "water",
+        "sea",
+        "monster",
+        "fantasy",
+        "ship",
+        "boat",
+        "nautical"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "giant spider hiss skitter",
+      "file": "sounds/giant-spider-hiss-skitter.mp3",
+      "keywords": [
+        "giant",
+        "spider",
+        "hiss",
+        "skitter",
+        "legs",
+        "fantasy",
+        "dnd",
+        "monster",
+        "humanoid"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "dire wolf snarl",
+      "file": "sounds/dire-wolf-snarl.mp3",
+      "keywords": [
+        "dire",
+        "wolf",
+        "snarl",
+        "growl",
+        "beast",
+        "fantasy",
+        "dnd",
+        "predator",
+        "canine"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "wyvern screech flyby",
+      "file": "sounds/wyvern-screech-flyby.mp3",
+      "keywords": [
+        "wyvern",
+        "screech",
+        "flyby",
+        "wings",
+        "dragon",
+        "fantasy",
+        "dnd",
+        "sky",
+        "aerial",
+        "air",
+        "beast",
+        "boss",
+        "monster"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "treant creaking groan",
+      "file": "sounds/treant-creaking-groan.mp3",
+      "keywords": [
+        "treant",
+        "creaking",
+        "groan",
+        "tree",
+        "ent",
+        "fantasy",
+        "dnd",
+        "wood"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "fire elemental roar",
+      "file": "sounds/fire-elemental-roar.mp3",
+      "keywords": [
+        "fire",
+        "elemental",
+        "roar",
+        "flame",
+        "whoosh",
+        "fantasy",
+        "dnd",
+        "monster",
+        "heat"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "earth elemental rumble",
+      "file": "sounds/earth-elemental-rumble.mp3",
+      "keywords": [
+        "earth",
+        "elemental",
+        "rumble",
+        "stone",
+        "rocks",
+        "fantasy",
+        "dnd",
+        "monster"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "water elemental surge",
+      "file": "sounds/water-elemental-surge.mp3",
+      "keywords": [
+        "water",
+        "elemental",
+        "surge",
+        "wave",
+        "splash",
+        "fantasy",
+        "dnd",
+        "monster",
+        "nature"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "air elemental gust",
+      "file": "sounds/air-elemental-gust.mp3",
+      "keywords": [
+        "air",
+        "elemental",
+        "gust",
+        "wind",
+        "whirl",
+        "fantasy",
+        "dnd",
+        "monster"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "imp cackle",
+      "file": "sounds/imp-cackle.mp3",
+      "keywords": [
+        "imp",
+        "cackle",
+        "giggle",
+        "demon",
+        "small",
+        "fantasy",
+        "dnd",
+        "mischief",
+        "horror",
+        "evil",
+        "monster"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "minotaur bellow",
+      "file": "sounds/minotaur-bellow.mp3",
+      "keywords": [
+        "minotaur",
+        "bellow",
+        "bull",
+        "roar",
+        "labyrinth",
+        "fantasy",
+        "dnd",
+        "monster"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "harpy screech",
+      "file": "sounds/harpy-screech.mp3",
+      "keywords": [
+        "harpy",
+        "screech",
+        "bird",
+        "woman",
+        "scream",
+        "fantasy",
+        "dnd",
+        "monster",
+        "horror"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "gargoyle stone awaken",
+      "file": "sounds/gargoyle-stone-awaken.mp3",
+      "keywords": [
+        "gargoyle",
+        "stone",
+        "awaken",
+        "crack",
+        "statue",
+        "fantasy",
+        "dnd",
+        "monster"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "phoenix cry fire",
+      "file": "sounds/phoenix-cry-fire.mp3",
+      "keywords": [
+        "phoenix",
+        "cry",
+        "fire",
+        "bird",
+        "rebirth",
+        "fantasy",
+        "flame",
+        "majestic",
+        "heat"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "greatsword heavy swing",
+      "file": "sounds/greatsword-heavy-swing.mp3",
+      "keywords": [
+        "greatsword",
+        "heavy",
+        "swing",
+        "sword",
+        "two",
+        "handed",
+        "whoosh",
+        "dnd",
+        "fantasy",
+        "intense",
+        "powerful"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "sword clash parry series",
+      "file": "sounds/sword-clash-parry-series.mp3",
+      "keywords": [
+        "sword",
+        "clash",
+        "parry",
+        "series",
+        "duel",
+        "steel",
+        "fight",
+        "dnd",
+        "fantasy",
+        "combat",
+        "blade",
+        "block",
+        "melee",
+        "weapon"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "axe throw spin impact",
+      "file": "sounds/axe-throw-spin-impact.mp3",
+      "keywords": [
+        "axe",
+        "throw",
+        "spin",
+        "impact",
+        "thrown",
+        "wood",
+        "weapon",
+        "dnd",
+        "melee",
+        "combat"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "spear thrust whoosh",
+      "file": "sounds/spear-thrust-whoosh.mp3",
+      "keywords": [
+        "spear",
+        "thrust",
+        "whoosh",
+        "polearm",
+        "jab",
+        "weapon",
+        "dnd",
+        "attack",
+        "melee",
+        "combat"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "halberd swing",
+      "file": "sounds/halberd-swing.mp3",
+      "keywords": [
+        "halberd",
+        "swing",
+        "polearm",
+        "heavy",
+        "whoosh",
+        "guard",
+        "weapon",
+        "dnd"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "bow draw release",
+      "file": "sounds/bow-draw-release.mp3",
+      "keywords": [
+        "bow",
+        "draw",
+        "release",
+        "arrow",
+        "string",
+        "creak",
+        "archer",
+        "dnd",
+        "combat",
+        "ranged",
+        "weapon"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "armor hit sword glance",
+      "file": "sounds/armor-hit-sword-glance.mp3",
+      "keywords": [
+        "armor",
+        "hit",
+        "sword",
+        "glance",
+        "plate",
+        "deflect",
+        "metal",
+        "dnd",
+        "fantasy",
+        "blade",
+        "melee",
+        "weapon",
+        "combat"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "knife throw hit wood",
+      "file": "sounds/knife-throw-hit-wood.mp3",
+      "keywords": [
+        "knife",
+        "throw",
+        "hit",
+        "wood",
+        "thrown",
+        "dagger",
+        "thunk",
+        "target",
+        "combat",
+        "blade",
+        "melee",
+        "rogue",
+        "weapon"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "club wooden smash",
+      "file": "sounds/club-wooden-smash.mp3",
+      "keywords": [
+        "club",
+        "wooden",
+        "smash",
+        "bludgeon",
+        "hit",
+        "ogre",
+        "weapon",
+        "dnd"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "chain whip swing rattle",
+      "file": "sounds/chain-whip-swing-rattle.mp3",
+      "keywords": [
+        "chain",
+        "whip",
+        "swing",
+        "rattle",
+        "metal",
+        "weapon",
+        "dnd",
+        "links"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "war drum single beat",
+      "file": "sounds/war-drum-single-beat.mp3",
+      "keywords": [
+        "war",
+        "drum",
+        "single",
+        "beat",
+        "battle",
+        "boom",
+        "army",
+        "signal",
+        "combat"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "horn signal retreat",
+      "file": "sounds/horn-signal-retreat.mp3",
+      "keywords": [
+        "horn",
+        "signal",
+        "retreat",
+        "battle",
+        "army",
+        "call",
+        "medieval",
+        "fall",
+        "fantasy",
+        "combat"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "catapult impact wall",
+      "file": "sounds/catapult-impact-wall.mp3",
+      "keywords": [
+        "catapult",
+        "impact",
+        "wall",
+        "siege",
+        "stone",
+        "crash",
+        "castle",
+        "rubble",
+        "fantasy"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "siege tower creak advance",
+      "file": "sounds/siege-tower-creak-advance.mp3",
+      "keywords": [
+        "siege",
+        "tower",
+        "creak",
+        "advance",
+        "wood",
+        "wheels",
+        "castle",
+        "war",
+        "fantasy",
+        "battle",
+        "medieval",
+        "combat"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "ballista fire bolt",
+      "file": "sounds/ballista-fire-bolt.mp3",
+      "keywords": [
+        "ballista",
+        "fire",
+        "bolt",
+        "siege",
+        "weapon",
+        "twang",
+        "heavy",
+        "war",
+        "flame",
+        "heat",
+        "ranged"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "trebuchet release",
+      "file": "sounds/trebuchet-release.mp3",
+      "keywords": [
+        "trebuchet",
+        "release",
+        "siege",
+        "launch",
+        "counterweight",
+        "creak",
+        "war",
+        "castle",
+        "fantasy"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "gauntlet punch metal",
+      "file": "sounds/gauntlet-punch-metal.mp3",
+      "keywords": [
+        "gauntlet",
+        "punch",
+        "metal",
+        "armor",
+        "fist",
+        "impact",
+        "knight",
+        "dnd",
+        "fantasy"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "helmet visor clank",
+      "file": "sounds/helmet-visor-clank.mp3",
+      "keywords": [
+        "helmet",
+        "visor",
+        "clank",
+        "knight",
+        "armor",
+        "metal",
+        "close",
+        "dnd",
+        "fantasy"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "castle gate open heavy",
+      "file": "sounds/castle-gate-open-heavy.mp3",
+      "keywords": [
+        "castle",
+        "gate",
+        "open",
+        "heavy",
+        "wood",
+        "iron",
+        "creak",
+        "fantasy",
+        "fortress",
+        "intense",
+        "medieval",
+        "powerful"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "stone pillar collapse",
+      "file": "sounds/stone-pillar-collapse.mp3",
+      "keywords": [
+        "stone",
+        "pillar",
+        "collapse",
+        "crash",
+        "ruins",
+        "rubble",
+        "temple",
+        "fantasy",
+        "ancient",
+        "holy",
+        "religious",
+        "ruined",
+        "sacred"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "cave in rocks falling",
+      "file": "sounds/cave-in-rocks-falling.mp3",
+      "keywords": [
+        "cave",
+        "rocks",
+        "falling",
+        "collapse",
+        "rumble",
+        "mine",
+        "danger",
+        "dust",
+        "cavern",
+        "underground"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "ice bridge crack collapse",
+      "file": "sounds/ice-bridge-crack-collapse.mp3",
+      "keywords": [
+        "ice",
+        "bridge",
+        "crack",
+        "collapse",
+        "frozen",
+        "shatter",
+        "fall",
+        "danger",
+        "cold",
+        "winter"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "lava splash burst",
+      "file": "sounds/lava-splash-burst.mp3",
+      "keywords": [
+        "lava",
+        "splash",
+        "burst",
+        "volcano",
+        "magma",
+        "fire",
+        "sizzle",
+        "eruption",
+        "heat",
+        "volcanic"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "portal rift tearing",
+      "file": "sounds/portal-rift-tearing.mp3",
+      "keywords": [
+        "portal",
+        "rift",
+        "tearing",
+        "dimension",
+        "magic",
+        "planar",
+        "fantasy",
+        "energy",
+        "arcane",
+        "teleport"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "bell tower midnight toll",
+      "file": "sounds/bell-tower-midnight-toll.mp3",
+      "keywords": [
+        "bell",
+        "tower",
+        "midnight",
+        "toll",
+        "church",
+        "clock",
+        "ominous",
+        "town"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "gate chain hoist",
+      "file": "sounds/gate-chain-hoist.mp3",
+      "keywords": [
+        "gate",
+        "chain",
+        "hoist",
+        "winch",
+        "raise",
+        "castle",
+        "metal",
+        "mechanism",
+        "fantasy"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "wooden bridge collapse",
+      "file": "sounds/wooden-bridge-collapse.mp3",
+      "keywords": [
+        "wooden",
+        "bridge",
+        "collapse",
+        "snap",
+        "planks",
+        "fall",
+        "river",
+        "danger",
+        "nature"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "ship hull cracking",
+      "file": "sounds/ship-hull-cracking.mp3",
+      "keywords": [
+        "ship",
+        "hull",
+        "cracking",
+        "wood",
+        "sinking",
+        "water",
+        "rush",
+        "disaster",
+        "boat",
+        "nautical"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "sail tearing wind",
+      "file": "sounds/sail-tearing-wind.mp3",
+      "keywords": [
+        "sail",
+        "tearing",
+        "wind",
+        "canvas",
+        "rip",
+        "storm",
+        "ship",
+        "sea",
+        "weather",
+        "boat",
+        "breeze",
+        "nautical"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "lightning hits tree crack",
+      "file": "sounds/lightning-hits-tree-crack.mp3",
+      "keywords": [
+        "lightning",
+        "hits",
+        "tree",
+        "crack",
+        "strike",
+        "storm",
+        "split",
+        "wood",
+        "weather",
+        "electric",
+        "thunder"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "dam breaking water surge",
+      "file": "sounds/dam-breaking-water-surge.mp3",
+      "keywords": [
+        "dam",
+        "breaking",
+        "water",
+        "surge",
+        "flood",
+        "crash",
+        "disaster",
+        "rush"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "crystal cave resonance",
+      "file": "sounds/crystal-cave-resonance.mp3",
+      "keywords": [
+        "crystal",
+        "cave",
+        "resonance",
+        "chime",
+        "magic",
+        "glow",
+        "fantasy",
+        "hum",
+        "cavern",
+        "underground"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "ancient door rune unlock",
+      "file": "sounds/ancient-door-rune-unlock.mp3",
+      "keywords": [
+        "ancient",
+        "door",
+        "rune",
+        "unlock",
+        "magic",
+        "stone",
+        "mechanism",
+        "fantasy",
+        "historic",
+        "old"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "trailer braam hit",
+      "file": "sounds/trailer-braam-hit.mp3",
+      "keywords": [
+        "trailer",
+        "braam",
+        "hit",
+        "cinematic",
+        "epic",
+        "impact",
+        "drama",
+        "stinger"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "suspense riser build",
+      "file": "sounds/suspense-riser-build.mp3",
+      "keywords": [
+        "suspense",
+        "riser",
+        "build",
+        "tension",
+        "cinematic",
+        "rising",
+        "stinger",
+        "thriller",
+        "tense"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "dramatic reveal sting",
+      "file": "sounds/dramatic-reveal-sting.mp3",
+      "keywords": [
+        "dramatic",
+        "reveal",
+        "sting",
+        "cinematic",
+        "shock",
+        "twist",
+        "orchestral",
+        "stinger"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "mystery sting pizzicato",
+      "file": "sounds/mystery-sting-pizzicato.mp3",
+      "keywords": [
+        "mystery",
+        "sting",
+        "pizzicato",
+        "detective",
+        "clue",
+        "curious",
+        "strings",
+        "stinger",
+        "intrigue",
+        "mysterious"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "horror riser scream",
+      "file": "sounds/horror-riser-scream.mp3",
+      "keywords": [
+        "horror",
+        "riser",
+        "scream",
+        "tension",
+        "stinger",
+        "dread",
+        "cinematic",
+        "scary",
+        "creepy",
+        "fear"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "battle drums intro",
+      "file": "sounds/battle-drums-intro.mp3",
+      "keywords": [
+        "battle",
+        "drums",
+        "intro",
+        "war",
+        "percussion",
+        "epic",
+        "march",
+        "stinger",
+        "combat",
+        "fight"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "heroic brass sting",
+      "file": "sounds/heroic-brass-sting.mp3",
+      "keywords": [
+        "heroic",
+        "brass",
+        "sting",
+        "fanfare",
+        "triumph",
+        "epic",
+        "hero",
+        "stinger",
+        "brave"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "dark choir hit",
+      "file": "sounds/dark-choir-hit.mp3",
+      "keywords": [
+        "dark",
+        "choir",
+        "hit",
+        "ominous",
+        "evil",
+        "cinematic",
+        "villain",
+        "stinger",
+        "horror",
+        "sinister"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "magical discovery sting",
+      "file": "sounds/magical-discovery-sting.mp3",
+      "keywords": [
+        "magical",
+        "discovery",
+        "sting",
+        "wonder",
+        "sparkle",
+        "harp",
+        "treasure",
+        "stinger",
+        "arcane",
+        "magic",
+        "spell"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "scene transition whoosh",
+      "file": "sounds/scene-transition-whoosh.mp3",
+      "keywords": [
+        "scene",
+        "transition",
+        "whoosh",
+        "cinematic",
+        "cut",
+        "swoosh",
+        "edit",
+        "stinger"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "time passing transition",
+      "file": "sounds/time-passing-transition.mp3",
+      "keywords": [
+        "time",
+        "passing",
+        "transition",
+        "clock",
+        "montage",
+        "cinematic",
+        "later",
+        "stinger"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "dream sequence harp",
+      "file": "sounds/dream-sequence-harp.mp3",
+      "keywords": [
+        "dream",
+        "sequence",
+        "harp",
+        "glissando",
+        "flashback",
+        "fantasy",
+        "sleep",
+        "stinger"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "flashback reverse whoosh",
+      "file": "sounds/flashback-reverse-whoosh.mp3",
+      "keywords": [
+        "flashback",
+        "reverse",
+        "whoosh",
+        "memory",
+        "cinematic",
+        "rewind",
+        "past",
+        "stinger"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "record scratch stop",
+      "file": "sounds/record-scratch-stop.mp3",
+      "keywords": [
+        "record",
+        "scratch",
+        "stop",
+        "comedy",
+        "freeze",
+        "vinyl",
+        "halt",
+        "stinger"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "dramatic gong",
+      "file": "sounds/dramatic-gong.mp3",
+      "keywords": [
+        "dramatic",
+        "gong",
+        "hit",
+        "asian",
+        "ceremony",
+        "cinematic",
+        "impact",
+        "stinger"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "taiko drum hit",
+      "file": "sounds/taiko-drum-hit.mp3",
+      "keywords": [
+        "taiko",
+        "drum",
+        "hit",
+        "japanese",
+        "percussion",
+        "boom",
+        "impact",
+        "stinger"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "church organ dark chord",
+      "file": "sounds/church-organ-dark-chord.mp3",
+      "keywords": [
+        "church",
+        "organ",
+        "dark",
+        "chord",
+        "gothic",
+        "vampire",
+        "horror",
+        "stinger",
+        "evil",
+        "monster",
+        "ominous",
+        "sinister",
+        "undead"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "romantic harp glissando",
+      "file": "sounds/romantic-harp-glissando.mp3",
+      "keywords": [
+        "romantic",
+        "harp",
+        "glissando",
+        "love",
+        "tender",
+        "sweet",
+        "moment",
+        "stinger"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "cliffhanger low boom",
+      "file": "sounds/cliffhanger-low-boom.mp3",
+      "keywords": [
+        "cliffhanger",
+        "low",
+        "boom",
+        "cinematic",
+        "end",
+        "suspense",
+        "drama",
+        "stinger"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "detective noir sax sting",
+      "file": "sounds/detective-noir-sax-sting.mp3",
+      "keywords": [
+        "detective",
+        "noir",
+        "sax",
+        "sting",
+        "jazz",
+        "mystery",
+        "city",
+        "stinger"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "western showdown sting",
+      "file": "sounds/western-showdown-sting.mp3",
+      "keywords": [
+        "western",
+        "showdown",
+        "sting",
+        "standoff",
+        "cowboy",
+        "guitar",
+        "whistle",
+        "stinger",
+        "desert",
+        "frontier"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "ticking clock tension",
+      "file": "sounds/ticking-clock-tension.mp3",
+      "keywords": [
+        "ticking",
+        "clock",
+        "tension",
+        "countdown",
+        "suspense",
+        "timer",
+        "bomb",
+        "stinger",
+        "tense"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "waterskin drink gulp",
+      "file": "sounds/waterskin-drink-gulp.mp3",
+      "keywords": [
+        "waterskin",
+        "drink",
+        "gulp",
+        "travel",
+        "thirst",
+        "swallow",
+        "adventurer",
+        "dnd"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "apple bite crunch",
+      "file": "sounds/apple-bite-crunch.mp3",
+      "keywords": [
+        "apple",
+        "bite",
+        "crunch",
+        "eating",
+        "food",
+        "fruit",
+        "chew",
+        "snack"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "bread tearing",
+      "file": "sounds/bread-tearing.mp3",
+      "keywords": [
+        "bread",
+        "tearing",
+        "loaf",
+        "food",
+        "crust",
+        "tavern",
+        "meal",
+        "rip",
+        "fantasy"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "mug slam table",
+      "file": "sounds/mug-slam-table.mp3",
+      "keywords": [
+        "mug",
+        "slam",
+        "table",
+        "tavern",
+        "tankard",
+        "wood",
+        "drink",
+        "angry",
+        "fantasy"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "tankards clink toast",
+      "file": "sounds/tankards-clink-toast.mp3",
+      "keywords": [
+        "tankards",
+        "clink",
+        "toast",
+        "tavern",
+        "cheers",
+        "metal",
+        "drink",
+        "friends",
+        "fantasy"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "chair creak lean back",
+      "file": "sounds/chair-creak-lean-back.mp3",
+      "keywords": [
+        "chair",
+        "creak",
+        "lean",
+        "back",
+        "wood",
+        "sit",
+        "relax",
+        "tavern",
+        "fantasy"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "bed creak lying down",
+      "file": "sounds/bed-creak-lying-down.mp3",
+      "keywords": [
+        "bed",
+        "creak",
+        "lying",
+        "inn",
+        "rest",
+        "sleep",
+        "springs"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "tent flap canvas",
+      "file": "sounds/tent-flap-canvas.mp3",
+      "keywords": [
+        "tent",
+        "flap",
+        "canvas",
+        "camp",
+        "open",
+        "outdoor",
+        "fabric",
+        "travel"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "compass click open",
+      "file": "sounds/compass-click-open.mp3",
+      "keywords": [
+        "compass",
+        "click",
+        "open",
+        "navigate",
+        "brass",
+        "explorer",
+        "lid",
+        "travel"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "lantern creak swing",
+      "file": "sounds/lantern-creak-swing.mp3",
+      "keywords": [
+        "lantern",
+        "creak",
+        "swing",
+        "metal",
+        "handle",
+        "night",
+        "oil",
+        "walk"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "finger snap",
+      "file": "sounds/finger-snap.mp3",
+      "keywords": [
+        "finger",
+        "snap",
+        "click",
+        "hand",
+        "magic",
+        "attention",
+        "gesture",
+        "quick"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "knuckles cracking",
+      "file": "sounds/knuckles-cracking.mp3",
+      "keywords": [
+        "knuckles",
+        "cracking",
+        "hands",
+        "fight",
+        "ready",
+        "pop",
+        "bones",
+        "threat",
+        "combat"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "face slap",
+      "file": "sounds/face-slap.mp3",
+      "keywords": [
+        "face",
+        "slap",
+        "hit",
+        "smack",
+        "cheek",
+        "insult",
+        "hand",
+        "sharp"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "kiss smooch",
+      "file": "sounds/kiss-smooch.mp3",
+      "keywords": [
+        "kiss",
+        "smooch",
+        "romance",
+        "love",
+        "lips",
+        "peck",
+        "cute",
+        "affection"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "hand slap table",
+      "file": "sounds/hand-slap-table.mp3",
+      "keywords": [
+        "hand",
+        "slap",
+        "table",
+        "anger",
+        "bang",
+        "wood",
+        "demand",
+        "impact"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "old man cough wheeze",
+      "file": "sounds/old-man-cough-wheeze.mp3",
+      "keywords": [
+        "old",
+        "man",
+        "cough",
+        "wheeze",
+        "sick",
+        "elderly",
+        "voice",
+        "frail"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "distant male scream",
+      "file": "sounds/distant-male-scream.mp3",
+      "keywords": [
+        "distant",
+        "male",
+        "scream",
+        "far",
+        "help",
+        "horror",
+        "echo",
+        "voice"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "short whistle call",
+      "file": "sounds/short-whistle-call.mp3",
+      "keywords": [
+        "short",
+        "whistle",
+        "call",
+        "human",
+        "signal",
+        "attention",
+        "hey",
+        "mouth"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "smoke alarm beeping",
+      "file": "sounds/smoke-alarm-beeping.mp3",
+      "keywords": [
+        "smoke",
+        "alarm",
+        "beeping",
+        "fire",
+        "detector",
+        "home",
+        "warning",
+        "shrill"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "school bell ring",
+      "file": "sounds/school-bell-ring.mp3",
+      "keywords": [
+        "school",
+        "bell",
+        "ring",
+        "class",
+        "period",
+        "hallway",
+        "loud",
+        "electric",
+        "intense",
+        "powerful"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "garbage truck lift dump",
+      "file": "sounds/garbage-truck-lift-dump.mp3",
+      "keywords": [
+        "garbage",
+        "truck",
+        "lift",
+        "dump",
+        "hydraulic",
+        "trash",
+        "street",
+        "morning"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "lawn mower pass",
+      "file": "sounds/lawn-mower-pass.mp3",
+      "keywords": [
+        "lawn",
+        "mower",
+        "pass",
+        "grass",
+        "engine",
+        "suburban",
+        "yard",
+        "summer"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "leaf blower",
+      "file": "sounds/leaf-blower.mp3",
+      "keywords": [
+        "leaf",
+        "blower",
+        "yard",
+        "engine",
+        "whine",
+        "suburban",
+        "autumn",
+        "loud",
+        "intense",
+        "powerful"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "ice cream truck jingle",
+      "file": "sounds/ice-cream-truck-jingle.mp3",
+      "keywords": [
+        "ice",
+        "cream",
+        "truck",
+        "jingle",
+        "box",
+        "summer",
+        "neighborhood",
+        "cold",
+        "frozen",
+        "winter"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "megaphone police unintelligible",
+      "file": "sounds/megaphone-police-unintelligible.mp3",
+      "keywords": [
+        "megaphone",
+        "police",
+        "unintelligible",
+        "loudspeaker",
+        "command",
+        "standoff",
+        "distorted",
+        "siege"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "subway doors chime close",
+      "file": "sounds/subway-doors-chime-close.mp3",
+      "keywords": [
+        "subway",
+        "doors",
+        "chime",
+        "close",
+        "metro",
+        "train",
+        "warning",
+        "transit"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "airplane takeoff roar",
+      "file": "sounds/airplane-takeoff-roar.mp3",
+      "keywords": [
+        "airplane",
+        "takeoff",
+        "roar",
+        "jet",
+        "runway",
+        "engines",
+        "flight",
+        "airport"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "sports car engine rev",
+      "file": "sounds/sports-car-engine-rev.mp3",
+      "keywords": [
+        "sports",
+        "car",
+        "engine",
+        "rev",
+        "exhaust",
+        "race",
+        "fast",
+        "loud",
+        "energetic",
+        "intense",
+        "modern",
+        "motor",
+        "powerful",
+        "quick",
+        "vehicle"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "truck air horn blast",
+      "file": "sounds/truck-air-horn-blast.mp3",
+      "keywords": [
+        "truck",
+        "air",
+        "horn",
+        "blast",
+        "semi",
+        "highway",
+        "loud",
+        "warning",
+        "intense",
+        "powerful"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "traffic jam honking",
+      "file": "sounds/traffic-jam-honking.mp3",
+      "keywords": [
+        "traffic",
+        "jam",
+        "honking",
+        "cars",
+        "horns",
+        "city",
+        "gridlock",
+        "angry"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "doorbell buzzer apartment",
+      "file": "sounds/doorbell-buzzer-apartment.mp3",
+      "keywords": [
+        "doorbell",
+        "buzzer",
+        "apartment",
+        "intercom",
+        "buzz",
+        "door",
+        "visitor",
+        "city"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "fire alarm bell",
+      "file": "sounds/fire-alarm-bell.mp3",
+      "keywords": [
+        "fire",
+        "alarm",
+        "bell",
+        "evacuate",
+        "building",
+        "emergency",
+        "ring",
+        "loud",
+        "flame",
+        "heat",
+        "intense",
+        "powerful"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "snow plow scrape pass",
+      "file": "sounds/snow-plow-scrape-pass.mp3",
+      "keywords": [
+        "snow",
+        "plow",
+        "scrape",
+        "pass",
+        "winter",
+        "truck",
+        "street",
+        "blade",
+        "combat",
+        "weather",
+        "cold"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "horse neigh loud",
+      "file": "sounds/horse-neigh-loud.mp3",
+      "keywords": [
+        "horse",
+        "neigh",
+        "loud",
+        "whinny",
+        "stable",
+        "ride",
+        "farm",
+        "animal",
+        "barn",
+        "intense",
+        "mount",
+        "powerful"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "donkey bray",
+      "file": "sounds/donkey-bray.mp3",
+      "keywords": [
+        "donkey",
+        "bray",
+        "mule",
+        "farm",
+        "hee",
+        "haw",
+        "animal",
+        "funny"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "cow bell clank",
+      "file": "sounds/cow-bell-clank.mp3",
+      "keywords": [
+        "cow",
+        "bell",
+        "clank",
+        "alpine",
+        "farm",
+        "pasture",
+        "cattle",
+        "walk"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "peacock call",
+      "file": "sounds/peacock-call.mp3",
+      "keywords": [
+        "peacock",
+        "call",
+        "bird",
+        "garden",
+        "estate",
+        "cry",
+        "exotic",
+        "loud",
+        "intense",
+        "powerful"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "elk bugle",
+      "file": "sounds/elk-bugle.mp3",
+      "keywords": [
+        "elk",
+        "bugle",
+        "call",
+        "mountain",
+        "forest",
+        "autumn",
+        "deer",
+        "wild",
+        "nature"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "wild boar grunt charge",
+      "file": "sounds/wild-boar-grunt-charge.mp3",
+      "keywords": [
+        "wild",
+        "boar",
+        "grunt",
+        "charge",
+        "pig",
+        "forest",
+        "hunt",
+        "dangerous",
+        "nature",
+        "attack",
+        "combat"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "squirrel chatter",
+      "file": "sounds/squirrel-chatter.mp3",
+      "keywords": [
+        "squirrel",
+        "chatter",
+        "scold",
+        "tree",
+        "forest",
+        "park",
+        "small",
+        "animal",
+        "nature"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "seals barking",
+      "file": "sounds/seals-barking.mp3",
+      "keywords": [
+        "seals",
+        "barking",
+        "sea",
+        "lions",
+        "harbor",
+        "pier",
+        "ocean",
+        "coast",
+        "nature"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "penguins squawking",
+      "file": "sounds/penguins-squawking.mp3",
+      "keywords": [
+        "penguins",
+        "squawking",
+        "colony",
+        "antarctic",
+        "birds",
+        "ice",
+        "cold",
+        "flock",
+        "nature"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "camel groan",
+      "file": "sounds/camel-groan.mp3",
+      "keywords": [
+        "camel",
+        "groan",
+        "desert",
+        "grumble",
+        "caravan",
+        "animal",
+        "arabian",
+        "bellow",
+        "exotic"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "loon call lake",
+      "file": "sounds/loon-call-lake.mp3",
+      "keywords": [
+        "loon",
+        "call",
+        "lake",
+        "bird",
+        "haunting",
+        "night",
+        "north",
+        "wilderness",
+        "nature",
+        "water"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "moose grunt",
+      "file": "sounds/moose-grunt.mp3",
+      "keywords": [
+        "moose",
+        "grunt",
+        "bull",
+        "forest",
+        "swamp",
+        "north",
+        "wild",
+        "large",
+        "nature"
+      ]
+    },
+    {
+      "type": "ambience",
+      "name": "ice cave crystal ambience",
+      "file": "sounds/ice-cave-crystal-ambience.mp3",
+      "keywords": [
+        "ice",
+        "cave",
+        "crystal",
+        "frozen",
+        "drip",
+        "echo",
+        "glitter",
+        "cold",
+        "ambience",
+        "ambient",
+        "background",
+        "cavern",
+        "underground",
+        "winter"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "thieves guild hideout ambience",
+      "file": "sounds/thieves-guild-hideout-ambience.mp3",
+      "keywords": [
+        "thieves",
+        "guild",
+        "hideout",
+        "rogue",
+        "whispers",
+        "coins",
+        "fantasy",
+        "secret",
+        "ambience",
+        "ambient",
+        "background"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "lighthouse storm ambience",
+      "file": "sounds/lighthouse-storm-ambience.mp3",
+      "keywords": [
+        "lighthouse",
+        "storm",
+        "sea",
+        "waves",
+        "wind",
+        "foghorn",
+        "rain",
+        "coast",
+        "ambience",
+        "ambient",
+        "background",
+        "nature",
+        "weather",
+        "thunder"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "ghost ship deck ambience",
+      "file": "sounds/ghost-ship-deck-ambience.mp3",
+      "keywords": [
+        "ghost",
+        "ship",
+        "deck",
+        "haunted",
+        "creak",
+        "fog",
+        "whispers",
+        "sea",
+        "ambience",
+        "ambient",
+        "background",
+        "horror",
+        "boat",
+        "nautical",
+        "spectral",
+        "spirit",
+        "undead"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "steampunk workshop ambience",
+      "file": "sounds/steampunk-workshop-ambience.mp3",
+      "keywords": [
+        "steampunk",
+        "workshop",
+        "gears",
+        "steam",
+        "tinker",
+        "clock",
+        "brass",
+        "inventor",
+        "ambience",
+        "ambient",
+        "background",
+        "clockwork",
+        "industrial",
+        "victorian"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "spaceport hangar ambience",
+      "file": "sounds/spaceport-hangar-ambience.mp3",
+      "keywords": [
+        "spaceport",
+        "hangar",
+        "scifi",
+        "ships",
+        "engines",
+        "crew",
+        "loading",
+        "echo",
+        "ambience",
+        "ambient",
+        "background",
+        "futuristic",
+        "sci-fi"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "wasteland wind ruins ambience",
+      "file": "sounds/wasteland-wind-ruins-ambience.mp3",
+      "keywords": [
+        "wasteland",
+        "wind",
+        "ruins",
+        "post",
+        "apocalyptic",
+        "desolate",
+        "metal",
+        "creak",
+        "ambience",
+        "ambient",
+        "background",
+        "ancient",
+        "breeze",
+        "ruined",
+        "weather"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "zombie horde distant ambience",
+      "file": "sounds/zombie-horde-distant-ambience.mp3",
+      "keywords": [
+        "zombie",
+        "horde",
+        "distant",
+        "moans",
+        "horror",
+        "undead",
+        "apocalypse",
+        "shuffle",
+        "ambience",
+        "ambient",
+        "background",
+        "monster"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "harvest festival ambience",
+      "file": "sounds/harvest-festival-ambience.mp3",
+      "keywords": [
+        "harvest",
+        "festival",
+        "autumn",
+        "village",
+        "fiddle",
+        "crowd",
+        "medieval",
+        "celebration",
+        "ambience",
+        "ambient",
+        "background",
+        "fantasy"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "snowy village night ambience",
+      "file": "sounds/snowy-village-night-ambience.mp3",
+      "keywords": [
+        "snowy",
+        "village",
+        "night",
+        "winter",
+        "quiet",
+        "wind",
+        "fire",
+        "medieval",
+        "ambience",
+        "ambient",
+        "background",
+        "fantasy"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "rainy medieval street ambience",
+      "file": "sounds/rainy-medieval-street-ambience.mp3",
+      "keywords": [
+        "rainy",
+        "medieval",
+        "street",
+        "rain",
+        "cobblestone",
+        "gutters",
+        "cart",
+        "city",
+        "ambience",
+        "ambient",
+        "background",
+        "fantasy",
+        "weather",
+        "historic"
+      ],
+      "loop": true
+    },
+    {
+      "type": "ambience",
+      "name": "desert ruins night ambience",
+      "file": "sounds/desert-ruins-night-ambience.mp3",
+      "keywords": [
+        "desert",
+        "ruins",
+        "night",
+        "wind",
+        "sand",
+        "ancient",
+        "jackal",
+        "stars",
+        "ambience",
+        "ambient",
+        "background",
+        "arid",
+        "dry",
+        "ruined"
+      ],
+      "loop": true
+    },
+    {
+      "type": "sfx",
+      "name": "footsteps metal grate",
+      "file": "sounds/footsteps-metal-grate.mp3",
+      "keywords": [
+        "footsteps",
+        "metal",
+        "grate",
+        "catwalk",
+        "industrial",
+        "scifi",
+        "walk",
+        "clang",
+        "futuristic",
+        "movement",
+        "sci-fi",
+        "walking"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "footsteps marble hall",
+      "file": "sounds/footsteps-marble-hall.mp3",
+      "keywords": [
+        "footsteps",
+        "marble",
+        "hall",
+        "echo",
+        "palace",
+        "museum",
+        "walk",
+        "heels",
+        "movement",
+        "walking"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "footsteps wooden dock running",
+      "file": "sounds/footsteps-wooden-dock-running.mp3",
+      "keywords": [
+        "footsteps",
+        "wooden",
+        "dock",
+        "running",
+        "pier",
+        "planks",
+        "harbor",
+        "chase",
+        "movement",
+        "walking"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "sneaking creaky floorboards",
+      "file": "sounds/sneaking-creaky-floorboards.mp3",
+      "keywords": [
+        "sneaking",
+        "creaky",
+        "floorboards",
+        "stealth",
+        "tiptoe",
+        "house",
+        "quiet",
+        "rogue"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "horse hooves cobblestone walk",
+      "file": "sounds/horse-hooves-cobblestone-walk.mp3",
+      "keywords": [
+        "horse",
+        "hooves",
+        "cobblestone",
+        "walk",
+        "clop",
+        "town",
+        "medieval",
+        "street",
+        "fantasy",
+        "footsteps",
+        "mount",
+        "movement",
+        "walking"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "horse gallop away distant",
+      "file": "sounds/horse-gallop-away-distant.mp3",
+      "keywords": [
+        "horse",
+        "gallop",
+        "away",
+        "distant",
+        "hooves",
+        "leaving",
+        "fade",
+        "road",
+        "mount"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "sword drop clatter",
+      "file": "sounds/sword-drop-clatter.mp3",
+      "keywords": [
+        "sword",
+        "drop",
+        "clatter",
+        "blade",
+        "surrender",
+        "stone",
+        "metal",
+        "fall",
+        "fantasy",
+        "combat",
+        "melee",
+        "weapon"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "shield drop ground",
+      "file": "sounds/shield-drop-ground.mp3",
+      "keywords": [
+        "shield",
+        "drop",
+        "ground",
+        "wood",
+        "metal",
+        "fall",
+        "thud",
+        "surrender",
+        "combat",
+        "block",
+        "defense"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "helmet falls rolls",
+      "file": "sounds/helmet-falls-rolls.mp3",
+      "keywords": [
+        "helmet",
+        "falls",
+        "rolls",
+        "metal",
+        "knight",
+        "floor",
+        "clang",
+        "defeat",
+        "fantasy"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "armored body fall",
+      "file": "sounds/armored-body-fall.mp3",
+      "keywords": [
+        "armored",
+        "body",
+        "fall",
+        "knight",
+        "death",
+        "thud",
+        "metal",
+        "collapse",
+        "fantasy"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "sword break shatter",
+      "file": "sounds/sword-break-shatter.mp3",
+      "keywords": [
+        "sword",
+        "break",
+        "shatter",
+        "blade",
+        "snap",
+        "metal",
+        "broken",
+        "dnd",
+        "fantasy",
+        "combat",
+        "melee",
+        "weapon"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "bowstring snap break",
+      "file": "sounds/bowstring-snap-break.mp3",
+      "keywords": [
+        "bowstring",
+        "snap",
+        "break",
+        "bow",
+        "string",
+        "fail",
+        "twang",
+        "archer",
+        "combat"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "arrow quiver draw",
+      "file": "sounds/arrow-quiver-draw.mp3",
+      "keywords": [
+        "arrow",
+        "quiver",
+        "draw",
+        "archer",
+        "nock",
+        "wood",
+        "rattle",
+        "ready",
+        "combat",
+        "ranged",
+        "weapon"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "map unfold paper",
+      "file": "sounds/map-unfold-paper.mp3",
+      "keywords": [
+        "map",
+        "unfold",
+        "paper",
+        "parchment",
+        "travel",
+        "navigate",
+        "crinkle",
+        "plan",
+        "foley",
+        "writing"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "wax seal stamp letter",
+      "file": "sounds/wax-seal-stamp-letter.mp3",
+      "keywords": [
+        "wax",
+        "seal",
+        "stamp",
+        "letter",
+        "royal",
+        "press",
+        "official",
+        "parchment"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "parchment burning",
+      "file": "sounds/parchment-burning.mp3",
+      "keywords": [
+        "parchment",
+        "burning",
+        "paper",
+        "fire",
+        "letter",
+        "destroy",
+        "crackle",
+        "flame"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "book slam shut",
+      "file": "sounds/book-slam-shut.mp3",
+      "keywords": [
+        "book",
+        "slam",
+        "shut",
+        "heavy",
+        "tome",
+        "library",
+        "thud",
+        "close",
+        "books",
+        "scholar",
+        "study"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "spellbook glow hum",
+      "file": "sounds/spellbook-glow-hum.mp3",
+      "keywords": [
+        "spellbook",
+        "glow",
+        "hum",
+        "magic",
+        "open",
+        "arcane",
+        "book",
+        "dnd"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "crystal ball hum",
+      "file": "sounds/crystal-ball-hum.mp3",
+      "keywords": [
+        "crystal",
+        "ball",
+        "hum",
+        "scry",
+        "fortune",
+        "magic",
+        "vision",
+        "glass"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "candle blow out puff",
+      "file": "sounds/candle-blow-out-puff.mp3",
+      "keywords": [
+        "candle",
+        "blow",
+        "out",
+        "puff",
+        "extinguish",
+        "breath",
+        "dark",
+        "flame"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "fireplace poke logs",
+      "file": "sounds/fireplace-poke-logs.mp3",
+      "keywords": [
+        "fireplace",
+        "poke",
+        "logs",
+        "embers",
+        "crackle",
+        "iron",
+        "hearth",
+        "cozy"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "door bar drop wood",
+      "file": "sounds/door-bar-drop-wood.mp3",
+      "keywords": [
+        "door",
+        "bar",
+        "drop",
+        "wood",
+        "barricade",
+        "lock",
+        "heavy",
+        "secure"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "iron key turn lock",
+      "file": "sounds/iron-key-turn-lock.mp3",
+      "keywords": [
+        "iron",
+        "key",
+        "turn",
+        "lock",
+        "door",
+        "old",
+        "click",
+        "dungeon",
+        "fantasy"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "chest lock click open",
+      "file": "sounds/chest-lock-click-open.mp3",
+      "keywords": [
+        "chest",
+        "lock",
+        "click",
+        "open",
+        "treasure",
+        "latch",
+        "creak",
+        "loot"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "rope climbing creak",
+      "file": "sounds/rope-climbing-creak.mp3",
+      "keywords": [
+        "rope",
+        "climbing",
+        "creak",
+        "climb",
+        "strain",
+        "hands",
+        "wall",
+        "effort"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "wooden ladder climb",
+      "file": "sounds/wooden-ladder-climb.mp3",
+      "keywords": [
+        "wooden",
+        "ladder",
+        "climb",
+        "rungs",
+        "creak",
+        "barn",
+        "loft",
+        "steps"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "wagon wheel creak slow",
+      "file": "sounds/wagon-wheel-creak-slow.mp3",
+      "keywords": [
+        "wagon",
+        "wheel",
+        "creak",
+        "slow",
+        "cart",
+        "travel",
+        "wood",
+        "road",
+        "relaxed"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "cart wheel breaks",
+      "file": "sounds/cart-wheel-breaks.mp3",
+      "keywords": [
+        "cart",
+        "wheel",
+        "breaks",
+        "snap",
+        "crash",
+        "wagon",
+        "accident",
+        "wood"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "well bucket drop splash",
+      "file": "sounds/well-bucket-drop-splash.mp3",
+      "keywords": [
+        "well",
+        "bucket",
+        "drop",
+        "splash",
+        "water",
+        "village",
+        "echo",
+        "deep"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "well crank chain",
+      "file": "sounds/well-crank-chain.mp3",
+      "keywords": [
+        "well",
+        "crank",
+        "chain",
+        "winch",
+        "bucket",
+        "village",
+        "rattle",
+        "raise"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "coin fountain plop",
+      "file": "sounds/coin-fountain-plop.mp3",
+      "keywords": [
+        "coin",
+        "fountain",
+        "plop",
+        "wish",
+        "water",
+        "toss",
+        "drop",
+        "luck"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "stone skipping water",
+      "file": "sounds/stone-skipping-water.mp3",
+      "keywords": [
+        "stone",
+        "skipping",
+        "water",
+        "lake",
+        "skip",
+        "splash",
+        "pond",
+        "calm",
+        "nature"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "ring drop floor",
+      "file": "sounds/ring-drop-floor.mp3",
+      "keywords": [
+        "ring",
+        "drop",
+        "floor",
+        "metal",
+        "gold",
+        "bounce",
+        "spin",
+        "jewelry"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "gem clink place",
+      "file": "sounds/gem-clink-place.mp3",
+      "keywords": [
+        "gem",
+        "clink",
+        "place",
+        "jewel",
+        "crystal",
+        "socket",
+        "puzzle",
+        "treasure"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "trap door open drop",
+      "file": "sounds/trap-door-open-drop.mp3",
+      "keywords": [
+        "trap",
+        "door",
+        "open",
+        "drop",
+        "floor",
+        "fall",
+        "dungeon",
+        "surprise",
+        "fantasy"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "spike wall grinding",
+      "file": "sounds/spike-wall-grinding.mp3",
+      "keywords": [
+        "spike",
+        "wall",
+        "grinding",
+        "trap",
+        "dungeon",
+        "closing",
+        "stone",
+        "danger",
+        "fantasy"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "cage lowering chains",
+      "file": "sounds/cage-lowering-chains.mp3",
+      "keywords": [
+        "cage",
+        "lowering",
+        "chains",
+        "prison",
+        "dungeon",
+        "winch",
+        "metal",
+        "descend",
+        "fantasy"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "gallows trapdoor drop",
+      "file": "sounds/gallows-trapdoor-drop.mp3",
+      "keywords": [
+        "gallows",
+        "trapdoor",
+        "drop",
+        "execution",
+        "rope",
+        "medieval",
+        "grim",
+        "bang",
+        "fantasy"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "tavern crowd laughter",
+      "file": "sounds/tavern-crowd-laughter.mp3",
+      "keywords": [
+        "tavern",
+        "crowd",
+        "laughter",
+        "laugh",
+        "inn",
+        "patrons",
+        "joke",
+        "group",
+        "fantasy",
+        "bar",
+        "medieval",
+        "pub"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "baby dragon chirp",
+      "file": "sounds/baby-dragon-chirp.mp3",
+      "keywords": [
+        "baby",
+        "dragon",
+        "chirp",
+        "hatchling",
+        "cute",
+        "fantasy",
+        "squeak",
+        "dnd",
+        "beast",
+        "boss",
+        "monster"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "kitten mew",
+      "file": "sounds/kitten-mew.mp3",
+      "keywords": [
+        "kitten",
+        "mew",
+        "cat",
+        "cute",
+        "small",
+        "pet",
+        "meow",
+        "tiny"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "puppy whimper bark",
+      "file": "sounds/puppy-whimper-bark.mp3",
+      "keywords": [
+        "puppy",
+        "whimper",
+        "bark",
+        "dog",
+        "cute",
+        "pet",
+        "yip",
+        "small"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "wolf attack snarl bite",
+      "file": "sounds/wolf-attack-snarl-bite.mp3",
+      "keywords": [
+        "wolf",
+        "attack",
+        "snarl",
+        "bite",
+        "lunge",
+        "beast",
+        "teeth",
+        "danger",
+        "canine",
+        "combat"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "bear attack roar maul",
+      "file": "sounds/bear-attack-roar-maul.mp3",
+      "keywords": [
+        "bear",
+        "attack",
+        "roar",
+        "maul",
+        "charge",
+        "forest",
+        "danger",
+        "beast",
+        "nature",
+        "combat"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "snake strike hiss",
+      "file": "sounds/snake-strike-hiss.mp3",
+      "keywords": [
+        "snake",
+        "strike",
+        "hiss",
+        "bite",
+        "lunge",
+        "venom",
+        "danger",
+        "fast",
+        "energetic",
+        "quick"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "rats scurrying many",
+      "file": "sounds/rats-scurrying-many.mp3",
+      "keywords": [
+        "rats",
+        "scurrying",
+        "many",
+        "sewer",
+        "squeaks",
+        "swarm",
+        "dungeon",
+        "vermin",
+        "fantasy"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "vulture screech circling",
+      "file": "sounds/vulture-screech-circling.mp3",
+      "keywords": [
+        "vulture",
+        "screech",
+        "circling",
+        "desert",
+        "death",
+        "bird",
+        "carrion",
+        "wasteland"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "fish splash jump",
+      "file": "sounds/fish-splash-jump.mp3",
+      "keywords": [
+        "fish",
+        "splash",
+        "jump",
+        "lake",
+        "river",
+        "water",
+        "leap",
+        "calm",
+        "nature",
+        "aquatic"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "whale breach splash",
+      "file": "sounds/whale-breach-splash.mp3",
+      "keywords": [
+        "whale",
+        "breach",
+        "splash",
+        "ocean",
+        "huge",
+        "sea",
+        "crash",
+        "water",
+        "nature"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "crowd children playing medieval",
+      "file": "sounds/crowd-children-playing-medieval.mp3",
+      "keywords": [
+        "crowd",
+        "children",
+        "playing",
+        "medieval",
+        "village",
+        "kids",
+        "laughter",
+        "street",
+        "fantasy",
+        "historic"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "wind chimes gentle",
+      "file": "sounds/wind-chimes-gentle.mp3",
+      "keywords": [
+        "wind",
+        "chimes",
+        "gentle",
+        "porch",
+        "breeze",
+        "peaceful",
+        "metal",
+        "tinkle",
+        "calm",
+        "soft",
+        "weather"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "church bell single toll",
+      "file": "sounds/church-bell-single-toll.mp3",
+      "keywords": [
+        "church",
+        "bell",
+        "single",
+        "toll",
+        "funeral",
+        "solemn",
+        "village",
+        "ring"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "thunder distant single",
+      "file": "sounds/thunder-distant-single.mp3",
+      "keywords": [
+        "thunder",
+        "distant",
+        "single",
+        "rumble",
+        "storm",
+        "far",
+        "approaching",
+        "weather",
+        "lightning"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "wind gust door rattle",
+      "file": "sounds/wind-gust-door-rattle.mp3",
+      "keywords": [
+        "wind",
+        "gust",
+        "door",
+        "rattle",
+        "storm",
+        "house",
+        "shutter",
+        "night",
+        "weather",
+        "breeze"
+      ]
+    },
+    {
+      "type": "sfx",
+      "name": "owl hoot night close",
+      "file": "sounds/owl-hoot-night-close.mp3",
+      "keywords": [
+        "owl",
+        "hoot",
+        "night",
+        "close",
+        "forest",
+        "bird",
+        "dark",
+        "hooting",
+        "nature"
+      ]
     }
   ]
 }
