@@ -210,7 +210,7 @@
     },
     {
       "type": "music",
-      "name": "Lullaby",
+      "name": "lullaby baby sleep music",
       "file": "sounds/backgroundmusicforvideos-lullaby-baby-sleep-music-388567.mp3",
       "keywords": [
         "lullaby",
@@ -222,12 +222,13 @@
         "soft",
         "relaxing",
         "quiet",
-        "serene"
+        "serene",
+        "baby"
       ]
     },
     {
       "type": "sfx",
-      "name": "bark, exterior, small dog, courtyard, close",
+      "name": "small dog bark courtyard",
       "file": "sounds/Bark, Exterior, Small Dog, Courtyard, Close - Epidemic Sound.mp3",
       "keywords": [
         "bark",
@@ -240,7 +241,7 @@
     },
     {
       "type": "sfx",
-      "name": "battlefield, modern, close, low intensity 03",
+      "name": "modern battlefield gunfire distant",
       "file": "sounds/Battlefield, Modern, Close, Low Intensity 03 - Epidemic Sound.mp3",
       "keywords": [
         "battlefield",
@@ -253,7 +254,9 @@
         "war",
         "battle",
         "death",
-        "fight"
+        "fight",
+        "distant",
+        "gunfire"
       ]
     },
     {
@@ -303,7 +306,7 @@
     },
     {
       "type": "sfx",
-      "name": "boom, distant explosion 01",
+      "name": "distant explosion boom",
       "file": "sounds/ES_Boom, Distant Explosion 01 - Epidemic Sound v3.mp3",
       "keywords": [
         "boom",
@@ -330,7 +333,7 @@
     },
     {
       "type": "sfx",
-      "name": "boom, distant explosion, low, muffled 03",
+      "name": "distant explosion muffled low",
       "file": "sounds/ES_Boom, Distant Explosion, Low, Muffled 03 - Epidemic Sound.mp3",
       "keywords": [
         "boom",
@@ -421,7 +424,7 @@
     },
     {
       "type": "ambience",
-      "name": "campfire, night, wood burning medium, crickets in background",
+      "name": "campfire wood burning crickets ambience",
       "file": "sounds/ES_Campfire, Night, Wood Burning Medium, Crickets In Background - Epidemic Sound.mp3",
       "keywords": [
         "campfire",
@@ -434,7 +437,8 @@
         "door",
         "fire",
         "flame",
-        "heat"
+        "heat",
+        "ambience"
       ],
       "loop": true
     },
@@ -509,7 +513,7 @@
     },
     {
       "type": "sfx",
-      "name": "cave monster screams v1",
+      "name": "cave monster scream 1",
       "file": "sounds/ES_Cave Monster Screams - Epidemic Sound v1.mp3",
       "keywords": [
         "cave",
@@ -524,7 +528,6 @@
         "fear",
         "scary",
         "underground",
-        "v1",
         "dungeon",
         "eerie",
         "unsettling",
@@ -536,7 +539,7 @@
     },
     {
       "type": "sfx",
-      "name": "cave monster screams v2",
+      "name": "cave monster scream 2",
       "file": "sounds/ES_Cave Monster Screams - Epidemic Sound v2.mp3",
       "keywords": [
         "cave",
@@ -551,7 +554,6 @@
         "fear",
         "scary",
         "underground",
-        "v2",
         "dungeon",
         "eerie",
         "unsettling",
@@ -563,7 +565,7 @@
     },
     {
       "type": "sfx",
-      "name": "cave monster screams v3",
+      "name": "cave monster scream 3",
       "file": "sounds/ES_Cave Monster Screams - Epidemic Sound v3.mp3",
       "keywords": [
         "cave",
@@ -578,7 +580,6 @@
         "fear",
         "scary",
         "underground",
-        "v3",
         "dungeon",
         "eerie",
         "unsettling",
@@ -590,7 +591,7 @@
     },
     {
       "type": "sfx",
-      "name": "cave monster screams v4",
+      "name": "cave monster scream 4",
       "file": "sounds/ES_Cave Monster Screams - Epidemic Sound v4.mp3",
       "keywords": [
         "cave",
@@ -605,7 +606,6 @@
         "fear",
         "scary",
         "underground",
-        "v4",
         "dungeon",
         "eerie",
         "unsettling",
@@ -617,7 +617,7 @@
     },
     {
       "type": "sfx",
-      "name": "cave monster screams v5",
+      "name": "cave monster scream 5",
       "file": "sounds/ES_Cave Monster Screams - Epidemic Sound v5.mp3",
       "keywords": [
         "cave",
@@ -632,7 +632,6 @@
         "fear",
         "scary",
         "underground",
-        "v5",
         "dungeon",
         "eerie",
         "unsettling",
@@ -644,7 +643,7 @@
     },
     {
       "type": "sfx",
-      "name": "cave monster screams v6",
+      "name": "cave monster scream 6",
       "file": "sounds/ES_Cave Monster Screams - Epidemic Sound v6.mp3",
       "keywords": [
         "cave",
@@ -659,7 +658,6 @@
         "fear",
         "scary",
         "underground",
-        "v6",
         "dungeon",
         "eerie",
         "unsettling",
@@ -861,7 +859,7 @@
     },
     {
       "type": "sfx",
-      "name": "concert crowd, stadium, large, interior, long swell, call to encore, the forum stadium, applause",
+      "name": "stadium concert crowd encore applause",
       "file": "sounds/ES_Concert Crowd, Stadium, Large, Interior, Long Swell, Call To Encore, The Forum Stadium, Applause - Epidemic Sound.mp3",
       "keywords": [
         "concert",
@@ -880,7 +878,7 @@
     },
     {
       "type": "sfx",
-      "name": "concert, girls, teenagers, squealing, artist enters, bell centre, montreal, canada",
+      "name": "concert crowd teen squealing",
       "file": "sounds/ES_Concert, Girls, Teenagers, Squealing, Artist Enters, Bell Centre, Montreal, Canada - Epidemic Sound.mp3",
       "keywords": [
         "concert",
@@ -894,7 +892,8 @@
         "montreal",
         "canada",
         "crowd",
-        "celebration"
+        "celebration",
+        "teen"
       ]
     },
     {
@@ -941,7 +940,7 @@
     },
     {
       "type": "sfx",
-      "name": "creature slurps and eating  02",
+      "name": "creature slurping eating",
       "file": "sounds/ES_Creature Slurps and eating  02 - Epidemic Sound.mp3",
       "keywords": [
         "creature",
@@ -957,12 +956,13 @@
         "fear",
         "scary",
         "eerie",
-        "unsettling"
+        "unsettling",
+        "slurping"
       ]
     },
     {
       "type": "sfx",
-      "name": "creatures, humanoid, zombie, group, ext roar, scream, shriek",
+      "name": "zombie group roar scream shriek",
       "file": "sounds/ES_Creatures, Humanoid, Zombie, Group, Ext Roar, Scream, Shriek - Epidemic Sound.mp3",
       "keywords": [
         "creatures",
@@ -977,7 +977,6 @@
         "horror",
         "creepy",
         "death",
-        "ext",
         "fear",
         "monster",
         "scary",
@@ -989,7 +988,7 @@
     },
     {
       "type": "sfx",
-      "name": "creatures, humanoid, zombie, rabid panting, growls, roaring",
+      "name": "zombie rabid panting growls",
       "file": "sounds/ES_Creatures, Humanoid, Zombie, Rabid Panting, Growls, Roaring - Epidemic Sound.mp3",
       "keywords": [
         "creatures",
@@ -1075,7 +1074,7 @@
     },
     {
       "type": "sfx",
-      "name": "Crystal",
+      "name": "crystal pickup chime",
       "file": "sounds/scratchonix-idea-stirring-up-423281.mp3",
       "keywords": [
         "arcade",
@@ -1108,7 +1107,7 @@
     },
     {
       "type": "sfx",
-      "name": "Dark Magic",
+      "name": "dark magic",
       "file": "sounds/yodguard-dark-magic-6-378652.mp3",
       "keywords": [
         "dark",
@@ -1173,7 +1172,7 @@
     },
     {
       "type": "sfx",
-      "name": "ding shop bell v2",
+      "name": "shop counter bell ding",
       "file": "sounds/ding_shop-bell-v2.mp3",
       "keywords": [
         "ding",
@@ -1184,12 +1183,12 @@
         "notification",
         "chime",
         "entrance",
-        "v2"
+        "counter"
       ]
     },
     {
       "type": "sfx",
-      "name": "dog, howl",
+      "name": "dog howl",
       "file": "sounds/ES_Dog, Howl - Epidemic Sound.mp3",
       "keywords": [
         "dog",
@@ -1363,7 +1362,7 @@
       ]
     },
     {
-      "type": "music",
+      "type": "ambience",
       "name": "eerie forest ambience",
       "file": "sounds/eerie_forest_ambience.mp3",
       "keywords": [
@@ -1387,7 +1386,8 @@
         "trees",
         "unsettling",
         "ambience"
-      ]
+      ],
+      "loop": true
     },
     {
       "type": "sfx",
@@ -1451,7 +1451,7 @@
     },
     {
       "type": "sfx",
-      "name": "evil beast, growl, snarl",
+      "name": "evil beast growl snarl",
       "file": "sounds/ES_Evil Beast, Growl, Snarl - Epidemic Sound.mp3",
       "keywords": [
         "evil",
@@ -1470,7 +1470,7 @@
     },
     {
       "type": "sfx",
-      "name": "explosion, real, cannon blast, airy v1",
+      "name": "cannon blast explosion 1",
       "file": "sounds/ES_Explosion, Real, Cannon Blast, Airy - Epidemic Sound v1.mp3",
       "keywords": [
         "explosion",
@@ -1481,7 +1481,6 @@
         "firearm",
         "ranged",
         "siege",
-        "v1",
         "battle",
         "medieval",
         "war",
@@ -1492,12 +1491,13 @@
         "magical",
         "arcane",
         "magic",
-        "spell"
+        "spell",
+        "boom"
       ]
     },
     {
       "type": "sfx",
-      "name": "explosion, real, cannon blast, airy v2",
+      "name": "cannon blast explosion 2",
       "file": "sounds/ES_Explosion, Real, Cannon Blast, Airy - Epidemic Sound v2.mp3",
       "keywords": [
         "explosion",
@@ -1508,7 +1508,6 @@
         "firearm",
         "ranged",
         "siege",
-        "v2",
         "battle",
         "medieval",
         "war",
@@ -1519,12 +1518,13 @@
         "magical",
         "arcane",
         "magic",
-        "spell"
+        "spell",
+        "boom"
       ]
     },
     {
       "type": "sfx",
-      "name": "explosion, real, cannon blast, airy v3",
+      "name": "cannon blast explosion 3",
       "file": "sounds/ES_Explosion, Real, Cannon Blast, Airy - Epidemic Sound v3.mp3",
       "keywords": [
         "explosion",
@@ -1535,7 +1535,6 @@
         "firearm",
         "ranged",
         "siege",
-        "v3",
         "battle",
         "medieval",
         "war",
@@ -1546,12 +1545,13 @@
         "magical",
         "arcane",
         "magic",
-        "spell"
+        "spell",
+        "boom"
       ]
     },
     {
       "type": "sfx",
-      "name": "explosion, real, cannon blast, airy v4",
+      "name": "cannon blast explosion 4",
       "file": "sounds/ES_Explosion, Real, Cannon Blast, Airy - Epidemic Sound v4.mp3",
       "keywords": [
         "explosion",
@@ -1562,7 +1562,6 @@
         "firearm",
         "ranged",
         "siege",
-        "v4",
         "battle",
         "medieval",
         "war",
@@ -1573,7 +1572,8 @@
         "magical",
         "arcane",
         "magic",
-        "spell"
+        "spell",
+        "boom"
       ]
     },
     {
@@ -1655,7 +1655,7 @@
     },
     {
       "type": "sfx",
-      "name": "flame, fireball, fast x4",
+      "name": "fireball flames fast burst",
       "file": "sounds/ES_Flame, Fireball, Fast x4 - Epidemic Sound.mp3",
       "keywords": [
         "flame",
@@ -1669,13 +1669,13 @@
         "magic",
         "quick",
         "spell",
-        "x4",
-        "arcane"
+        "arcane",
+        "flames"
       ]
     },
     {
       "type": "sfx",
-      "name": "flames, large, movement 01",
+      "name": "large flames movement",
       "file": "sounds/ES_Flames, Large, Movement 01 - Epidemic Sound.mp3",
       "keywords": [
         "flames",
@@ -1901,7 +1901,7 @@
     },
     {
       "type": "sfx",
-      "name": "Horse Cart",
+      "name": "horse cart",
       "file": "sounds/freesound_community-horse-with-old-cart-27042.mp3",
       "keywords": [
         "horse",
@@ -1948,7 +1948,7 @@
     },
     {
       "type": "sfx",
-      "name": "futuristic explosion 04 v1",
+      "name": "futuristic explosion 1",
       "file": "sounds/ES_Futuristic Explosion 04 - Epidemic Sound v1.mp3",
       "keywords": [
         "futuristic",
@@ -1958,7 +1958,6 @@
         "scifi",
         "science fiction",
         "space",
-        "v1",
         "cosmic",
         "stars",
         "boom",
@@ -1968,7 +1967,7 @@
     },
     {
       "type": "sfx",
-      "name": "futuristic explosion 04 v2",
+      "name": "futuristic explosion 2",
       "file": "sounds/ES_Futuristic Explosion 04 - Epidemic Sound v2.mp3",
       "keywords": [
         "futuristic",
@@ -1978,7 +1977,6 @@
         "scifi",
         "science fiction",
         "space",
-        "v2",
         "cosmic",
         "stars",
         "boom",
@@ -1988,7 +1986,7 @@
     },
     {
       "type": "sfx",
-      "name": "futuristic explosion 04 v3",
+      "name": "futuristic explosion 3",
       "file": "sounds/ES_Futuristic Explosion 04 - Epidemic Sound v3.mp3",
       "keywords": [
         "futuristic",
@@ -1998,7 +1996,6 @@
         "scifi",
         "science fiction",
         "space",
-        "v3",
         "cosmic",
         "stars",
         "boom",
@@ -2008,7 +2005,7 @@
     },
     {
       "type": "sfx",
-      "name": "giant creature, roaring",
+      "name": "giant creature roaring",
       "file": "sounds/ES_Giant Creature, Roaring - Epidemic Sound.mp3",
       "keywords": [
         "giant",
@@ -2043,7 +2040,7 @@
     },
     {
       "type": "sfx",
-      "name": "golden retriever, barks, whimper",
+      "name": "golden retriever bark whimper",
       "file": "sounds/ES_Golden Retriever, Barks, Whimper - Epidemic Sound.mp3",
       "keywords": [
         "golden",
@@ -2059,7 +2056,7 @@
     },
     {
       "type": "sfx",
-      "name": "gravel, sneaker, running 01",
+      "name": "running on gravel sneakers",
       "file": "sounds/ES_Gravel, Sneaker, Running 01 - Epidemic Sound.mp3",
       "keywords": [
         "gravel",
@@ -2070,7 +2067,8 @@
         "ground",
         "movement",
         "outdoor",
-        "walk"
+        "walk",
+        "sneakers"
       ]
     },
     {
@@ -2147,7 +2145,7 @@
     },
     {
       "type": "sfx",
-      "name": "hardwood, boots, walking by 02",
+      "name": "boots walking hardwood floor",
       "file": "sounds/ES_Hardwood, Boots, Walking By 02 - Epidemic Sound.mp3",
       "keywords": [
         "hardwood",
@@ -2162,7 +2160,7 @@
     },
     {
       "type": "sfx",
-      "name": "hardwood, female, heels, walk 03",
+      "name": "heels walking hardwood floor",
       "file": "sounds/ES_Hardwood, Female, Heels, Walk 03 - Epidemic Sound.mp3",
       "keywords": [
         "hardwood",
@@ -2178,7 +2176,7 @@
     },
     {
       "type": "music",
-      "name": "he said, xi said scary music",
+      "name": "he said xi said scary music",
       "file": "sounds/ES_He Said, Xi Said-scary music - August Wilhelmsson.mp3",
       "keywords": [
         "horror",
@@ -2447,15 +2445,13 @@
     },
     {
       "type": "sfx",
-      "name": "horses army calvery galloping jennas laptop",
+      "name": "cavalry horses galloping army",
       "file": "sounds/horses_army_calvery_galloping-Jennas-Laptop.flac",
       "keywords": [
         "horses",
         "army",
-        "calvery",
+        "cavalry",
         "galloping",
-        "jennas",
-        "laptop",
         "horse",
         "mount"
       ]
@@ -2489,7 +2485,7 @@
     },
     {
       "type": "sfx",
-      "name": "impact, dark, cinematic, low, explosive",
+      "name": "dark cinematic impact explosive",
       "file": "sounds/ES_Impact, Dark, Cinematic, Low, Explosive - Epidemic Sound.mp3",
       "keywords": [
         "impact",
@@ -2727,7 +2723,7 @@
     },
     {
       "type": "sfx",
-      "name": "Lightning Spell",
+      "name": "lightning spell",
       "file": "sounds/dragon-studio-lightning-spell-386163.mp3",
       "keywords": [
         "electric",
@@ -2805,7 +2801,7 @@
     },
     {
       "type": "sfx",
-      "name": "lion roar like, gugrling",
+      "name": "lion roar gurgling",
       "file": "sounds/ES_Lion Roar LIke, Gugrling - Epidemic Sound.mp3",
       "keywords": [
         "lion",
@@ -2815,7 +2811,7 @@
         "creature",
         "animal",
         "monster",
-        "gugrling",
+        "gurgling",
         "like"
       ]
     },
@@ -2941,7 +2937,7 @@
     },
     {
       "type": "sfx",
-      "name": "Magic Wand",
+      "name": "magic wand",
       "file": "sounds/humordome-fairy-sparkle-451414.mp3",
       "keywords": [
         "magic",
@@ -2960,7 +2956,7 @@
     },
     {
       "type": "sfx",
-      "name": "medieval battlefield, medium group, sword impacts, screams, grunts",
+      "name": "medieval battlefield swords screams grunts",
       "file": "sounds/ES_Medieval Battlefield, Medium Group, Sword Impacts, Screams, Grunts - Epidemic Sound.mp3",
       "keywords": [
         "medieval",
@@ -2982,7 +2978,7 @@
         "death",
         "eerie",
         "fear",
-        "fight"
+        "swords"
       ]
     },
     {
@@ -3003,8 +2999,8 @@
       ]
     },
     {
-      "type": "music",
-      "name": "medieval village atmosphere",
+      "type": "ambience",
+      "name": "medieval village ambience",
       "file": "sounds/medieval_village_atmosphere.mp3",
       "keywords": [
         "medieval",
@@ -3017,12 +3013,14 @@
         "magical",
         "arcane",
         "magic",
-        "spell"
-      ]
+        "spell",
+        "ambience"
+      ],
+      "loop": true
     },
     {
       "type": "sfx",
-      "name": "medieval, war, battle, armors, shields, arrows, swords layer",
+      "name": "medieval war battle armor shields arrows",
       "file": "sounds/ES_Medieval, War, Battle, Armors, Shields, Arrows, Swords Layer - Epidemic Sound.mp3",
       "keywords": [
         "medieval",
@@ -3044,12 +3042,12 @@
         "arcane",
         "magic",
         "ranged",
-        "spell"
+        "armor"
       ]
     },
     {
       "type": "sfx",
-      "name": "medieval, war, battle, many swords, layer",
+      "name": "medieval war battle many swords",
       "file": "sounds/ES_Medieval, War, Battle, Many Swords, Layer - Epidemic Sound.mp3",
       "keywords": [
         "medieval",
@@ -3085,7 +3083,7 @@
     },
     {
       "type": "sfx",
-      "name": "metal impact, block, parry, sword fight, ring out 01",
+      "name": "sword parry metal block ring",
       "file": "sounds/ES_Metal Impact, Block, Parry, Sword Fight, Ring Out 01 - Epidemic Sound.mp3",
       "keywords": [
         "metal",
@@ -3165,7 +3163,7 @@
     },
     {
       "type": "sfx",
-      "name": "monster vocal, screams 03",
+      "name": "monster vocal screams",
       "file": "sounds/ES_Monster Vocal, Screams 03 - Epidemic Sound.mp3",
       "keywords": [
         "monster",
@@ -3185,7 +3183,7 @@
     },
     {
       "type": "sfx",
-      "name": "newborn, maternity ward, baby crying",
+      "name": "newborn baby crying",
       "file": "sounds/ES_Newborn, Maternity Ward, Baby Crying - Epidemic Sound.mp3",
       "keywords": [
         "newborn",
@@ -3203,7 +3201,7 @@
       ]
     },
     {
-      "type": "music",
+      "type": "ambience",
       "name": "night ambience",
       "file": "sounds/night_ambience.mp3",
       "keywords": [
@@ -3216,7 +3214,8 @@
         "serene",
         "soft",
         "ambience"
-      ]
+      ],
+      "loop": true
     },
     {
       "type": "music",
@@ -3443,8 +3442,8 @@
       ]
     },
     {
-      "type": "music",
-      "name": "pirate tavern crowd",
+      "type": "ambience",
+      "name": "pirate tavern crowd ambience",
       "file": "sounds/pirate-tavern-croud.mp3",
       "keywords": [
         "pirate",
@@ -3465,9 +3464,10 @@
         "arcane",
         "magic",
         "ocean",
-        "spell",
-        "nature"
-      ]
+        "nature",
+        "ambience"
+      ],
+      "loop": true
     },
     {
       "type": "sfx",
@@ -3484,7 +3484,7 @@
     },
     {
       "type": "sfx",
-      "name": "Potion Swig",
+      "name": "potion swig",
       "file": "sounds/freesound_community-085594_potion-35983.mp3",
       "keywords": [
         "potion",
@@ -3681,7 +3681,7 @@
     },
     {
       "type": "sfx",
-      "name": "river, small, distant waterfall 02",
+      "name": "small river distant waterfall",
       "file": "sounds/ES_River, Small, Distant Waterfall 02 - Epidemic Sound.mp3",
       "keywords": [
         "river",
@@ -3716,7 +3716,7 @@
     },
     {
       "type": "sfx",
-      "name": "roar v1",
+      "name": "monster roar 1",
       "file": "sounds/ES_Roar - Epidemic Sound v1.mp3",
       "keywords": [
         "roar",
@@ -3729,12 +3729,12 @@
         "terrifying",
         "wild",
         "deep",
-        "v1"
+        "horror"
       ]
     },
     {
       "type": "sfx",
-      "name": "roar v2",
+      "name": "monster roar 2",
       "file": "sounds/ES_Roar - Epidemic Sound v2.mp3",
       "keywords": [
         "roar",
@@ -3752,11 +3752,11 @@
         "intense",
         "magical",
         "medieval",
-        "v2",
         "arcane",
         "heavy",
         "historic",
-        "magic"
+        "magic",
+        "horror"
       ]
     },
     {
@@ -3806,7 +3806,7 @@
     },
     {
       "type": "sfx",
-      "name": "running, panting, outdoors",
+      "name": "running panting outdoors",
       "file": "sounds/ES_Running, Panting, Outdoors - Epidemic Sound.mp3",
       "keywords": [
         "running",
@@ -3854,7 +3854,7 @@
     },
     {
       "type": "sfx",
-      "name": "scuba mask, breathing, oxygen tank",
+      "name": "scuba breathing oxygen tank",
       "file": "sounds/ES_Scuba Mask, Breathing, Oxygen Tank - Epidemic Sound.mp3",
       "keywords": [
         "scuba",
@@ -3957,7 +3957,7 @@
     },
     {
       "type": "sfx",
-      "name": "snarling, growling 01",
+      "name": "snarling growling beast",
       "file": "sounds/ES_Snarling, Growling 01 - Epidemic Sound.mp3",
       "keywords": [
         "snarling",
@@ -4003,7 +4003,7 @@
     },
     {
       "type": "sfx",
-      "name": "sputtering, roar",
+      "name": "sputtering roar",
       "file": "sounds/ES_Sputtering, Roar - Epidemic Sound.mp3",
       "keywords": [
         "sputtering",
@@ -4021,7 +4021,7 @@
     },
     {
       "type": "sfx",
-      "name": "Stand Summon",
+      "name": "stand summon",
       "file": "sounds/freesound_community-stand-summon-effect-40997.mp3",
       "keywords": [
         "summon",
@@ -4182,7 +4182,7 @@
     },
     {
       "type": "sfx",
-      "name": "sword fight, 1v1, longsword, medieval warriors, knights, in armor, schoeps",
+      "name": "sword fight longsword knights duel",
       "file": "sounds/ES_Sword Fight, 1v1, Longsword, Medieval Warriors, Knights, In Armor, Schoeps (MS) - Epidemic Sound.mp3",
       "keywords": [
         "sword",
@@ -4193,7 +4193,6 @@
         "warriors",
         "knights",
         "armor",
-        "schoeps",
         "combat",
         "weapon",
         "fantasy",
@@ -4204,7 +4203,8 @@
         "arcane",
         "magic",
         "melee",
-        "war"
+        "war",
+        "duel"
       ]
     },
     {
@@ -4430,8 +4430,8 @@
       ]
     },
     {
-      "type": "music",
-      "name": "tavern crowd",
+      "type": "ambience",
+      "name": "tavern crowd ambience",
       "file": "sounds/tavern-croud_music.mp3",
       "keywords": [
         "tavern",
@@ -4446,12 +4446,14 @@
         "arcane",
         "historic",
         "magic",
-        "spell"
-      ]
+        "spell",
+        "ambience"
+      ],
+      "loop": true
     },
     {
       "type": "sfx",
-      "name": "textures, large fire, inferno, winds, continuously on fire",
+      "name": "large fire inferno winds",
       "file": "sounds/ES_Textures, Large Fire, Inferno, Winds, Continuously On Fire - Epidemic Sound.mp3",
       "keywords": [
         "textures",
@@ -4662,7 +4664,7 @@
     },
     {
       "type": "sfx",
-      "name": "thick wood front door, knock variations 07",
+      "name": "thick wood front door knock",
       "file": "sounds/ES_Thick Wood Front Door, Knock Variations 07 - Epidemic Sound.mp3",
       "keywords": [
         "door",
@@ -4768,8 +4770,8 @@
       ]
     },
     {
-      "type": "music",
-      "name": "thunder storm 02",
+      "type": "ambience",
+      "name": "thunderstorm ambience 1",
       "file": "sounds/ES_Thunder Storm 02 - Fredrik Ekstrom.mp3",
       "keywords": [
         "thunder",
@@ -4779,12 +4781,15 @@
         "rain",
         "lightning",
         "water",
-        "electric"
-      ]
+        "electric",
+        "ambience",
+        "thunderstorm"
+      ],
+      "loop": true
     },
     {
-      "type": "music",
-      "name": "thunder storm 04",
+      "type": "ambience",
+      "name": "thunderstorm ambience 2",
       "file": "sounds/ES_Thunder Storm 04 - Fredrik Ekstrom.mp3",
       "keywords": [
         "thunder",
@@ -4794,8 +4799,11 @@
         "rain",
         "lightning",
         "water",
-        "electric"
-      ]
+        "electric",
+        "ambience",
+        "thunderstorm"
+      ],
+      "loop": true
     },
     {
       "type": "sfx",
@@ -4816,7 +4824,7 @@
     },
     {
       "type": "sfx",
-      "name": "tiger, growls, roars, several, intimidated",
+      "name": "tiger growls roars",
       "file": "sounds/ES_Tiger, Growls, Roars, Several, Intimidated - Epidemic Sound.mp3",
       "keywords": [
         "tiger",
@@ -4854,7 +4862,7 @@
     },
     {
       "type": "sfx",
-      "name": "toddler, male, 15 months, laugh",
+      "name": "toddler laugh",
       "file": "sounds/ES_Toddler, Male, 15 Months, Laugh - Epidemic Sound.mp3",
       "keywords": [
         "laugh",
@@ -4983,7 +4991,7 @@
     },
     {
       "type": "sfx",
-      "name": "troll, mad, growling, pitchdown  12st 04",
+      "name": "troll mad growling",
       "file": "sounds/ES_Troll, Mad, Growling, Pitchdown -12st 04 - Epidemic Sound.mp3",
       "keywords": [
         "troll",
@@ -4993,9 +5001,7 @@
         "ogre",
         "beast",
         "fierce",
-        "12st",
-        "mad",
-        "pitchdown"
+        "mad"
       ]
     },
     {
@@ -5167,7 +5173,7 @@
     },
     {
       "type": "sfx",
-      "name": "water flowing, small stream 01",
+      "name": "water flowing small stream",
       "file": "sounds/ES_Water Flowing, Small Stream 01 - Epidemic Sound.mp3",
       "keywords": [
         "water",
@@ -5236,7 +5242,7 @@
     },
     {
       "type": "sfx",
-      "name": "whimpering, indoor",
+      "name": "dog whimpering indoor",
       "file": "sounds/ES_Whimpering, Indoor - Epidemic Sound.mp3",
       "keywords": [
         "whimpering",
@@ -5357,7 +5363,7 @@
     },
     {
       "type": "sfx",
-      "name": "wohoo, yay, 7 people 02",
+      "name": "group cheer wohoo yay",
       "file": "sounds/ES_Wohoo, Yay, 7 People 02 - Epidemic Sound.mp3",
       "keywords": [
         "wohoo",
@@ -5379,7 +5385,7 @@
         "brave",
         "epic",
         "cinematic",
-        "grand"
+        "group"
       ]
     },
     {
@@ -5488,7 +5494,7 @@
     },
     {
       "type": "sfx",
-      "name": "wood, 50's gallery open, shut",
+      "name": "wooden gallery door open shut",
       "file": "sounds/ES_Wood, 50's Gallery Open, Shut - Epidemic Sound.mp3",
       "keywords": [
         "wood",
@@ -5496,7 +5502,8 @@
         "gallery",
         "open",
         "shut",
-        "door"
+        "door",
+        "wooden"
       ]
     },
     {
@@ -5581,7 +5588,7 @@
     },
     {
       "type": "sfx",
-      "name": "zombie specimen, growling, roaring 04",
+      "name": "zombie specimen growling roaring",
       "file": "sounds/ES_Zombie Specimen, Growling, Roaring 04 - Epidemic Sound.mp3",
       "keywords": [
         "zombie",
@@ -17518,14 +17525,14 @@
       "name": "laptop lid close",
       "file": "sounds/laptop-lid-close.mp3",
       "keywords": [
-        "laptop",
         "lid",
         "close",
         "computer",
         "shut",
         "plastic",
         "office",
-        "device"
+        "device",
+        "laptop"
       ]
     },
     {
@@ -18600,7 +18607,11 @@
         "escape",
         "flee",
         "desperate",
-        "chase"
+        "chase",
+        "running",
+        "urgent",
+        "tension",
+        "pursuit"
       ]
     },
     {
@@ -18612,7 +18623,11 @@
         "heist",
         "sneak",
         "rogue",
-        "infiltration"
+        "infiltration",
+        "tension",
+        "sneaky",
+        "quiet",
+        "suspense"
       ]
     },
     {
@@ -18643,7 +18658,12 @@
         "ambush",
         "surprise",
         "sudden",
-        "attack"
+        "attack",
+        "battle",
+        "tension",
+        "combat",
+        "alarm",
+        "danger"
       ]
     },
     {
@@ -18797,7 +18817,11 @@
         "expedition",
         "rainforest",
         "tropical",
-        "adventure"
+        "adventure",
+        "explore",
+        "exotic",
+        "drums",
+        "travel"
       ]
     },
     {
@@ -18853,7 +18877,11 @@
         "ceremony",
         "love",
         "celebration",
-        "romantic"
+        "romantic",
+        "bride",
+        "vows",
+        "happy",
+        "gentle"
       ]
     },
     {
@@ -18896,7 +18924,11 @@
         "rising",
         "uplifting",
         "hopeful",
-        "warm"
+        "warm",
+        "inspiring",
+        "emotional",
+        "dawn",
+        "triumph"
       ]
     },
     {
@@ -18908,7 +18940,12 @@
         "creeping",
         "horror",
         "unease",
-        "tension"
+        "tension",
+        "dark",
+        "suspense",
+        "eerie",
+        "slow",
+        "relaxed"
       ]
     },
     {
@@ -18947,7 +18984,11 @@
         "awe",
         "magical",
         "discovery",
-        "beauty"
+        "beauty",
+        "fantasy",
+        "epic",
+        "reveal",
+        "shimmer"
       ]
     },
     {
@@ -18999,7 +19040,11 @@
         "playful",
         "fairy",
         "comedic",
-        "light"
+        "light",
+        "quirky",
+        "fun",
+        "bouncy",
+        "children"
       ]
     },
     {
@@ -19011,7 +19056,11 @@
         "revelation",
         "shock",
         "dramatic",
-        "turn"
+        "turn",
+        "twist",
+        "dark",
+        "tension",
+        "strings"
       ]
     },
     {
@@ -19052,7 +19101,12 @@
         "western",
         "frontier",
         "cowboy",
-        "desert"
+        "desert",
+        "guitar",
+        "prairie",
+        "outlaw",
+        "saloon",
+        "travel"
       ]
     },
     {
@@ -19114,7 +19168,12 @@
         "steampunk",
         "industrial",
         "victorian",
-        "clockwork"
+        "clockwork",
+        "gears",
+        "machinery",
+        "brass",
+        "mechanical",
+        "factory"
       ]
     },
     {
@@ -19177,7 +19236,11 @@
         "jazz",
         "detective",
         "1940s",
-        "investigation"
+        "investigation",
+        "saxophone",
+        "mystery",
+        "smoky",
+        "night"
       ]
     },
     {
@@ -19203,7 +19266,13 @@
         "viking",
         "nordic",
         "saga",
-        "warrior"
+        "warrior",
+        "drums",
+        "epic",
+        "battle",
+        "sea",
+        "horn",
+        "combat"
       ]
     },
     {
@@ -19638,7 +19707,11 @@
         "crack",
         "sharp",
         "leather",
-        "weapon"
+        "weapon",
+        "snap",
+        "lash",
+        "cowboy",
+        "western"
       ]
     },
     {
@@ -19650,7 +19723,11 @@
         "fist",
         "impact",
         "flesh",
-        "unarmed"
+        "unarmed",
+        "hit",
+        "fight",
+        "brawl",
+        "combat"
       ]
     },
     {
@@ -19661,7 +19738,12 @@
         "kick",
         "impact",
         "body",
-        "martial"
+        "martial",
+        "hit",
+        "fight",
+        "brawl",
+        "combat",
+        "thud"
       ]
     },
     {
@@ -19684,7 +19766,12 @@
       "keywords": [
         "counterspell",
         "cancel",
-        "dispel"
+        "dispel",
+        "magic",
+        "spell",
+        "arcane",
+        "fizzle",
+        "dnd"
       ]
     },
     {
