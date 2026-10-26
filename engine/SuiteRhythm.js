@@ -1464,7 +1464,7 @@ class SuiteRhythm {
             'bear': 'bear growl roar',
             'eagle': 'eagle screech',
             'hawk': 'eagle screech',
-            'wolves': 'wolf pack howling',
+            'wolves': 'wolf pack howls distant',
             'raven': 'raven caw',
             'crow': 'crow flock scatter',
             'crows': 'crow flock scatter',

@@ -7690,27 +7690,6 @@
     },
     {
       "type": "sfx",
-      "name": "wolf pack howling",
-      "file": "sounds/wolf-pack-howling.mp3",
-      "keywords": [
-        "wolf",
-        "pack",
-        "howling",
-        "multiple",
-        "night",
-        "wilderness",
-        "predator",
-        "group",
-        "choir",
-        "valley",
-        "beast",
-        "canine",
-        "creature",
-        "monster"
-      ]
-    },
-    {
-      "type": "sfx",
       "name": "raven caw",
       "file": "sounds/raven-caw.mp3",
       "keywords": [
@@ -16664,7 +16643,13 @@
         "fantasy",
         "dnd",
         "beast",
-        "canine"
+        "canine",
+        "howling",
+        "multiple",
+        "group",
+        "predator",
+        "creature",
+        "wolves"
       ]
     },
     {
